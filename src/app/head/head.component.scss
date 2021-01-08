@@ -1,0 +1,33 @@
+ul{
+  list-style-type: none;
+  overflow:hidden;
+  //background-color: black;
+  align-content: stretch;
+}
+
+
+
+li{
+  display:inline-block;
+  background-color: black;
+}
+
+a{
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+  padding: 20px 90px;
+  background-color: black;
+
+}
+
+a:hover{
+  color: black;
+  background-color: white;
+}
+
+
+
+
+
+
