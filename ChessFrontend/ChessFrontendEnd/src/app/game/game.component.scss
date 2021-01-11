@@ -1,0 +1,27 @@
+td {
+  width: 60px;
+  height: 60px;
+  border-collapse: collapse;
+}
+tr:nth-child(odd) {
+  td:nth-child(odd) {
+    background: white;
+  }
+  td:nth-child(even) {
+    background: black;
+  }
+}
+
+tr:nth-child(even) {
+  td:nth-child(even) {
+    background: white;
+  }
+  td:nth-child(odd) {
+    background: black;
+  }
+}
+
+.checkboard{
+  border: black 1px solid;
+  border-collapse: collapse;
+}
