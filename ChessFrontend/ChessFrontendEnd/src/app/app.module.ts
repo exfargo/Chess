@@ -10,6 +10,8 @@ import { RegisterComponent } from './register/register.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     HomeComponent,
     LoginComponent,
     GameComponent,
-    RegisterComponent
+    RegisterComponent,
+    LeaderboardComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
