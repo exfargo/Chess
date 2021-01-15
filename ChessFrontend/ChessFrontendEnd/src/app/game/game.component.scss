@@ -5,23 +5,25 @@ td {
 }
 tr:nth-child(odd) {
   td:nth-child(odd) {
-    background: white;
+    background: #795538;
   }
   td:nth-child(even) {
-    background: black;
+    background: #eed7b5;
   }
 }
 
 tr:nth-child(even) {
   td:nth-child(even) {
-    background: white;
+    background: #795538;
   }
   td:nth-child(odd) {
-    background: black;
+    background: #eed7b5;
   }
 }
 
 .checkboard{
-  border: black 1px solid;
+  border: black 3px solid;
   border-collapse: collapse;
+    border-radius: 20px;
+    box-shadow: black 0px 0px 60px;
 }

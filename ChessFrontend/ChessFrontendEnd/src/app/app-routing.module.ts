@@ -3,11 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import {GameComponent} from "./game/game.component";
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
+import {UserComponent} from "./user/user.component";
+import {LeaderboardComponent} from "./leaderboard/leaderboard.component";
 
 const routes: Routes = [
   {path: 'game', component: GameComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'user', component: UserComponent},
+  {path: 'leaderboard', component: LeaderboardComponent}
 ];
 
 @NgModule({
