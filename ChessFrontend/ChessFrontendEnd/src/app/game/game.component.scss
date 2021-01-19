@@ -1,6 +1,6 @@
 td {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-collapse: collapse;
 }
 tr:nth-child(odd) {
@@ -26,4 +26,8 @@ tr:nth-child(even) {
   border-collapse: collapse;
     border-radius: 20px;
     box-shadow: black 0px 0px 60px;
+}
+
+div{
+  margin-top: 100px;
 }
