@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-  checkboard = [["br","bk","bb","bq","bk","bb","bk","br"],
+  checkboard = [["br","bh","bb","bq","bk","bb","bh","br"],
                 ["bp","bp","bp","bp","bp","bp","bp","bp"],
                 ["","","","","","","",""],
                 ["","","","","","","",""],
                 ["","","","","","","",""],
                 ["","","","","","","",""],
                 ["wp","wp","wp","wp","wp","wp","wp","wp"],
-                ["wr","wk","wb","wq","wk","wb","wk","wr"]];
+                ["wr","wh","wb","wq","wk","wb","wh","wr"]];
   constructor() { }
 
   ngOnInit(): void {
