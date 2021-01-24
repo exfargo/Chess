@@ -20,3 +20,5 @@
   + 2.4 user -
   
   + 2.5 footer -
+
+  + 2.6 leaderboard - WP
