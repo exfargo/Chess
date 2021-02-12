@@ -4,7 +4,7 @@ import {GameComponent} from "./game/game.component";
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {UserComponent} from "./user/user.component";
-import {LeaderboardComponent} from "./leaderboard/leaderboard.component";
+import {LeaderboardComponent} from "./lidlboard/leaderboard.component";
 import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'user', component: UserComponent},
-  {path: 'leaderboard', component: LeaderboardComponent}
+  {path: 'lidlboard', component: LeaderboardComponent}
 ];
 
 @NgModule({

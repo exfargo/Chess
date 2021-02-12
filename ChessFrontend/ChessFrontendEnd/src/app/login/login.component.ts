@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ApiServiceService} from "../apiService.service";
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: ApiServiceService) {
 
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {
+    this.apiService.getPlayer(0).subscribe((data) => {
+      console.log(data);
+    });
+  }
 }

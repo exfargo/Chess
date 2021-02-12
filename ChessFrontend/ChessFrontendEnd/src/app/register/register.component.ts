@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import axios from "axios";
 
 @Component({
   selector: 'app-register',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  userRegister: string[] = [];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    axios.get(``)
+      .then(file => {
+        this.userRegister.push(file.data);
+      })
+
   }
 
 }
