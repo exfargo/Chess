@@ -1,6 +1,6 @@
 package org.game;
 
-import org.chess.game.Figures.*;
+import org.game.Figures.*;
 import org.game.Figures.*;
 import org.utils.Coordinates;
 import org.utils.Pair;
