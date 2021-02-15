@@ -1,7 +1,6 @@
 package org.game;
 
 import org.game.Figures.*;
-import org.game.Figures.*;
 import org.utils.Coordinates;
 import org.utils.Pair;
 
@@ -146,7 +145,19 @@ public class Board implements IBoard{
             //hradovani & kral mvment
             }else if (selectedPiece.getType().equals("King")){
 
+
                 if (((IHradable)(selectedPiece)).isHradAble() && isHradingDirectionValid( source, target,selectedPiece.getOwner()) && Math.abs((target.first() - source.first())) == 2) {
+                    //špagety vařím
+                    int newHradingRookX = 0;
+
+                    if (hradingRookX < source.first()) newHradingRookX = target.first()+1;
+                    if (hradingRookX > source.first()) newHradingRookX = target.first()-1;
+
+                    teleportPiece(new Coordinates(hradingRookX,hradingRookY),new Coordinates(newHradingRookX,hradingRookY));
+                    teleportPiece(source,target);
+                    ((IHradable)(board[hradingRookX][newHradingRookX])).setHradovniAble(false);
+                    ((IHradable)(selectedPiece)).setHradovniAble(false);
+                    return true;
 
                 }else {
                     teleportPiece(source,target);
@@ -154,7 +165,6 @@ public class Board implements IBoard{
                     return true;
                 }
 
-                return false;
 
             }else{
                 //not hradable
@@ -232,18 +242,20 @@ public class Board implements IBoard{
         }
         return null;
     }
-    private IFigure hradingRook;
+    private int hradingRookX = 0;
+    private int hradingRookY = 0;
     private boolean isHradingDirectionValid(Pair<Integer,Integer> source,Pair<Integer,Integer> target,Teams team){
 
-        int tempDir = target.first() - source.first();
+        int tempDir = (target.first() - source.first())/2;
 
         if (tempDir == 1 && board[source.second()][7].getType().equals("Rook") && ((IHradable)(board[source.second()][7])).isHradAble() && checkLos(source,new Coordinates(7,source.second()))){
-            hradingRook = board[source.second()][7];
-            System.out.println("jis");
-            return false;
+            hradingRookX = 7;
+            hradingRookY = source.second();
+
+            return true;
         }else if(tempDir == -1 && board[source.second()][0].getType().equals("Rook") && ((IHradable)(board[source.second()][0])).isHradAble() && checkLos(source,new Coordinates(0,source.second()))){
-            hradingRook = board[source.second()][0];
-            System.out.println("jis");
+            hradingRookX = 0;
+            hradingRookY = source.second();
             return true;
         }
         return false;

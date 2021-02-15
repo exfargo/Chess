@@ -27,6 +27,7 @@ public class GameController implements  IGameController{
 
     @Override
     public IGameController initializeGame() {
+        if (false) System.out.println("xd");
         return null;
     }
 

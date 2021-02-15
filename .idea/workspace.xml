@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="Game package package transfer" />
+    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="Game package package transfer">
+      <change beforePath="$PROJECT_DIR$/.idea/Chess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Chess.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +25,19 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -32,6 +48,7 @@
       <updated>1613388374308</updated>
       <workItem from="1613388376097" duration="34000" />
       <workItem from="1613388595971" duration="60000" />
+      <workItem from="1613389790094" duration="94000" />
     </task>
     <task id="LOCAL-00001" summary="Game package package transfer">
       <created>1613388637852</created>
