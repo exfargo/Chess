@@ -1,8 +1,8 @@
-package game;
+package org.chess.game;
 
-import game.Figures.Teams;
-import utils.Coordinates;
-import utils.Pair;
+import org.chess.game.Figures.Teams;
+import org.chess.utils.Coordinates;
+import org.chess.utils.Pair;
 
 public class GameController implements  IGameController{
 

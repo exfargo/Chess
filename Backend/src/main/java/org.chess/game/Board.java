@@ -1,8 +1,8 @@
-package game;
+package org.chess.game;
 
-import game.Figures.*;
-import utils.Coordinates;
-import utils.Pair;
+import org.chess.game.Figures.*;
+import org.chess.utils.Coordinates;
+import org.chess.utils.Pair;
 
 public class Board implements IBoard{
 

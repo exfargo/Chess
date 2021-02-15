@@ -1,4 +1,4 @@
-package game.Figures;
+package org.chess.game.Figures;
 
 public interface IHradable {
     public boolean isHradAble();

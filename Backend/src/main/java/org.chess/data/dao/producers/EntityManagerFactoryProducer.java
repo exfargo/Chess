@@ -2,9 +2,9 @@ package org.chess.data.dao.producers;
 
 import javax.annotation.PreDestroy;
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.ws.rs.Produces;
 
 @ApplicationScoped
 public class EntityManagerFactoryProducer {

@@ -1,7 +1,7 @@
-package game;
+package org.chess.game;
 
-import game.Figures.IFigure;
-import utils.Pair;
+import org.chess.game.Figures.IFigure;
+import org.chess.utils.Pair;
 
 /*
 Board holding class

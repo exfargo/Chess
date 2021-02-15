@@ -1,6 +1,6 @@
-package game;
+package org.chess.game;
 
-import utils.Pair;
+import org.chess.utils.Pair;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
-package game.Figures;
+package org.chess.game.Figures;
 
-import utils.Pair;
+import org.chess.utils.Pair;
 
 /*
     IFigure is an all general interface for figures
