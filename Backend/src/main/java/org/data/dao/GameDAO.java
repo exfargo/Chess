@@ -2,7 +2,7 @@ package org.data.dao;
 
 
 import org.data.entities.Game;
-import org.chess.data.entities.Game_;
+import org.data.entities.Game_;
 import org.data.entities.User;
 
 import javax.enterprise.context.ApplicationScoped;

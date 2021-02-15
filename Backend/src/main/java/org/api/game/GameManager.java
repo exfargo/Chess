@@ -26,7 +26,7 @@ public class GameManager {
 
     public boolean makeMove(Move m) {
         try {
-            if (gameController.makeMove())
+            //if (gameController.makeMove())
             game.writeMove(m);
             return true;
         } catch (Exception e) {

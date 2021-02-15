@@ -3,7 +3,7 @@ package org.data.dao;
 
 
 import org.data.entities.User;
-import org.chess.data.entities.User_;
+import org.data.entities.User_;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
