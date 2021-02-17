@@ -4,6 +4,7 @@ package org.data.entities;
 
 import org.utils.PasswordService;
 
+import javax.json.bind.annotation.JsonbProperty;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,7 +14,9 @@ public class User {
     @Id
     @GeneratedValue
     private int id;
+    @JsonbProperty
     private String username;
+    @JsonbProperty
     private String password;
     private Long points;
 
