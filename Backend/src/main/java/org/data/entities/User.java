@@ -14,9 +14,7 @@ public class User {
     @Id
     @GeneratedValue
     private int id;
-    @JsonbProperty
     private String username;
-    @JsonbProperty
     private String password;
     private Long points;
 
@@ -26,6 +24,14 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public User(String username, String password) {

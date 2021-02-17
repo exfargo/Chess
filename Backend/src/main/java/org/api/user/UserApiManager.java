@@ -13,20 +13,17 @@ public class UserApiManager {
     @Inject
     private UserDAO userDAO;
 
-    public Object createUser(User u) {
+    public boolean createUser(User u) {
         u.print();
         try {
-            try {
-                if (userDAO.getUserByName(u.getUsername()).isEmpty()) {
-                    userDAO.save(new User(u.getUsername(), u.getPassword()));
-                }
-            } catch (IllegalArgumentException e) {
+            if (userDAO.getUserByName(u.getUsername()).isEmpty()) {
                 userDAO.save(new User(u.getUsername(), u.getPassword()));
+            } else {
+                return false;
             }
-            System.out.println("Saved : " + u.getUsername() + " " + u.getPassword());
             return true;
         } catch (Exception e) {
-            return e.toString();
+            return false;
         }
     }
 
