@@ -4,13 +4,12 @@ package org.api.user;
 import org.data.entities.User;
 
 import javax.inject.Inject;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("user/settings")
+@Produces(MediaType.APPLICATION_JSON)
 public class UserSettingsResources {
 
     @Inject
