@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="tenhle úchyl furt chce commitment">
-      <change afterPath="$PROJECT_DIR$/DOCS/ToDo.md" afterDir="false" />
+    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="a zase to ten krypl chce">
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/org/api/game/ChallangeResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/org/api/game/GameResources.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOCS/Databaze.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOCS/Databaze.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/API.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOCS/API.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOCS/API.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -65,7 +68,9 @@
       <workItem from="1613388595971" duration="60000" />
       <workItem from="1613389790094" duration="94000" />
       <workItem from="1613717442540" duration="155000" />
-      <workItem from="1613717609189" duration="2170000" />
+      <workItem from="1613717609189" duration="2205000" />
+      <workItem from="1613728941361" duration="37000" />
+      <workItem from="1613729433598" duration="549000" />
     </task>
     <task id="LOCAL-00001" summary="Game package package transfer">
       <created>1613388637852</created>
@@ -88,7 +93,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613718754464</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="dokumentace">
+      <created>1613719811319</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613719811319</updated>
+    </task>
+    <task id="LOCAL-00005" summary="a zase to ten krypl chce">
+      <created>1613719822030</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613719822030</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +129,8 @@
     <MESSAGE value="Game package package transfer" />
     <MESSAGE value="tak začnem s dokumentací" />
     <MESSAGE value="tenhle úchyl furt chce commitment" />
-    <option name="LAST_COMMIT_MESSAGE" value="tenhle úchyl furt chce commitment" />
+    <MESSAGE value="dokumentace" />
+    <MESSAGE value="a zase to ten krypl chce" />
+    <option name="LAST_COMMIT_MESSAGE" value="a zase to ten krypl chce" />
   </component>
 </project>
