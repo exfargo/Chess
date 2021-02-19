@@ -3,6 +3,7 @@ package org.api.user;
 
 import org.data.dao.UserDAO;
 import org.data.entities.User;
+import org.utils.ResponseMessage;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -13,34 +14,34 @@ public class UserApiManager {
     @Inject
     private UserDAO userDAO;
 
-    public Object createUser(User u) {
+    public ResponseMessage createUser(User u) {
         try {
             if (userDAO.getUserByName(u.getUsername()).isEmpty()) {
                 userDAO.save(new User(u.getUsername(), u.getPassword()));
             } else {
-                return "Username already exists";
+                return new ResponseMessage("User already exists");
             }
-            return true;
+            return new ResponseMessage("User created successfully");
         } catch (Exception e) {
-            return e.toString();
+            return new ResponseMessage(e.toString());
         }
     }
 
-    public boolean deleteUser(User u) {
+    public ResponseMessage deleteUser(User u) {
         try {
-            userDAO.delete(u.getId());
-            return true;
+            userDAO.delete(this.getNormalizedUser(u).getId());
+            return new ResponseMessage("User deleted successfully");
         } catch (Exception e) {
-            return false;
+            return new ResponseMessage("Something went wrong");
         }
     }
 
-    public boolean changeUserPassword(User u) {
+    public ResponseMessage changeUserPassword(User u) {
         try {
             userDAO.changePassword(u.getId(), u.getPassword());
-            return true;
+            return new ResponseMessage("Password changed successfully");
         } catch (Exception e) {
-            return false;
+            return new ResponseMessage("Something went wrong");
         }
     }
 
@@ -57,7 +58,12 @@ public class UserApiManager {
         return userDAO.getUserByName(user.getUsername()).get(0);
     }
 
-    public User getUser(int id) {
+    public User getUserById(int id) {
         return userDAO.get(id);
     }
+
+    public boolean isUserWithName(String username) {
+        return !userDAO.getUserByName(username).isEmpty();
+    }
+
 }
