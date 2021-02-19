@@ -9,8 +9,18 @@ public class Board implements IBoard{
     private final IFigure[][] board = new IFigure[8][8];
     private int passX = -1;
     private int passY = -1;
+    private boolean whiteCheckMate = false;
+    private boolean blackCheckMate = false;
+    private Teams winner = Teams.Empty;
     private Teams passTeam = Teams.Empty;
 
+    public boolean getWhiteCheckMate(){
+        return whiteCheckMate;
+    }
+
+    public boolean getBlackCheckMate(){
+        return blackCheckMate;
+    }
 
     public Board(){
         //Init Board
@@ -147,7 +157,6 @@ public class Board implements IBoard{
 
 
                 if (((IHradable)(selectedPiece)).isHradAble() && isHradingDirectionValid( source, target,selectedPiece.getOwner()) && Math.abs((target.first() - source.first())) == 2) {
-                    //špagety vařím
                     int newHradingRookX = 0;
 
                     if (hradingRookX < source.first()) newHradingRookX = target.first()+1;
@@ -155,7 +164,8 @@ public class Board implements IBoard{
 
                     teleportPiece(new Coordinates(hradingRookX,hradingRookY),new Coordinates(newHradingRookX,hradingRookY));
                     teleportPiece(source,target);
-                    ((IHradable)(board[hradingRookX][newHradingRookX])).setHradovniAble(false);
+                    //System.out.println(hradingRookX+ "," + newHradingRookX);
+                    ((IHradable)(board[hradingRookY][newHradingRookX])).setHradovniAble(false);
                     ((IHradable)(selectedPiece)).setHradovniAble(false);
                     return true;
 
@@ -199,6 +209,10 @@ public class Board implements IBoard{
         passX = -1;
         passY = -1;
         passTeam = Teams.Empty;
+
+        whiteCheckMate = checkCheck(findFigure("King",Teams.White),Teams.White);
+        blackCheckMate = checkCheck(findFigure("King",Teams.Black),Teams.Black);
+
     }
 
     public int getPassX(){
@@ -223,13 +237,25 @@ public class Board implements IBoard{
                     //nahorsi casy
                     //hors casy uz nastaly
                     if (board[y][x].checkMoveValidity(new Coordinates(x,y),position) && (checkLos( new Coordinates(x,y),position)|| (board[y][x].getType().equals("Knight")))){
+
+
+                        //checkmate
                         return true;
                     }
                 }
             }
         }
+
         return false;
     }
+
+
+    //private boolean ghostTurn(Teams team,Coordinates source,Coordinates traget){
+
+    //}
+
+
+
 
     //returns null if figure not found
     public Coordinates findFigure(String type, Teams owner){
@@ -248,6 +274,8 @@ public class Board implements IBoard{
 
         int tempDir = (target.first() - source.first())/2;
 
+        if (checkCheck(source,team) && checkCheck(new Coordinates(source.first()+tempDir,source.second()),team) && checkCheck(new Coordinates(source.first()+(tempDir*2),source.second()),team)) return false;
+
         if (tempDir == 1 && board[source.second()][7].getType().equals("Rook") && ((IHradable)(board[source.second()][7])).isHradAble() && checkLos(source,new Coordinates(7,source.second()))){
             hradingRookX = 7;
             hradingRookY = source.second();
@@ -260,5 +288,9 @@ public class Board implements IBoard{
         }
         return false;
 
+    }
+
+    public Teams getWinner(){
+        return winner;
     }
 }

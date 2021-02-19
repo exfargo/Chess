@@ -60,10 +60,9 @@ public class GameController implements  IGameController{
         }
         System.out.println("--------------");
         System.out.println("pass : " + board.getPassX() + ", " +board.getPassY() + ", " + board.getPassTeam());
-        Coordinates temp = board.findFigure("King", Teams.White);
-        System.out.println("White check : "+ board.checkCheck(temp,Teams.White));
-        temp = board.findFigure("King", Teams.Black);
-        System.out.println("Black check : "+ board.checkCheck(temp,Teams.Black));
+        System.out.println("White check : "+ board.getWhiteCheckMate());
+        System.out.println("Black check : "+ board.getBlackCheckMate());
+        System.out.println("Winner : " + board.getWinner().toString());
 
     }
 }
