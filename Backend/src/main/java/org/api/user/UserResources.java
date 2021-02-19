@@ -13,24 +13,14 @@ import javax.ws.rs.core.Response;
 public class UserResources {
 
     @Inject
-    LoggedUser loggedUser;
-    @Inject
     UserApiManager apiManager;
 
     @GET
-    public Response getLoggedUser() {
-        return Response.ok(loggedUser.getLoggedUser()).build();
-    }
-
-    @POST
-    public Response logUser(User user) {
-        if (apiManager.isValidUser(user)) {
-            loggedUser.setLoggedUser(apiManager.getNormalizedUser(user));
-            return Response.ok(true).build();
+    public Response getUserByID(@QueryParam("id") int id) {
+        try {
+            return Response.ok(apiManager.getUser(id)).build();
+        } catch (Exception e) {
+            return Response.ok(e.toString()).build();
         }
-        return Response.ok(false).build();
     }
-
-
-
 }

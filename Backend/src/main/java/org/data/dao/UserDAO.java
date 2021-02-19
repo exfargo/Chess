@@ -1,7 +1,5 @@
 package org.data.dao;
 
-
-
 import org.data.entities.User;
 import org.data.entities.User_;
 
@@ -71,7 +69,6 @@ public class UserDAO {
         entityManager.getTransaction().begin();
         entityManager.persist(user);
         entityManager.getTransaction().commit();
-        entityManager.close();
     }
 
     public void delete(int id) {

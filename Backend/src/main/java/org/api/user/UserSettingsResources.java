@@ -15,19 +15,23 @@ public class UserSettingsResources {
     @Inject
     UserApiManager apiManager;
 
-    @POST
-    public Response createUser(User u) {
-        return Response.ok(apiManager.createUser(u)).build();
-    }
-
     @DELETE
     public Response deleteUser(User u) {
-        return Response.ok(apiManager.deleteUser(u)).build();
+        try {
+            apiManager.deleteUser(u);
+            return Response.status(200).build();
+        } catch (Exception e) {
+            return Response.status(404).build();
+        }
     }
 
     @PUT
-    public Response changeUserProperties(User u) {
-        return Response.ok(apiManager.changeUserPassword(u)).build();
+    public Response changeUserPassword(User u) {
+        try {
+            apiManager.changeUserPassword(u);
+            return Response.status(200).build();
+        } catch (Exception e) {
+            return Response.status(404).build();
+        }
     }
-
 }
