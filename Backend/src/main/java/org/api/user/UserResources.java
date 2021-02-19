@@ -18,7 +18,7 @@ public class UserResources {
     UserApiManager apiManager;
 
     @GET
-    public Response getUserByID() {
+    public Response getLoggedUser() {
         return Response.ok(loggedUser.getLoggedUser()).build();
     }
 
