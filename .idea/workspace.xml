@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="Game package package transfer">
-      <change afterPath="$PROJECT_DIR$/DOCS/API.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DOCS/Chess.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DOCS/Databaze.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DOCS/GameInterface.md" afterDir="false" />
+    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="tenhle úchyl furt chce commitment">
+      <change afterPath="$PROJECT_DIR$/DOCS/ToDo.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOCS/Databaze.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOCS/Databaze.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +34,25 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Apps\Dev\Chess\DOCS" />
+      <recent name="C:\Apps\Dev\Chess" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,7 +65,7 @@
       <workItem from="1613388595971" duration="60000" />
       <workItem from="1613389790094" duration="94000" />
       <workItem from="1613717442540" duration="155000" />
-      <workItem from="1613717609189" duration="916000" />
+      <workItem from="1613717609189" duration="2170000" />
     </task>
     <task id="LOCAL-00001" summary="Game package package transfer">
       <created>1613388637852</created>
@@ -57,7 +74,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613388637852</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="tak začnem s dokumentací">
+      <created>1613718694068</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613718694068</updated>
+    </task>
+    <task id="LOCAL-00003" summary="tenhle úchyl furt chce commitment">
+      <created>1613718754464</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613718754464</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,6 +108,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Game package package transfer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Game package package transfer" />
+    <MESSAGE value="tak začnem s dokumentací" />
+    <MESSAGE value="tenhle úchyl furt chce commitment" />
+    <option name="LAST_COMMIT_MESSAGE" value="tenhle úchyl furt chce commitment" />
   </component>
 </project>
