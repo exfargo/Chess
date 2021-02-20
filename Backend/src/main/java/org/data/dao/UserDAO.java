@@ -92,4 +92,13 @@ public class UserDAO {
         u.changeName(username);
         entityManager.merge(u);
     }
+
+    public List<User> getTop(int top) {
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<User> cq = cb.createQuery(User.class);
+        Root<User> rootEntry = cq.from(User.class);
+        cq.orderBy(cb.desc(rootEntry.get(User_.POINTS)));
+        TypedQuery<User> typedQuery = entityManager.createQuery(cq);
+        return typedQuery.getResultList().subList(0, top);
+    }
 }

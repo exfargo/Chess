@@ -128,13 +128,14 @@ public class UserResources {
     }
     //endregion
 
+    //region challenge
     @GET
     @Path("challenge")
     public Response getChallenges() {
         if (this.loggedUser.getLoggedUser() == null)
             return Response.status(404).entity(new ResponseMessage("You must be logged in order to view challenges")).build();
         try {
-            return Response.status(200).entity(challengeDAO.getChallengesForUser(this.loggedUser.getLoggedUser())).build();
+            return Response.status(200).entity(challengeDAO.getPendingChallengesForUser(this.loggedUser.getLoggedUser())).build();
         } catch (Exception e) {
             return Response.status(400).entity("Something went wrong").build();
         }
@@ -145,6 +146,8 @@ public class UserResources {
     public Response acceptChallenge(@PathParam("id") int id) {
         if (this.loggedUser.getLoggedUser() == null)
             return Response.status(404).entity(new ResponseMessage("You must be logged in order to accept challenges")).build();
+        if (challengeDAO.get(id) == null)
+            return Response.status(404).entity(new ResponseMessage("No such challenge")).build();
         try {
             challengeDAO.acceptChallenge(id);
             return Response.status(200).entity(new ResponseMessage("Challenge accepted successfully")).build();
@@ -167,6 +170,7 @@ public class UserResources {
             return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
         }
     }
+    //endregion
 
 
 }

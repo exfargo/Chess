@@ -23,7 +23,16 @@ public class ChallengeDAO {
         return entityManager.find(Challenge.class, id);
     }
 
-    public List<Challenge> getChallengesForUser(User user) {
+    public List<Challenge> getPendingChallengesForUser(User user) {
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Challenge> cq = cb.createQuery(Challenge.class);
+        Root<Challenge> rootEntry = cq.from(Challenge.class);
+        cq.select(rootEntry).where(cb.equal(rootEntry.get(Challenge_.CHALLENGED), user));
+        TypedQuery<Challenge> typedQuery = entityManager.createQuery(cq);
+        return typedQuery.getResultList();
+    }
+
+    public List<Challenge> getPendingChallengesByUser(User user) {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<Challenge> cq = cb.createQuery(Challenge.class);
         Root<Challenge> rootEntry = cq.from(Challenge.class);
