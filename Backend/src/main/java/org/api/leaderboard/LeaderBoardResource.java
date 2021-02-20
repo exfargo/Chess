@@ -1,6 +1,7 @@
 package org.api.leaderboard;
 
 import org.managers.LeaderBoardApiManager;
+import org.utils.ResponseMessage;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -14,7 +15,12 @@ public class LeaderBoardResource {
     LeaderBoardApiManager apiManager;
 
     @GET
-    public Response getLeaderboardBy(String filter) {
-        return Response.ok(apiManager.getLeaderboardBy(filter)).build();
+    @Path("top-50")
+    public Response getLeaderboardTop50() {
+        try {
+            return Response.status(200).entity(apiManager.getLeaderboardTop50()).build();
+        } catch (Exception e) {
+            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+        }
     }
 }
