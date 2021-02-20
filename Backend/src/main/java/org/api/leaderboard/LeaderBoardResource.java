@@ -1,5 +1,7 @@
 package org.api.leaderboard;
 
+import org.managers.LeaderBoardApiManager;
+
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

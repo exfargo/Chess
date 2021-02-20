@@ -1,4 +1,4 @@
-package org.api.leaderboard;
+package org.managers;
 
 import javax.enterprise.context.ApplicationScoped;
 

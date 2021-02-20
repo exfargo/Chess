@@ -1,4 +1,4 @@
-package org.api.game;
+package org.managers;
 
 import org.data.entities.Game;
 import org.data.entities.Move;
@@ -23,27 +23,4 @@ public class GameManager {
             return false;
         }
     }
-
-    public boolean makeMove(Move m) {
-        try {
-            //if (gameController.makeMove())
-            game.writeMove(m);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    public boolean endGame() {
-        try {
-
-
-
-            this.game = null;
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
 }
