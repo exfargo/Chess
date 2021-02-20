@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="dokumentace + resources">
+    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserApiManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserApiManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserAuthenticationResource.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserSettingsResources.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/utils/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/utils/ResponseMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/data/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/data/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/data/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/data/entities/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DOCS/API.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOCS/API.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,21 +43,6 @@
       <recent name="C:\Apps\Dev\Chess" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,7 +58,8 @@
       <workItem from="1613717609189" duration="2205000" />
       <workItem from="1613728941361" duration="37000" />
       <workItem from="1613729433598" duration="644000" />
-      <workItem from="1613755437181" duration="654000" />
+      <workItem from="1613755437181" duration="909000" />
+      <workItem from="1613807155913" duration="411000" />
     </task>
     <task id="LOCAL-00001" summary="Game package package transfer">
       <created>1613388637852</created>
