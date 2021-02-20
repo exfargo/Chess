@@ -1,5 +1,8 @@
 # API
 
+* * *
+* * *
+
 ### [USER](../Backend/src/main/java/org/api/user/UserResources.java)
 
 `http://25.67.249.190:8080/Chess/chess/user`
@@ -22,9 +25,24 @@
 `http://25.67.249.190:8080/Chess/chess/user/username`
 * PUT => zmeni jmeno (vyzaduje nove username a heslo)
 
+`http://25.67.249.190:8080/Chess/chess/user/challenge`
+* GET => vrati list vsech pending challengi (tech pro tebe)
+* POST => vytvori novou challenge (vyzaduje id druheho hrace)
+
+`http://25.67.249.190:8080/Chess/chess/user/challenge/{id}`
+* PUT => prijme challeng s danym id
+
+* * *
+* * *
 
 ### [LIDLBOARD](../Backend/src/main/java/org/api/leaderboard/LeaderBoardResource.java)
 
+`http://25.67.249.190:8080/Chess/chess/lidlboard/top-50`
+* GET => vrati top 50 uzivatelu podle score
+#
+
+* * *
+* * *
 
 ### [GAME](../Backend/src/main/java/org/api/game/GameResources.java)
 

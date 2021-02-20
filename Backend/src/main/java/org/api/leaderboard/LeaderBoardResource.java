@@ -8,7 +8,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-@Path("Lidlboard")
+@Path("lidlboard")
 public class LeaderBoardResource {
 
     @Inject

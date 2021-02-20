@@ -171,6 +171,4 @@ public class UserResources {
         }
     }
     //endregion
-
-
 }
