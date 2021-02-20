@@ -86,4 +86,10 @@ public class UserDAO {
         u.changePassword(password);
         entityManager.merge(u);
     }
+
+    public void changeUserName(int id, String username) {
+        User u = get(id);
+        u.changeName(username);
+        entityManager.merge(u);
+    }
 }

@@ -78,4 +78,8 @@ public class User {
     public boolean matchPassword(String password) {
         return new PasswordService().comparePassword(password, this.password);
     }
+
+    public void changeName(String username) {
+        this.username = username;
+    }
 }

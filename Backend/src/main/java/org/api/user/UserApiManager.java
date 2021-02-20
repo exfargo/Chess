@@ -66,4 +66,19 @@ public class UserApiManager {
         return !userDAO.getUserByName(username).isEmpty();
     }
 
+    public ResponseMessage changeUserName(User u) {
+        try {
+            if (!isUserWithName(u.getUsername())) {
+                userDAO.changeUserName(u.getId(), u.getUsername());
+                return new ResponseMessage("Username changed successfully");
+            }
+            return new ResponseMessage("Username already in use");
+        } catch (Exception e) {
+            return new ResponseMessage("Something went wrong");
+        }
+    }
+
+    public boolean idMatchesPassword(User u) {
+        return getUserById(u.getId()).matchPassword(u.getPassword());
+    }
 }

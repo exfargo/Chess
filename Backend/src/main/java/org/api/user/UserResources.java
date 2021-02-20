@@ -68,11 +68,22 @@ public class UserResources {
         }
         return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
     }
+
+    @DELETE
+    @Path("authentication")
+    public Response signOut() {
+        if (loggedUser.getLoggedUser() != null) {
+            loggedUser.setLoggedUser(null);
+            return Response.status(200).entity(new ResponseMessage("user signed out")).build();
+        }
+        return Response.status(400).entity(new ResponseMessage("No user is logged in")).build();
+    }
+
     //endregion
 
     //region user/settings
     @DELETE
-    @Path("settings")
+    @Path("delete")
     public Response deleteUser(User u) {
         try {
             if (apiManager.isValidUser(u)) {
@@ -85,7 +96,7 @@ public class UserResources {
     }
 
     @PUT
-    @Path("settings")
+    @Path("password")
     public Response changeUserPassword(User u) {
         try {
             if (apiManager.isValidUser(u)) {
@@ -96,6 +107,18 @@ public class UserResources {
             return Response.status(400).entity("Something went wrong").build();
         }
     }
-    //endregion
 
+    @PUT
+    @Path("username")
+    public Response changeUserName(User u) {
+        try {
+            if (apiManager.idMatchesPassword(u)) {
+                return Response.status(200).entity(apiManager.changeUserName(u)).build();
+            }
+            return Response.status(404).entity(new ResponseMessage("User doesn't exist")).build();
+        } catch (Exception e) {
+            return Response.status(400).entity("Something went wrong").build();
+        }
+    }
+    //endregion
 }
