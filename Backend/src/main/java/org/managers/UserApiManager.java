@@ -1,4 +1,4 @@
-package org.api.user;
+package org.managers;
 
 
 import org.data.dao.UserDAO;

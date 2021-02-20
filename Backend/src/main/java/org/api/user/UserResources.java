@@ -1,7 +1,10 @@
 package org.api.user;
 
 
+import org.data.dao.ChallengeDAO;
+import org.data.entities.Challenge;
 import org.data.entities.User;
+import org.managers.UserApiManager;
 import org.utils.ResponseMessage;
 
 import javax.inject.Inject;
@@ -15,6 +18,9 @@ public class UserResources {
 
     @Inject
     UserApiManager apiManager;
+
+    @Inject
+    ChallengeDAO challengeDAO;
 
     @Inject
     LoggedUser loggedUser;
@@ -121,4 +127,46 @@ public class UserResources {
         }
     }
     //endregion
+
+    @GET
+    @Path("challenge")
+    public Response getChallenges() {
+        if (this.loggedUser.getLoggedUser() == null)
+            return Response.status(404).entity(new ResponseMessage("You must be logged in order to view challenges")).build();
+        try {
+            return Response.status(200).entity(challengeDAO.getChallengesForUser(this.loggedUser.getLoggedUser())).build();
+        } catch (Exception e) {
+            return Response.status(400).entity("Something went wrong").build();
+        }
+    }
+
+    @PUT
+    @Path("challenge/{id}")
+    public Response acceptChallenge(@PathParam("id") int id) {
+        if (this.loggedUser.getLoggedUser() == null)
+            return Response.status(404).entity(new ResponseMessage("You must be logged in order to accept challenges")).build();
+        try {
+            challengeDAO.acceptChallenge(id);
+            return Response.status(200).entity(new ResponseMessage("Challenge accepted successfully")).build();
+        } catch (Exception e) {
+            return Response.status(400).entity("Something went wrong").build();
+        }
+    }
+
+    @POST
+    @Path("challenge")
+    public Response createChallenge(int idChallenged) {
+        if (this.loggedUser.getLoggedUser() == null)
+            return Response.status(404).entity(new ResponseMessage("You must be logged in order to challenge someone")).build();
+        if (this.apiManager.getUserById(idChallenged) == null)
+            return Response.status(404).entity(new ResponseMessage("No such player")).build();
+        try {
+            challengeDAO.save(new Challenge(this.loggedUser.getLoggedUser(), apiManager.getUserById(idChallenged)));
+            return Response.status(200).entity(new ResponseMessage("Player challenged successfully")).build();
+        } catch (Exception e) {
+            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+        }
+    }
+
+
 }
