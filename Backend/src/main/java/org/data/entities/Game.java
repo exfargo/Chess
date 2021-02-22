@@ -29,7 +29,7 @@ public class Game {
     //<editor-fold desc="ID">
     //id for database referencing
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     //</editor-fold>
     //<editor-fold desc="Moves">

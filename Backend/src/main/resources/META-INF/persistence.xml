@@ -6,6 +6,7 @@
 
         <class>org.data.entities.Game</class>
         <class>org.data.entities.User</class>
+        <class>org.data.entities.Challenge</class>
 
         <properties>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
