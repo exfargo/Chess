@@ -69,8 +69,8 @@ public class UserResources {
     @Path("authentication")
     public Response logUser(User user) {
         if (apiManager.isValidUser(user)) {
-            loggedUser.setLoggedUser(apiManager.getNormalizedUser(user));
-            return Response.status(200).build();
+            loggedUser.setLoggedUser(apiManager.getNormalizedUser(user).getId());
+            return Response.status(200).entity(new ResponseMessage("Logged in")).build();
         }
         return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
     }
@@ -105,8 +105,8 @@ public class UserResources {
     @Path("password")
     public Response changeUserPassword(User u) {
         try {
-            if (apiManager.isValidUser(u)) {
-                return Response.status(200).entity(apiManager.changeUserPassword(u)).build();
+            if (apiManager.idMatchesUsername(loggedUser.getLoggedUser().getId(), u)) {
+                return Response.status(200).entity(apiManager.changeUserPassword(loggedUser.getLoggedUser(), u)).build();
             }
             return Response.status(404).entity(new ResponseMessage("User doesn't exist")).build();
         } catch (Exception e) {
@@ -118,8 +118,8 @@ public class UserResources {
     @Path("username")
     public Response changeUserName(User u) {
         try {
-            if (apiManager.idMatchesPassword(u)) {
-                return Response.status(200).entity(apiManager.changeUserName(u)).build();
+            if (apiManager.idMatchesPassword(loggedUser.getLoggedUser().getId(), u)) {
+                return Response.status(200).entity(apiManager.changeUserName(loggedUser.getLoggedUser(), u)).build();
             }
             return Response.status(404).entity(new ResponseMessage("User doesn't exist")).build();
         } catch (Exception e) {

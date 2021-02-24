@@ -72,25 +72,35 @@ public class UserDAO {
     }
 
     public void delete(int id) {
+        entityManager.getTransaction().begin();
         entityManager.remove(get(id));
+        entityManager.getTransaction().commit();
     }
 
     public void changeScore(int id, Long amount) {
+        entityManager.getTransaction().begin();
         User u = get(id);
         u.changePoints(amount);
         entityManager.merge(u);
+        entityManager.getTransaction().commit();
+
     }
 
     public void changePassword(int id, String password) {
+        entityManager.getTransaction().begin();
         User u = get(id);
         u.changePassword(password);
         entityManager.merge(u);
+        entityManager.getTransaction().commit();
+
     }
 
     public void changeUserName(int id, String username) {
+        entityManager.getTransaction().begin();
         User u = get(id);
         u.changeName(username);
         entityManager.merge(u);
+        entityManager.getTransaction().commit();
     }
 
     public List<User> getTop(int top) {
@@ -99,6 +109,11 @@ public class UserDAO {
         Root<User> rootEntry = cq.from(User.class);
         cq.orderBy(cb.desc(rootEntry.get(User_.POINTS)));
         TypedQuery<User> typedQuery = entityManager.createQuery(cq);
-        return typedQuery.getResultList().subList(0, top);
+        List<User> r = typedQuery.getResultList();
+        if (top < r.size()) {
+            return r.subList(0, top);
+        } else {
+            return r;
+        }
     }
 }
