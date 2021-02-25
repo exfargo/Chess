@@ -6,7 +6,7 @@ import org.utils.Pair;
 
 public class Board implements IBoard{
 
-    private final IFigure[][] board = new IFigure[8][8];
+    private IFigure[][] board = new IFigure[8][8];
     private int passX = -1;
     private int passY = -1;
     private boolean whiteCheckMate = false;
@@ -79,6 +79,22 @@ public class Board implements IBoard{
                 }
             }
         }
+    }
+    //copy array
+    public Board(IFigure[][] differentBoard){
+        for (int x = 0;x < 8;x++){
+            for (int y = 0;y < 8;y++){
+
+                try {
+                    this.board[y][x] = (IFigure)  differentBoard[y][x].clone();
+                } catch (CloneNotSupportedException e) {
+                    //lmao proč je lmao považováno za gramaticky správně xd
+                    System.out.println("lmao epický error");
+                }
+
+            }
+        }
+
     }
 
     @Override
@@ -250,9 +266,17 @@ public class Board implements IBoard{
     }
 
 
-    //private boolean ghostTurn(Teams team,Coordinates source,Coordinates traget){
+    public boolean ghostTurn(Teams team,Coordinates source,Coordinates target){
+        Board ghostBoard = new Board(this.board);
+        ghostBoard.movePiece(source,target);
+        this.board = ghostBoard.getBoard();
 
-    //}
+        Coordinates temp = ghostBoard.findFigure("King",team);
+        if (temp != null){
+            return checkCheck(temp,team);
+        }
+        return false;
+    }
 
 
 
