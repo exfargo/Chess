@@ -23,4 +23,8 @@ public class LoggedUser implements Serializable {
     public void setLoggedUser(Integer loggedUserId) {
         this.loggedUserId = loggedUserId;
     }
+
+    public boolean isLogged() {
+        return loggedUserId != null;
+    }
 }

@@ -2,7 +2,6 @@ package org.data.dao;
 
 import org.data.entities.*;
 import org.data.entities.Challenge_;
-import org.data.entities.Game_;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -19,7 +18,7 @@ public class ChallengeDAO {
     @Inject
     private EntityManager entityManager;
 
-    public Challenge get(int id) {
+    public Challenge get(long id) {
         return entityManager.find(Challenge.class, id);
     }
 
@@ -41,8 +40,10 @@ public class ChallengeDAO {
         return typedQuery.getResultList();
     }
 
-    public void acceptChallenge(int id) {
+    public void acceptChallenge(long id) {
+        entityManager.getTransaction().begin();
         get(id).setAccepted(true);
+        entityManager.getTransaction().commit();
     }
 
     public void save(Challenge Challenge) {

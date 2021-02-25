@@ -26,7 +26,8 @@ public class UserResources {
     LoggedUser loggedUser;
 
     @GET
-    public Response getUser(@QueryParam("id") int id) {
+    @Path("{id}")
+    public Response getUser(@PathParam("id") int id) {
         try {
             User u = apiManager.getUserById(id);
             if (u == null) {
@@ -78,7 +79,7 @@ public class UserResources {
     @DELETE
     @Path("authentication")
     public Response signOut() {
-        if (loggedUser.getLoggedUser() != null) {
+        if (this.loggedUser.isLogged()) {
             loggedUser.setLoggedUser(null);
             return Response.status(200).entity(new ResponseMessage("user signed out")).build();
         }
@@ -91,6 +92,9 @@ public class UserResources {
     @DELETE
     @Path("delete")
     public Response deleteUser(User u) {
+        if (!this.loggedUser.isLogged()) {
+            return Response.status(400).entity(new ResponseMessage("You must be logged in order to delete user")).build();
+        }
         try {
             if (apiManager.isValidUser(u)) {
                 return Response.status(200).entity(apiManager.deleteUser(u)).build();
@@ -104,6 +108,9 @@ public class UserResources {
     @PUT
     @Path("password")
     public Response changeUserPassword(User u) {
+        if (!this.loggedUser.isLogged()) {
+            return Response.status(400).entity(new ResponseMessage("You must be logged in order to change password")).build();
+        }
         try {
             if (apiManager.idMatchesUsername(loggedUser.getLoggedUser().getId(), u)) {
                 return Response.status(200).entity(apiManager.changeUserPassword(loggedUser.getLoggedUser(), u)).build();
@@ -117,9 +124,12 @@ public class UserResources {
     @PUT
     @Path("username")
     public Response changeUserName(User u) {
+        if (!this.loggedUser.isLogged()) {
+            return Response.status(400).entity(new ResponseMessage("You must be logged in order to change username")).build();
+        }
         try {
-            if (apiManager.idMatchesPassword(loggedUser.getLoggedUser().getId(), u)) {
-                return Response.status(200).entity(apiManager.changeUserName(loggedUser.getLoggedUser(), u)).build();
+            if (apiManager.idMatchesPassword(this.loggedUser.getLoggedUser().getId(), u)) {
+                return Response.status(200).entity(this.apiManager.changeUserName(this.loggedUser.getLoggedUser(), u)).build();
             }
             return Response.status(404).entity(new ResponseMessage("User doesn't exist")).build();
         } catch (Exception e) {
@@ -132,19 +142,19 @@ public class UserResources {
     @GET
     @Path("challenge")
     public Response getChallenges() {
-        if (this.loggedUser.getLoggedUser() == null)
+        if (!this.loggedUser.isLogged())
             return Response.status(404).entity(new ResponseMessage("You must be logged in order to view challenges")).build();
         try {
             return Response.status(200).entity(challengeDAO.getPendingChallengesForUser(this.loggedUser.getLoggedUser())).build();
         } catch (Exception e) {
-            return Response.status(400).entity("Something went wrong").build();
+            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
         }
     }
 
     @PUT
     @Path("challenge/{id}")
-    public Response acceptChallenge(@PathParam("id") int id) {
-        if (this.loggedUser.getLoggedUser() == null)
+    public Response acceptChallenge(@PathParam("id") long id) {
+        if (!this.loggedUser.isLogged())
             return Response.status(404).entity(new ResponseMessage("You must be logged in order to accept challenges")).build();
         if (challengeDAO.get(id) == null)
             return Response.status(404).entity(new ResponseMessage("No such challenge")).build();
@@ -157,12 +167,15 @@ public class UserResources {
     }
 
     @POST
-    @Path("challenge")
-    public Response createChallenge(int idChallenged) {
-        if (this.loggedUser.getLoggedUser() == null)
+    @Path("{id}/challenge")
+    public Response createChallenge(@PathParam("id") int idChallenged) {
+        if (!this.loggedUser.isLogged())
             return Response.status(404).entity(new ResponseMessage("You must be logged in order to challenge someone")).build();
         if (this.apiManager.getUserById(idChallenged) == null)
             return Response.status(404).entity(new ResponseMessage("No such player")).build();
+        if (idChallenged == this.loggedUser.getLoggedUser().getId()) {
+            return Response.status(400).entity(new ResponseMessage("Cannot challenge yourself")).build();
+        }
         try {
             challengeDAO.save(new Challenge(this.loggedUser.getLoggedUser(), apiManager.getUserById(idChallenged)));
             return Response.status(200).entity(new ResponseMessage("Player challenged successfully")).build();

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="user docs">
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOCS/API.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOCS/API.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,12 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="KotlinMultiplatform">
+    <allAvailableExecutables />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="dzodvreh" />
+  </component>
   <component name="ProjectId" id="1oW3AB9J5hW3aXc5Wp5XzQSfGPQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Strawpoll/Backend" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -57,6 +62,7 @@
       <workItem from="1613755437181" duration="909000" />
       <workItem from="1613807155913" duration="1040000" />
       <workItem from="1613823013859" duration="515000" />
+      <workItem from="1614151305413" duration="3136000" />
     </task>
     <task id="LOCAL-00001" summary="Game package package transfer">
       <created>1613388637852</created>
