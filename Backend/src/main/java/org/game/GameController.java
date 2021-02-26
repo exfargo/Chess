@@ -1,7 +1,6 @@
 package org.game;
 
 import org.game.Figures.Teams;
-import org.utils.Coordinates;
 import org.utils.Pair;
 
 public class GameController implements  IGameController{
@@ -73,10 +72,10 @@ public class GameController implements  IGameController{
             System.out.println();
         }
         System.out.println("--------------");
-        System.out.println("Current player : " + playersTurn.toString());
+        System.out.println("Current player : " +  (board.getCheatMode() ? "yes" : playersTurn.toString()));
         System.out.println("pass : " + board.getPassX() + ", " +board.getPassY() + ", " + board.getPassTeam());
-        System.out.println("White check : "+ board.getWhiteCheckMate());
-        System.out.println("Black check : "+ board.getBlackCheckMate());
+        System.out.println("White check : "+ board.getWhiteCheck());
+        System.out.println("Black check : "+ board.getBlackCheck());
         System.out.println("Winner : " + board.getWinner().toString());
 
     }
