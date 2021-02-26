@@ -27,8 +27,8 @@ public class TestovaciSunka {
             System.out.println("Target :");
             arg3 = sc.nextInt();
             arg4 = sc.nextInt();
-            //g.makeMove(new Pair<>(arg1, arg2), new Pair<>(arg3, arg4), (byte) 1);
-            ((Board)g.getBoard()).ghostTurn(Teams.White,new Coordinates(arg1,arg2),new Coordinates(arg3,arg4));
+            g.makeMove(new Pair<>(arg1, arg2), new Pair<>(arg3, arg4));
+            //((Board)g.getBoard()).ghostTurn(Teams.White,new Coordinates(arg1,arg2),new Coordinates(arg3,arg4));
             g.printBoard();
         }
     }

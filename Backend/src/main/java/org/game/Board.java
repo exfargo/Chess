@@ -13,6 +13,8 @@ public class Board implements IBoard{
     private boolean blackCheckMate = false;
     private Teams winner = Teams.Empty;
     private Teams passTeam = Teams.Empty;
+    //makes players ignore turn order
+    private boolean cheatMode = false;
 
     public boolean getWhiteCheckMate(){
         return whiteCheckMate;
@@ -107,7 +109,7 @@ public class Board implements IBoard{
         return board[location.second()][location.first()];
     }
 
-    public boolean movePiece(Pair<Integer, Integer> source, Pair<Integer, Integer> target){
+    public boolean movePiece(Pair<Integer, Integer> source, Pair<Integer, Integer> target,Teams playingTeam){
         /*
           nekdy mít promenou navíc pomáhá čitelnosti kódu
           možná mě to melo napadnout dřív
@@ -119,7 +121,8 @@ public class Board implements IBoard{
         //hledí na : move validity ,los a friendly fire
         if (board[source.second()][source.first()].checkMoveValidity(source,target)
         && (board[source.second()][source.first()].getType().equals("Knight") || checkLos(source,target))
-        && board[source.second()][source.first()].getOwner() != board[target.second()][target.first()].getOwner()){
+        && board[source.second()][source.first()].getOwner() != board[target.second()][target.first()].getOwner()
+        && (selectedPiece.getOwner() == playingTeam || cheatMode)){
 
             //pawn shenanigans
             if (board[source.second()][source.first()].getType().equals("Pawn")) {
@@ -268,7 +271,7 @@ public class Board implements IBoard{
 
     public boolean ghostTurn(Teams team,Coordinates source,Coordinates target){
         Board ghostBoard = new Board(this.board);
-        ghostBoard.movePiece(source,target);
+        ghostBoard.movePiece(source,target,team);
         this.board = ghostBoard.getBoard();
 
         Coordinates temp = ghostBoard.findFigure("King",team);
