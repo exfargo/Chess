@@ -4,6 +4,7 @@ package org.api.user;
 import org.data.dao.ChallengeDAO;
 import org.data.entities.Challenge;
 import org.data.entities.User;
+import org.managers.GameManager;
 import org.managers.UserApiManager;
 import org.utils.ResponseMessage;
 
@@ -21,7 +22,8 @@ public class UserResources {
 
     @Inject
     ChallengeDAO challengeDAO;
-
+    @Inject
+    GameManager gameManager;
     @Inject
     LoggedUser loggedUser;
 
@@ -149,7 +151,7 @@ public class UserResources {
         if (!this.loggedUser.isLogged())
             return Response.status(404).entity(new ResponseMessage("You must be logged in order to view challenges")).build();
         try {
-            return Response.status(200).entity(challengeDAO.getPendingChallengesForUser(this.loggedUser.getLoggedUser())).build();
+            return Response.status(200).entity(challengeDAO.getChallengesForUser(this.loggedUser.getLoggedUser())).build();
         } catch (Exception e) {
             return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
         }
@@ -164,6 +166,7 @@ public class UserResources {
             return Response.status(404).entity(new ResponseMessage("No such challenge")).build();
         try {
             challengeDAO.acceptChallenge(id);
+            gameManager.matchChallenges();
             return Response.status(200).entity(new ResponseMessage("Challenge accepted successfully")).build();
         } catch (Exception e) {
             return Response.status(400).entity("Something went wrong").build();

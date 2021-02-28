@@ -21,7 +21,7 @@ public class GameDAO {
     @Inject
     private EntityManager entityManager;
 
-    public Game get(int id) {
+    public Game get(long id) {
         return entityManager.find(Game.class, id);
     }
 
@@ -30,6 +30,7 @@ public class GameDAO {
         CriteriaQuery<Game> cq = cb.createQuery(Game.class);
         Root<Game> rootEntry = cq.from(Game.class);
         cq.select(rootEntry).where(cb.equal(rootEntry.get(Game_.user1), user));
+        //TODO add user2 clause
         TypedQuery<Game> typedQuery = entityManager.createQuery(cq);
         return typedQuery.getResultList();
     }
@@ -47,7 +48,7 @@ public class GameDAO {
         entityManager.getTransaction().commit();
     }
 
-    public void writeMove(int id, Move move) {
+    public void writeMove(long id, Move move) {
         entityManager.getTransaction().begin();
         Game g = get(id);
         g.writeMove(move);

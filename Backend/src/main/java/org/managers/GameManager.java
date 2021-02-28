@@ -1,43 +1,61 @@
 package org.managers;
 
+import org.data.dao.ChallengeDAO;
 import org.data.dao.GameDAO;
+import org.data.entities.Challenge;
 import org.data.entities.Game;
 import org.data.entities.Move;
 import org.data.entities.User;
 import org.game.GameController;
-import org.game.IGameController;
 import org.utils.Pair;
+import org.utils.Utils;
 
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import java.util.LinkedList;
+import java.util.List;
 
-@RequestScoped
+@ApplicationScoped
 public class GameManager {
 
     @Inject
     GameDAO gameDAO;
+    @Inject
+    ChallengeDAO challengeDAO;
 
-    IGameController gameController;
+    @Inject
+    GameControllerPool gameControllerPool;
 
-    public boolean createGame(User u1, User u2) {
-        try {
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
+    public long createGame(User u1, User u2) {
+        Game g = new Game(new Pair<>(u1, u2));
+        gameDAO.save(g);
+        gameControllerPool.addController(g.getId(), new GameController());
+        return g.getId();
     }
 
-    public Game getGame(int id) {
+    public Game getGame(long id) {
         return gameDAO.get(id);
     }
 
-    public void writeMove(int id, Move move) {
+    public void makeMove(long id, Move move) {
+        gameControllerPool.retrieveController(id).makeMove(new Pair<>(move.getxSource(), move.getySource()), new Pair<>(move.getxTarget(), move.getyTarget()));
         gameDAO.writeMove(id, move);
     }
 
-    public boolean isYourTurn() {
-        //TODO implement getMove()
-        return true;
-        //return gameController.getMove();
+    public List<Long> getForUser(User user) {
+        return Utils.extractIds(gameDAO.getGameWherePlayer(user));
+    }
+
+    public void matchChallenges() {
+        List<Challenge> toDelete = new LinkedList<>();
+        for (Challenge c : challengeDAO.getAll()) {
+            if (c.isAccepted()) {
+                toDelete.add(c);
+                this.createGame(c.getChallenger(), c.getChallenged());
+            }
+        }
+        for (Challenge c : toDelete) {
+            challengeDAO.clearChallenge(c);
+        }
     }
 }

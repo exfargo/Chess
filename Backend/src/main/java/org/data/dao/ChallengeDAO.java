@@ -22,7 +22,7 @@ public class ChallengeDAO {
         return entityManager.find(Challenge.class, id);
     }
 
-    public List<Challenge> getPendingChallengesForUser(User user) {
+    public List<Challenge> getChallengesForUser(User user) {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<Challenge> cq = cb.createQuery(Challenge.class);
         Root<Challenge> rootEntry = cq.from(Challenge.class);
@@ -31,7 +31,7 @@ public class ChallengeDAO {
         return typedQuery.getResultList();
     }
 
-    public List<Challenge> getPendingChallengesByUser(User user) {
+    public List<Challenge> getChallengesByUser(User user) {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<Challenge> cq = cb.createQuery(Challenge.class);
         Root<Challenge> rootEntry = cq.from(Challenge.class);
@@ -46,9 +46,22 @@ public class ChallengeDAO {
         entityManager.getTransaction().commit();
     }
 
-    public void save(Challenge Challenge) {
+    public void save(Challenge challenge) {
         entityManager.getTransaction().begin();
-        entityManager.persist(Challenge);
+        entityManager.persist(challenge);
+        entityManager.getTransaction().commit();
+    }
+
+    public List<Challenge> getAll() {
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Challenge> cq = cb.createQuery(Challenge.class);
+        TypedQuery<Challenge> typedQuery = entityManager.createQuery(cq);
+        return typedQuery.getResultList();
+    }
+
+    public void clearChallenge(Challenge challenge) {
+        entityManager.getTransaction().begin();
+        entityManager.remove(challenge);
         entityManager.getTransaction().commit();
     }
 }
