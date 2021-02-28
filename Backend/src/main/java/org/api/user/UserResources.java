@@ -79,11 +79,15 @@ public class UserResources {
     @DELETE
     @Path("authentication")
     public Response signOut() {
-        if (this.loggedUser.isLogged()) {
-            loggedUser.setLoggedUser(null);
-            return Response.status(200).entity(new ResponseMessage("user signed out")).build();
+        try {
+            if (this.loggedUser.isLogged()) {
+                loggedUser.setLoggedUser(null);
+                return Response.status(200).entity(new ResponseMessage("user signed out")).build();
+            }
+            return Response.status(404).entity(new ResponseMessage("No user is logged in")).build();
+        } catch (Exception e) {
+            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
         }
-        return Response.status(400).entity(new ResponseMessage("No user is logged in")).build();
     }
 
     //endregion

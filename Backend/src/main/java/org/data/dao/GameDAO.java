@@ -3,6 +3,7 @@ package org.data.dao;
 
 import org.data.entities.Game;
 import org.data.entities.Game_;
+import org.data.entities.Move;
 import org.data.entities.User;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -43,6 +44,14 @@ public class GameDAO {
     public void save(Game game) {
         entityManager.getTransaction().begin();
         entityManager.persist(game);
+        entityManager.getTransaction().commit();
+    }
+
+    public void writeMove(int id, Move move) {
+        entityManager.getTransaction().begin();
+        Game g = get(id);
+        g.writeMove(move);
+        entityManager.merge(g);
         entityManager.getTransaction().commit();
     }
 }
