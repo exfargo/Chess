@@ -271,8 +271,7 @@ public class Board implements IBoard{
 
     public boolean ghostTurn(Teams team,Coordinates source,Coordinates target){
         Board ghostBoard = new Board(this.board);
-        ghostBoard.movePiece(source,target,team);
-
+        ghostBoard.teleportPiece(source,target);
         Coordinates temp = ghostBoard.findFigure("King",team);
         if (temp != null){
             return ghostBoard.checkCheck(temp,team);
@@ -326,10 +325,9 @@ public class Board implements IBoard{
                 && (board[source.second()][source.first()].getType().equals("Knight") || checkLos(source,target))
                 && board[source.second()][source.first()].getOwner() != board[target.second()][target.first()].getOwner()
                 && (selectedPiece.getOwner() == playingTeam || cheatMode);
-
-        if (output == true && (whiteCheck || blackCheck)){
+        if (output){
             //pair cannot be cast to coordinates :I
-            output = ghostTurn(playingTeam,new Coordinates(source.first(),source.second()),new Coordinates(target.first(),target.second()));
+            output = !ghostTurn(playingTeam,new Coordinates(source.first(),source.second()),new Coordinates(target.first(),target.second()));
         }
 
         return output;
