@@ -55,6 +55,8 @@ public class ChallengeDAO {
     public List<Challenge> getAll() {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<Challenge> cq = cb.createQuery(Challenge.class);
+        Root<Challenge> rootEntry = cq.from(Challenge.class);
+        cq.select(rootEntry).where(cb.equal(rootEntry.get(Challenge_.id), rootEntry.get(Challenge_.id)));
         TypedQuery<Challenge> typedQuery = entityManager.createQuery(cq);
         return typedQuery.getResultList();
     }

@@ -7,13 +7,12 @@ import org.managers.GameManager;
 import org.utils.ResponseMessage;
 
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("game")
+@Produces(MediaType.APPLICATION_JSON)
 public class GameResources {
 
     @Inject
@@ -22,6 +21,7 @@ public class GameResources {
     @Inject
     LoggedUser loggedUser;
 
+    @GET
     @Path("/all")
     public Response getGames() {
         try {

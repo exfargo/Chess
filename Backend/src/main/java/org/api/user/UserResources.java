@@ -144,6 +144,13 @@ public class UserResources {
     }
     //endregion
 
+    @DELETE
+    @Path("challenge/{id}/del")
+    public Response revokeChallenge() {
+        //TODO revoke/decline challenge
+        return Response.status(400).entity(new ResponseMessage("NOT IMPLEMENTED YET!")).build();
+    }
+
     //region challenge
     @GET
     @Path("challenge")
@@ -164,12 +171,15 @@ public class UserResources {
             return Response.status(404).entity(new ResponseMessage("You must be logged in order to accept challenges")).build();
         if (challengeDAO.get(id) == null)
             return Response.status(404).entity(new ResponseMessage("No such challenge")).build();
+        if (this.challengeDAO.get(id).isAccepted()) {
+            return Response.status(200).entity(new ResponseMessage("Challenge already accepted")).build();
+        }
         try {
             challengeDAO.acceptChallenge(id);
             gameManager.matchChallenges();
             return Response.status(200).entity(new ResponseMessage("Challenge accepted successfully")).build();
         } catch (Exception e) {
-            return Response.status(400).entity("Something went wrong").build();
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
     }
 
