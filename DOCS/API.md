@@ -39,10 +39,18 @@
 
 `http://25.67.249.190:8080/Chess/chess/lidlboard/top-50`
 * GET => vrati top 50 uzivatelu podle score
-#
+
 
 * * *
 * * *
 
 ### [GAME](../Backend/src/main/java/org/api/game/GameResources.java)
+`http://25.67.249.190:8080/Chess/chess/game/all`
+* GET => vrati idcka vsech prihlasenym hracem hratelnych her
+
+`http://25.67.249.190:8080/Chess/chess/game/{id}/r`
+* GET => vrati ??? JA NEVIM CO TO DELA HELP
+
+`http://25.67.249.190:8080/Chess/chess/game/{id}/play`
+* POST => provede tah v dane hre, vyzaduje id (v pathe) a [move](../Backend/src/main/java/org/data/entities/Move.java) objekt
 
