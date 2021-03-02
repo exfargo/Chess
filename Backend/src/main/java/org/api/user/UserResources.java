@@ -37,7 +37,7 @@ public class UserResources {
             }
             return Response.status(200).entity(u).build();
         } catch (Exception e) {
-            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
     }
 
@@ -51,7 +51,7 @@ public class UserResources {
             else
                 return Response.status(404).entity(new ResponseMessage("User is not logged in")).build();
         } catch (NullPointerException e) {
-            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
     }
 
@@ -64,18 +64,22 @@ public class UserResources {
             }
             return Response.status(200).entity(apiManager.createUser(u)).build();
         } catch (Exception e) {
-            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
     }
 
     @POST
     @Path("authentication")
     public Response logUser(User user) {
-        if (apiManager.isValidUser(user)) {
-            loggedUser.setLoggedUser(apiManager.getNormalizedUser(user).getId());
-            return Response.status(200).entity(new ResponseMessage("Logged in")).build();
+        try {
+            if (apiManager.isValidUser(user)) {
+                loggedUser.setLoggedUser(apiManager.getNormalizedUser(user).getId());
+                return Response.status(200).entity(new ResponseMessage("Logged in")).build();
+            }
+        } catch (Exception e) {
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
-        return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+        return Response.status(420).entity(new ResponseMessage("You WATAFAK")).build();
     }
 
     @DELETE
@@ -88,7 +92,7 @@ public class UserResources {
             }
             return Response.status(404).entity(new ResponseMessage("No user is logged in")).build();
         } catch (Exception e) {
-            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
     }
 
@@ -160,7 +164,7 @@ public class UserResources {
         try {
             return Response.status(200).entity(challengeDAO.getChallengesForUser(this.loggedUser.getLoggedUser())).build();
         } catch (Exception e) {
-            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
     }
 
@@ -197,7 +201,7 @@ public class UserResources {
             challengeDAO.save(new Challenge(this.loggedUser.getLoggedUser(), apiManager.getUserById(idChallenged)));
             return Response.status(200).entity(new ResponseMessage("Player challenged successfully")).build();
         } catch (Exception e) {
-            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
     }
     //endregion

@@ -31,7 +31,7 @@ public class GameResources {
                 return Response.status(404).entity(new ResponseMessage("User not logged")).build();
             }
         } catch (Exception e) {
-            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
     }
 
@@ -39,13 +39,16 @@ public class GameResources {
     @PUT
     public Response makeMove(@PathParam("id") long id, Move move) {
         try {
+            if (move == null) {
+                return Response.status(400).entity(new ResponseMessage("Missing move entity!")).build();
+            }
             if (gameManager.getGame(id) != null) {
                 gameManager.makeMove(id, move);
                 return Response.status(200).entity(new ResponseMessage("Move successful")).build();
             }
             return Response.status(404).entity(new ResponseMessage("No game with id : " + id)).build();
         } catch (Exception e) {
-            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
     }
 
@@ -59,7 +62,7 @@ public class GameResources {
             }
             return Response.status(404).entity(new ResponseMessage("No game with id : " + id)).build();
         } catch (Exception e) {
-            return Response.status(400).entity(new ResponseMessage("Something went wrong")).build();
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
     }
 

@@ -33,7 +33,7 @@ public class UserApiManager {
             userDAO.delete(this.getNormalizedUser(u).getId());
             return new ResponseMessage("User deleted successfully");
         } catch (Exception e) {
-            return new ResponseMessage("Something went wrong");
+            return new ResponseMessage(e.toString());
         }
     }
 
@@ -42,7 +42,7 @@ public class UserApiManager {
             userDAO.changePassword(loggedUser.getId(), u.getPassword());
             return new ResponseMessage("Password changed successfully");
         } catch (Exception e) {
-            return new ResponseMessage("Something went wrong");
+            return new ResponseMessage(e.toString());
         }
     }
 
@@ -75,7 +75,7 @@ public class UserApiManager {
             }
             return new ResponseMessage("Username already in use");
         } catch (Exception e) {
-            return new ResponseMessage("Something went wrong");
+            return new ResponseMessage(e.toString());
         }
     }
 

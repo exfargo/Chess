@@ -29,6 +29,7 @@ public class GameManager {
     public long createGame(User u1, User u2) {
         Game g = new Game(new Pair<>(u1, u2));
         gameDAO.save(g);
+        //TODO fix this later (wait for GameController.init() implementation)
         gameControllerPool.addController(g.getId(), new GameController());
         return g.getId();
     }
