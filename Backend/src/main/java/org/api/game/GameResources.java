@@ -3,6 +3,7 @@ package org.api.game;
 import org.api.user.LoggedUser;
 import org.data.entities.Game;
 import org.data.entities.Move;
+import org.game.Figures.Teams;
 import org.managers.GameManager;
 import org.utils.ResponseMessage;
 
@@ -43,10 +44,14 @@ public class GameResources {
                 return Response.status(400).entity(new ResponseMessage("Missing move entity!")).build();
             }
             if (gameManager.getGame(id) != null) {
-                gameManager.makeMove(id, move);
-                return Response.status(200).entity(new ResponseMessage("Move successful")).build();
+                return Response.status(404).entity(new ResponseMessage("No game with id : " + id)).build();
             }
-            return Response.status(404).entity(new ResponseMessage("No game with id : " + id)).build();
+            if ((gameManager.getGame(id).getUser1().getId() == loggedUser.getLoggedUser().getId() && gameManager.getTurn(id) != Teams.White)
+                    || gameManager.getGame(id).getUser2().getId() == loggedUser.getLoggedUser().getId() && gameManager.getTurn(id) != Teams.Black) {
+                return Response.status(404).entity(new ResponseMessage("Not your turn")).build();
+            }
+            gameManager.makeMove(id, move);
+            return Response.status(200).entity(new ResponseMessage("Moved successfully")).build();
         } catch (Exception e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }

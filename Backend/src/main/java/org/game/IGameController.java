@@ -1,5 +1,6 @@
 package org.game;
 
+import org.game.Figures.Teams;
 import org.utils.Pair;
 
 /*
@@ -29,4 +30,7 @@ public interface IGameController {
      * @return Board entity
      */
     IBoard getBoard();
+
+    Teams getPlayersTurn();
+
 }

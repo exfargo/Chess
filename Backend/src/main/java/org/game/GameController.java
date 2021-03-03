@@ -36,6 +36,11 @@ public class GameController implements  IGameController{
         return this.board;
     }
 
+    @Override
+    public Teams getPlayersTurn() {
+        return playersTurn;
+    }
+
     //pouze pro testy
 
     /**

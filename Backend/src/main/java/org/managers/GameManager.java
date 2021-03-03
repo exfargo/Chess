@@ -6,6 +6,7 @@ import org.data.entities.Challenge;
 import org.data.entities.Game;
 import org.data.entities.Move;
 import org.data.entities.User;
+import org.game.Figures.Teams;
 import org.game.GameController;
 import org.utils.Pair;
 import org.utils.Utils;
@@ -59,4 +60,9 @@ public class GameManager {
             challengeDAO.clearChallenge(c);
         }
     }
+
+    public Teams getTurn(long id) {
+        return gameControllerPool.retrieveController(id).getPlayersTurn();
+    }
+
 }
