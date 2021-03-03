@@ -29,13 +29,4 @@ public interface IGameController {
      * @return Board entity
      */
     IBoard getBoard();
-
-    /**
-     * constructor invoker,
-     * creates a new instance of the game
-     *
-     * @return itself
-     */
-    static IGameController initializeGame();
-
 }

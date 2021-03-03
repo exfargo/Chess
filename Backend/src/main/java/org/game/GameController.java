@@ -24,7 +24,6 @@ public class GameController implements  IGameController{
         }else {
             return false;
         }
-
     }
 
     @Override
@@ -35,15 +34,6 @@ public class GameController implements  IGameController{
     @Override
     public IBoard getBoard() {
         return this.board;
-    }
-
-    @Override
-    public static IGameController initializeGame() {
-        GameController g = new GameController();
-        g.setBoard(new Board());
-        g.setPlayersTurn(Teams.White);
-
-        return g;
     }
 
     //pouze pro testy
