@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="user docs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/game/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/game/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/game/IGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/game/IGameController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +47,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

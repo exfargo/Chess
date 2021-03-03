@@ -38,10 +38,12 @@ public class GameController implements  IGameController{
     }
 
     @Override
-    public IGameController initializeGame() {
-        this.board = new Board();
-        playersTurn = Teams.White;
-        return this;
+    public static IGameController initializeGame() {
+        GameController g = new GameController();
+        g.setBoard(new Board());
+        g.setPlayersTurn(Teams.White);
+
+        return g;
     }
 
     //pouze pro testy
@@ -78,5 +80,12 @@ public class GameController implements  IGameController{
         System.out.println("Black check : "+ board.getBlackCheck());
         System.out.println("Winner : " + board.getWinner().toString());
 
+    }
+
+    public void setPlayersTurn(Teams team){
+        this.playersTurn = team;
+    }
+    public void setBoard(Board board){
+        this.board = board;
     }
 }

@@ -36,6 +36,6 @@ public interface IGameController {
      *
      * @return itself
      */
-    IGameController initializeGame();
+    static IGameController initializeGame();
 
 }
