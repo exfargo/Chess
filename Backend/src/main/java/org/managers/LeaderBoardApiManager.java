@@ -16,4 +16,8 @@ public class LeaderBoardApiManager {
     public List<User> getLeaderboardTop50() {
         return userDAO.getTop(50);
     }
+
+    public List<User> getLeaderboardPleb50() {
+        return userDAO.getPleb(50);
+    }
 }

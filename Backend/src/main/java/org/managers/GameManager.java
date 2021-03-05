@@ -23,7 +23,6 @@ public class GameManager {
     GameDAO gameDAO;
     @Inject
     ChallengeDAO challengeDAO;
-
     @Inject
     GameControllerPool gameControllerPool;
 
@@ -48,17 +47,10 @@ public class GameManager {
         return Utils.extractIds(gameDAO.getGameWherePlayer(user));
     }
 
-    public void matchChallenges() {
-        List<Challenge> toDelete = new LinkedList<>();
-        for (Challenge c : challengeDAO.getAll()) {
-            if (c.isAccepted()) {
-                toDelete.add(c);
-                this.createGame(c.getChallenger(), c.getChallenged());
-            }
-        }
-        for (Challenge c : toDelete) {
-            challengeDAO.clearChallenge(c);
-        }
+    public void matchChallenge(long id) {
+        Challenge c = challengeDAO.get(id);
+        this.createGame(c.getChallenger(), c.getChallenged());
+        challengeDAO.clearChallenge(c);
     }
 
     public Teams getTurn(long id) {

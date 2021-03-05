@@ -26,4 +26,15 @@ public class LeaderBoardResource {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
     }
+
+    @GET
+    @Path("pleb-50")
+    public Response getLeaderboardPleb50() {
+        try {
+            return Response.status(200).entity(apiManager.getLeaderboardPleb50()).build();
+        } catch (Exception e) {
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
+        }
+    }
+
 }
