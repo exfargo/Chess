@@ -29,19 +29,20 @@ public class UserApiManager {
 
     public ResponseMessage deleteUser(User u) {
         try {
+            getNormalizedUser(u).print();
             userDAO.delete(this.getNormalizedUser(u).getId());
             return new ResponseMessage("User deleted successfully");
         } catch (Exception e) {
-            return new ResponseMessage("Something went wrong");
+            return new ResponseMessage(e.toString());
         }
     }
 
-    public ResponseMessage changeUserPassword(User u) {
+    public ResponseMessage changeUserPassword(User loggedUser, User u) {
         try {
-            userDAO.changePassword(u.getId(), u.getPassword());
+            userDAO.changePassword(loggedUser.getId(), u.getPassword());
             return new ResponseMessage("Password changed successfully");
         } catch (Exception e) {
-            return new ResponseMessage("Something went wrong");
+            return new ResponseMessage(e.toString());
         }
     }
 
@@ -66,19 +67,23 @@ public class UserApiManager {
         return !userDAO.getUserByName(username).isEmpty();
     }
 
-    public ResponseMessage changeUserName(User u) {
+    public ResponseMessage changeUserName(User loggedUser, User u) {
         try {
             if (!isUserWithName(u.getUsername())) {
-                userDAO.changeUserName(u.getId(), u.getUsername());
+                userDAO.changeUserName(loggedUser.getId(), u.getUsername());
                 return new ResponseMessage("Username changed successfully");
             }
             return new ResponseMessage("Username already in use");
         } catch (Exception e) {
-            return new ResponseMessage("Something went wrong");
+            return new ResponseMessage(e.toString());
         }
     }
 
-    public boolean idMatchesPassword(User u) {
-        return getUserById(u.getId()).matchPassword(u.getPassword());
+    public boolean idMatchesPassword(int id, User u) {
+        return getUserById(id).matchPassword(u.getPassword());
+    }
+
+    public boolean idMatchesUsername(int id, User u) {
+        return getUserById(id).getUsername().equals(u.getUsername());
     }
 }

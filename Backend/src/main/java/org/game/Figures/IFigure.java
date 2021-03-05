@@ -28,5 +28,5 @@ public interface IFigure {
      */
     boolean checkMoveValidity(Pair<Integer, Integer> cords1, Pair<Integer, Integer> cords2);
 
-
+    public Object clone() throws CloneNotSupportedException;
 }

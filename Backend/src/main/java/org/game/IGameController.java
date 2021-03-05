@@ -1,5 +1,6 @@
 package org.game;
 
+import org.game.Figures.Teams;
 import org.utils.Pair;
 
 /*
@@ -12,10 +13,9 @@ public interface IGameController {
      *
      * @param source <x,y> of original tile
      * @param target <x,y> of target tile
-     * @param player 0 is null, 1 is white, 2 is black
      * @return true if move was successful else false
      */
-    boolean makeMove(Pair<Integer, Integer> source, Pair<Integer, Integer> target, byte player);
+    boolean makeMove(Pair<Integer, Integer> source, Pair<Integer, Integer> target);
 
     /**
      * checks if both kings are alive, if not, returns winning player
@@ -31,12 +31,6 @@ public interface IGameController {
      */
     IBoard getBoard();
 
-    /**
-     * constructor invoker,
-     * creates a new instance of the game
-     *
-     * @return itself
-     */
-    IGameController initializeGame();
+    Teams getPlayersTurn();
 
 }

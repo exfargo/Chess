@@ -2,7 +2,7 @@ package org.game.Figures;
 
 import org.utils.Pair;
 
-public class Pawn implements IFigure {
+public class Pawn implements IFigure,Cloneable {
     private final Teams owner;
 
     public Pawn(Teams owner) {
@@ -45,6 +45,9 @@ public class Pawn implements IFigure {
 
         }
         return false;
+    }
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
     }
 
 }

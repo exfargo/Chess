@@ -2,7 +2,7 @@ package org.game.Figures;
 
 import org.utils.Pair;
 
-public class King implements IFigure, IHradable {
+public class King implements IFigure, IHradable, Cloneable {
     private final Teams owner;
     private boolean hradovaniAble = true;
 
@@ -40,4 +40,9 @@ public class King implements IFigure, IHradable {
     public boolean isHradAble(){
         return hradovaniAble;
     }
+
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
+
 }

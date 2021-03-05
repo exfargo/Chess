@@ -1,18 +1,29 @@
 package org.game;
 
 import org.game.Figures.Teams;
-import org.utils.Coordinates;
 import org.utils.Pair;
 
 public class GameController implements  IGameController{
 
-    private final Board board = new Board();
+    private Board board = new Board();
+    private Teams playersTurn = Teams.White;
 
 
     @Override
-    public boolean makeMove(Pair<Integer, Integer> source, Pair<Integer, Integer> target, byte player)
+    public boolean makeMove(Pair<Integer, Integer> source, Pair<Integer, Integer> target)
     {
-        return board.movePiece(source,target);
+        if (board.movePiece(source,target,playersTurn)){
+            //switch player turn
+            if (playersTurn == Teams.White){
+                playersTurn = Teams.Black;
+            } else {
+                playersTurn = Teams.White;
+            }
+
+            return true;
+        }else {
+            return false;
+        }
     }
 
     @Override
@@ -26,9 +37,8 @@ public class GameController implements  IGameController{
     }
 
     @Override
-    public IGameController initializeGame() {
-        if (false) System.out.println("xd");
-        return null;
+    public Teams getPlayersTurn() {
+        return playersTurn;
     }
 
     //pouze pro testy
@@ -59,10 +69,18 @@ public class GameController implements  IGameController{
             System.out.println();
         }
         System.out.println("--------------");
+        System.out.println("Current player : " +  (board.getCheatMode() ? "yes" : playersTurn.toString()));
         System.out.println("pass : " + board.getPassX() + ", " +board.getPassY() + ", " + board.getPassTeam());
-        System.out.println("White check : "+ board.getWhiteCheckMate());
-        System.out.println("Black check : "+ board.getBlackCheckMate());
+        System.out.println("White check : "+ board.getWhiteCheck());
+        System.out.println("Black check : "+ board.getBlackCheck());
         System.out.println("Winner : " + board.getWinner().toString());
 
+    }
+
+    public void setPlayersTurn(Teams team){
+        this.playersTurn = team;
+    }
+    public void setBoard(Board board){
+        this.board = board;
     }
 }

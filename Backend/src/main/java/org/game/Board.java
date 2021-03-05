@@ -6,20 +6,25 @@ import org.utils.Pair;
 
 public class Board implements IBoard{
 
-    private final IFigure[][] board = new IFigure[8][8];
+    private IFigure[][] board = new IFigure[8][8];
     private int passX = -1;
     private int passY = -1;
-    private boolean whiteCheckMate = false;
-    private boolean blackCheckMate = false;
+    private boolean whiteCheck = false;
+    private boolean blackCheck = false;
     private Teams winner = Teams.Empty;
     private Teams passTeam = Teams.Empty;
+    //makes players ignore turn order
+    private boolean cheatMode = true;
 
-    public boolean getWhiteCheckMate(){
-        return whiteCheckMate;
+    public boolean getCheatMode(){
+        return cheatMode;
     }
 
-    public boolean getBlackCheckMate(){
-        return blackCheckMate;
+    public boolean getWhiteCheck(){
+        return whiteCheck;
+    }
+    public boolean getBlackCheck(){
+        return blackCheck;
     }
 
     public Board(){
@@ -80,6 +85,22 @@ public class Board implements IBoard{
             }
         }
     }
+    //copy array
+    public Board(IFigure[][] differentBoard){
+        for (int x = 0;x < 8;x++){
+            for (int y = 0;y < 8;y++){
+
+                try {
+                    this.board[y][x] = (IFigure)  differentBoard[y][x].clone();
+                } catch (CloneNotSupportedException e) {
+                    //lmao proč je lmao považováno za gramaticky správně xd
+                    System.out.println("lmao epický error");
+                }
+
+            }
+        }
+
+    }
 
     @Override
     public IFigure[][] getBoard() {
@@ -91,7 +112,7 @@ public class Board implements IBoard{
         return board[location.second()][location.first()];
     }
 
-    public boolean movePiece(Pair<Integer, Integer> source, Pair<Integer, Integer> target){
+    public boolean movePiece(Pair<Integer, Integer> source, Pair<Integer, Integer> target,Teams playingTeam){
         /*
           nekdy mít promenou navíc pomáhá čitelnosti kódu
           možná mě to melo napadnout dřív
@@ -100,10 +121,8 @@ public class Board implements IBoard{
         IFigure selectedPiece = board[source.second()][source.first()];
 
 
-        //hledí na : move validity ,los a friendly fire
-        if (board[source.second()][source.first()].checkMoveValidity(source,target)
-        && (board[source.second()][source.first()].getType().equals("Knight") || checkLos(source,target))
-        && board[source.second()][source.first()].getOwner() != board[target.second()][target.first()].getOwner()){
+        //hledí na : move validity, los, friendly fire a tahy
+        if (canMove(source,target,playingTeam,selectedPiece)){
 
             //pawn shenanigans
             if (board[source.second()][source.first()].getType().equals("Pawn")) {
@@ -210,8 +229,8 @@ public class Board implements IBoard{
         passY = -1;
         passTeam = Teams.Empty;
 
-        whiteCheckMate = checkCheck(findFigure("King",Teams.White),Teams.White);
-        blackCheckMate = checkCheck(findFigure("King",Teams.Black),Teams.Black);
+        whiteCheck = checkCheck(findFigure("King",Teams.White),Teams.White);
+        blackCheck = checkCheck(findFigure("King",Teams.Black),Teams.Black);
 
     }
 
@@ -250,9 +269,15 @@ public class Board implements IBoard{
     }
 
 
-    //private boolean ghostTurn(Teams team,Coordinates source,Coordinates traget){
-
-    //}
+    public boolean ghostTurn(Teams team,Coordinates source,Coordinates target){
+        Board ghostBoard = new Board(this.board);
+        ghostBoard.teleportPiece(source,target);
+        Coordinates temp = ghostBoard.findFigure("King",team);
+        if (temp != null){
+            return ghostBoard.checkCheck(temp,team);
+        }
+        return false;
+    }
 
 
 
@@ -292,5 +317,19 @@ public class Board implements IBoard{
 
     public Teams getWinner(){
         return winner;
+    }
+
+    //přemístil šílenost sem
+    private boolean canMove(Pair<Integer, Integer> source, Pair<Integer, Integer> target,Teams playingTeam, IFigure selectedPiece){
+        boolean output = board[source.second()][source.first()].checkMoveValidity(source,target)
+                && (board[source.second()][source.first()].getType().equals("Knight") || checkLos(source,target))
+                && board[source.second()][source.first()].getOwner() != board[target.second()][target.first()].getOwner()
+                && (selectedPiece.getOwner() == playingTeam || cheatMode);
+        if (output){
+            //pair cannot be cast to coordinates :I
+            output = !ghostTurn(playingTeam,new Coordinates(source.first(),source.second()),new Coordinates(target.first(),target.second()));
+        }
+
+        return output;
     }
 }

@@ -3,6 +3,7 @@ package org.data.dao;
 
 import org.data.entities.Game;
 import org.data.entities.Game_;
+import org.data.entities.Move;
 import org.data.entities.User;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -20,7 +21,7 @@ public class GameDAO {
     @Inject
     private EntityManager entityManager;
 
-    public Game get(int id) {
+    public Game get(long id) {
         return entityManager.find(Game.class, id);
     }
 
@@ -29,6 +30,7 @@ public class GameDAO {
         CriteriaQuery<Game> cq = cb.createQuery(Game.class);
         Root<Game> rootEntry = cq.from(Game.class);
         cq.select(rootEntry).where(cb.equal(rootEntry.get(Game_.user1), user));
+        //TODO add user2 clause
         TypedQuery<Game> typedQuery = entityManager.createQuery(cq);
         return typedQuery.getResultList();
     }
@@ -43,6 +45,14 @@ public class GameDAO {
     public void save(Game game) {
         entityManager.getTransaction().begin();
         entityManager.persist(game);
+        entityManager.getTransaction().commit();
+    }
+
+    public void writeMove(long id, Move move) {
+        entityManager.getTransaction().begin();
+        Game g = get(id);
+        g.writeMove(move);
+        entityManager.merge(g);
         entityManager.getTransaction().commit();
     }
 }

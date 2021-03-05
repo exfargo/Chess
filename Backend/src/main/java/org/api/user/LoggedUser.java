@@ -1,20 +1,30 @@
 package org.api.user;
 
 
+import org.data.dao.UserDAO;
 import org.data.entities.User;
 
 import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
 import java.io.Serializable;
 
 @SessionScoped
 public class LoggedUser implements Serializable {
-    private User loggedUser;
+
+    @Inject
+    UserDAO userDAO;
+
+    private Integer loggedUserId;
 
     public User getLoggedUser() {
-        return loggedUser;
+        return userDAO.get(loggedUserId);
     }
 
-    public void setLoggedUser(User loggedUser) {
-        this.loggedUser = loggedUser;
+    public void setLoggedUser(Integer loggedUserId) {
+        this.loggedUserId = loggedUserId;
+    }
+
+    public boolean isLogged() {
+        return loggedUserId != null;
     }
 }
