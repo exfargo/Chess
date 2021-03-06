@@ -1,7 +1,7 @@
 package org.api.user;
 
 import org.data.entities.User;
-import org.managers.UserApiManager;
+import org.managers.UserManager;
 import org.utils.ResponseMessage;
 
 import javax.inject.Inject;
@@ -15,7 +15,7 @@ public class UserAuthentication {
 
     //apiManager takes care of more complex actions, that may require communication with databases
     @Inject
-    UserApiManager apiManager;
+    UserManager userManager;
 
     //loggedUser keeps session logged user
     @Inject
@@ -25,13 +25,12 @@ public class UserAuthentication {
      * retrieves and returns a user with specified id from database
      * @param id user's identification
      * @return User by id
-     * TODO returns password
      */
     @GET
     @Path("{id}")
     public Response getUser(@PathParam("id") int id) {
         try {
-            User u = apiManager.getUserById(id);
+            User u = userManager.getUserById(id);
             if (u == null) {
                 return Response.status(404).entity(new ResponseMessage("User doesn't exist")).build();
             }
@@ -50,9 +49,9 @@ public class UserAuthentication {
     @Path("authentication")
     public Response getLoggedUser() {
         try {
-            if (loggedUser.isLogged())
+            if (loggedUser.isLogged()) {
                 return Response.status(200).entity(loggedUser.getLoggedUser()).build();
-            else
+            } else
                 return Response.status(404).entity(new ResponseMessage("User is not logged in")).build();
         } catch (NullPointerException e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
@@ -68,10 +67,10 @@ public class UserAuthentication {
     @Path("authentication/new")
     public Response createUser(User newUser) {
         try {
-            if (apiManager.isUserWithName(newUser.getUsername())) {
+            if (userManager.isUserByName(newUser.getUsername())) {
                 return Response.status(409).entity(new ResponseMessage("Name already in use")).build();
             }
-            return Response.status(200).entity(apiManager.createUser(newUser)).build();
+            return Response.status(200).entity(userManager.createUser(newUser)).build();
         } catch (Exception e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
@@ -85,12 +84,13 @@ public class UserAuthentication {
     @POST
     @Path("authentication")
     public Response logUser(User user) {
+        user.print();
         try {
-            if (apiManager.isValidUser(user)) {
-                loggedUser.setLoggedUser(apiManager.getNormalizedUser(user).getId());
+            if (userManager.isValidUser(user)) {
+                loggedUser.setLoggedUser(userManager.getNormalizedUser(user).getId());
                 return Response.status(200).entity(new ResponseMessage("Logged in")).build();
             }
-            return Response.status(420).entity(new ResponseMessage("You WATAFAK")).build();
+            return Response.status(420).entity("huh").build();
         } catch (Exception e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }

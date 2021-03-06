@@ -7,6 +7,7 @@ import java.util.LinkedHashMap;
 
 @ApplicationScoped
 public class GameControllerPool {
+
     private final LinkedHashMap<Long, IGameController> pool = new LinkedHashMap<>();
 
     public IGameController retrieveController(long id) {

@@ -1,7 +1,7 @@
 package org.api.user;
 
 import org.data.entities.User;
-import org.managers.UserApiManager;
+import org.managers.UserManager;
 import org.utils.ResponseMessage;
 
 import javax.inject.Inject;
@@ -15,14 +15,13 @@ public class UserSettingsResources {
 
     //apiManager takes care of more complex actions, that may require communication with databases
     @Inject
-    UserApiManager apiManager;
+    UserManager userManager;
 
     //loggedUser keeps session logged user
     @Inject
     LoggedUser loggedUser;
 
     //endregion
-
     /**
      * deletes a user account
      * @param delUser information (username, password)
@@ -35,8 +34,8 @@ public class UserSettingsResources {
             return Response.status(400).entity(new ResponseMessage("You must be logged in order to delete user")).build();
         }
         try {
-            if (apiManager.isValidUser(delUser)) {
-                return Response.status(200).entity(apiManager.deleteUser(delUser)).build();
+            if (userManager.isValidUser(delUser)) {
+                return Response.status(200).entity(userManager.deleteUser(delUser)).build();
             }
             return Response.status(404).entity(new ResponseMessage("User doesn't exist")).build();
         } catch (Exception e) {
@@ -46,18 +45,18 @@ public class UserSettingsResources {
 
     /**
      * changes password for logged user
-     * @param chanUser information (username, newPassword)
+     * @param changedUser information (username, newPassword)
      * @return outcome message
      */
     @PUT
     @Path("password")
-    public Response changeUserPassword(User chanUser) {
+    public Response changeUserPassword(User changedUser) {
         if (!this.loggedUser.isLogged()) {
             return Response.status(400).entity(new ResponseMessage("You must be logged in order to change password")).build();
         }
         try {
-            if (apiManager.idMatchesUsername(loggedUser.getLoggedUser().getId(), chanUser)) {
-                return Response.status(200).entity(apiManager.changeUserPassword(loggedUser.getLoggedUser(), chanUser)).build();
+            if (userManager.idMatchesUsername(loggedUser.getLoggedUser().getId(), changedUser)) {
+                return Response.status(200).entity(userManager.changeUserPassword(loggedUser.getLoggedUser().getId(), changedUser)).build();
             }
             return Response.status(404).entity(new ResponseMessage("User doesn't exist")).build();
         } catch (Exception e) {
@@ -67,18 +66,18 @@ public class UserSettingsResources {
 
     /**
      * changes username for logged user
-     * @param chanUser information (newUsername, password)
+     * @param changedUser information (newUsername, password)
      * @return outcome message
      */
     @PUT
     @Path("username")
-    public Response changeUserName(User chanUser) {
+    public Response changeUserName(User changedUser) {
         if (!this.loggedUser.isLogged()) {
             return Response.status(400).entity(new ResponseMessage("You must be logged in order to change username")).build();
         }
         try {
-            if (apiManager.idMatchesPassword(this.loggedUser.getLoggedUser().getId(), chanUser)) {
-                return Response.status(200).entity(this.apiManager.changeUserName(this.loggedUser.getLoggedUser(), chanUser)).build();
+            if (userManager.idMatchesPassword(this.loggedUser.getLoggedUser().getId(), changedUser)) {
+                return Response.status(200).entity(this.userManager.changeUserName(this.loggedUser.getLoggedUser(), changedUser)).build();
             }
             return Response.status(404).entity(new ResponseMessage("User doesn't exist")).build();
         } catch (Exception e) {

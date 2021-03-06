@@ -13,7 +13,6 @@ import org.utils.Utils;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import java.util.LinkedList;
 import java.util.List;
 
 @ApplicationScoped
@@ -26,12 +25,10 @@ public class GameManager {
     @Inject
     GameControllerPool gameControllerPool;
 
-    public long createGame(User u1, User u2) {
+    public void createGame(User u1, User u2) {
         Game g = new Game(new Pair<>(u1, u2));
         gameDAO.save(g);
-        //TODO fix this later (wait for GameController.init() implementation)
         gameControllerPool.addController(g.getId(), new GameController());
-        return g.getId();
     }
 
     public Game getGame(long id) {

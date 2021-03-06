@@ -82,4 +82,9 @@ public class User {
     public void changeName(String username) {
         this.username = username;
     }
+
+    public User retrievePasswordLess() {
+        this.password = null;
+        return this;
+    }
 }
