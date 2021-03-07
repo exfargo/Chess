@@ -8,12 +8,16 @@ import javax.inject.Inject;
 import java.util.List;
 
 @ApplicationScoped
-public class LeaderBoardApiManager {
+public class LeaderBoardManager {
 
     @Inject
     UserDAO userDAO;
 
     public List<User> getLeaderboardTop50() {
         return userDAO.getTop(50);
+    }
+
+    public List<User> getLeaderboardPleb50() {
+        return userDAO.getPleb(50);
     }
 }

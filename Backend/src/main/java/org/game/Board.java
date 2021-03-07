@@ -4,6 +4,8 @@ import org.game.Figures.*;
 import org.utils.Coordinates;
 import org.utils.Pair;
 
+import javax.persistence.criteria.CriteriaBuilder;
+
 public class Board implements IBoard{
 
     private IFigure[][] board = new IFigure[8][8];
@@ -14,7 +16,7 @@ public class Board implements IBoard{
     private Teams winner = Teams.Empty;
     private Teams passTeam = Teams.Empty;
     //makes players ignore turn order
-    private boolean cheatMode = true;
+    private boolean cheatMode = false;
 
     public boolean getCheatMode(){
         return cheatMode;
@@ -232,6 +234,18 @@ public class Board implements IBoard{
         whiteCheck = checkCheck(findFigure("King",Teams.White),Teams.White);
         blackCheck = checkCheck(findFigure("King",Teams.Black),Teams.Black);
 
+        if (whiteCheck && checkCheckMate(Teams.White)) winner = Teams.Black;
+        if (blackCheck && checkCheckMate(Teams.Black)) winner = Teams.White;
+    }
+
+    //Version without recursion
+    private void teleportPiece2(Pair<Integer, Integer> source, Pair<Integer, Integer> target){
+        board[target.second()][target.first()] = board[source.second()][source.first()];
+        board[source.second()][source.first()] = new EmptySpace();
+        passX = -1;
+        passY = -1;
+        passTeam = Teams.Empty;
+
     }
 
     public int getPassX(){
@@ -253,12 +267,7 @@ public class Board implements IBoard{
         for(int x = 0;x < 8;x++) {
             for (int y = 0; y < 8; y++) {
                 if (!board[y][x].getOwner().equals(team) && !board[y][x].getOwner().equals(Teams.Empty)){
-                    //nahorsi casy
-                    //hors casy uz nastaly
                     if (board[y][x].checkMoveValidity(new Coordinates(x,y),position) && (checkLos( new Coordinates(x,y),position)|| (board[y][x].getType().equals("Knight")))){
-
-
-                        //checkmate
                         return true;
                     }
                 }
@@ -271,7 +280,7 @@ public class Board implements IBoard{
 
     public boolean ghostTurn(Teams team,Coordinates source,Coordinates target){
         Board ghostBoard = new Board(this.board);
-        ghostBoard.teleportPiece(source,target);
+        ghostBoard.teleportPiece2(source,target);
         Coordinates temp = ghostBoard.findFigure("King",team);
         if (temp != null){
             return ghostBoard.checkCheck(temp,team);
@@ -325,11 +334,62 @@ public class Board implements IBoard{
                 && (board[source.second()][source.first()].getType().equals("Knight") || checkLos(source,target))
                 && board[source.second()][source.first()].getOwner() != board[target.second()][target.first()].getOwner()
                 && (selectedPiece.getOwner() == playingTeam || cheatMode);
-        if (output){
+
+
+        if (output && !cheatMode){
+
             //pair cannot be cast to coordinates :I
             output = !ghostTurn(playingTeam,new Coordinates(source.first(),source.second()),new Coordinates(target.first(),target.second()));
         }
 
         return output;
+    }
+
+    //TO DO: this
+    //tohle bude humáč
+    public boolean checkCheckMate(Teams team) {
+
+        for (int x = 0;x < 8;x++){
+            for (int y = 0;y < 8;y++){
+                IFigure selectedPiece = board[y][x];
+                if (selectedPiece.getOwner().equals(team)){
+
+                    for (int x2 = 0;x2 < 8;x2++) {
+                        for (int y2 = 0; y2 < 8; y2++) {
+                            if(!ghostTurn(team,new Coordinates(x,y),new Coordinates(x2,y2)) && canMove(new Pair<>(x,y),new Pair<>(x2,y2),team,selectedPiece) && bruhMoment(new Coordinates(x,y),new Coordinates(x2,y2),team,selectedPiece)){
+
+                                System.out.println(x + "," + y);
+                                System.out.println(x2 + "," + y2);
+                                return false;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        return true;
+    }
+
+    private boolean bruhMoment(Coordinates pos,Coordinates tar,Teams team,IFigure selectedPiece){
+        //check if hrading
+        if (selectedPiece.getType().equals("King") && Math.abs((int)pos.first() - (int)tar.second()) == 2){
+            if (((IHradable)(selectedPiece)).isHradAble() && isHradingDirectionValid( pos, tar, selectedPiece.getOwner())){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        else if(selectedPiece.getType().equals("Pawn")){
+            if(board[(int)tar.second()][(int)tar.first()].getOwner().equals(Teams.Empty) && (int)pos.first() == (int)tar.first()) {
+                return true;
+            }else if((int)pos.first() != (int)tar.first() && !board[(int)tar.second()][(int)tar.first()].getOwner().equals(Teams.Empty)){
+                return true;
+            }else {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

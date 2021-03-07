@@ -22,13 +22,16 @@ public class UserDAO {
         return entityManager.find(User.class, id);
     }
 
-    public List<User> getUserByName(String name) {
+    public User getUserByName(String name) {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<User> cq = cb.createQuery(User.class);
         Root<User> rootEntry = cq.from(User.class);
         cq.select(rootEntry).where(cb.like(rootEntry.get(User_.username), name));
         TypedQuery<User> typedQuery = entityManager.createQuery(cq);
-        return typedQuery.getResultList();
+        List<User> us = typedQuery.getResultList();
+        if (us.size() > 0) {
+            return typedQuery.getResultList().get(0);
+        } else return null;
     }
 
     public List<User> getUserWhereScoreGreaterThan(int value) {
@@ -83,7 +86,6 @@ public class UserDAO {
         u.changePoints(amount);
         entityManager.merge(u);
         entityManager.getTransaction().commit();
-
     }
 
     public void changePassword(int id, String password) {
@@ -92,7 +94,6 @@ public class UserDAO {
         u.changePassword(password);
         entityManager.merge(u);
         entityManager.getTransaction().commit();
-
     }
 
     public void changeUserName(int id, String username) {
@@ -110,8 +111,28 @@ public class UserDAO {
         cq.orderBy(cb.desc(rootEntry.get(User_.POINTS)));
         TypedQuery<User> typedQuery = entityManager.createQuery(cq);
         List<User> r = typedQuery.getResultList();
+        for (int i = 0; i < r.size(); i++) {
+            r.set(i, r.get(i).retrievePasswordLess());
+        }
         if (top < r.size()) {
             return r.subList(0, top);
+        } else {
+            return r;
+        }
+    }
+
+    public List<User> getPleb(int bot) {
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<User> cq = cb.createQuery(User.class);
+        Root<User> rootEntry = cq.from(User.class);
+        cq.orderBy(cb.asc(rootEntry.get(User_.POINTS)));
+        TypedQuery<User> typedQuery = entityManager.createQuery(cq);
+        List<User> r = typedQuery.getResultList();
+        for (int i = 0; i < r.size(); i++) {
+            r.set(i, r.get(i).retrievePasswordLess());
+        }
+        if (bot < r.size()) {
+            return r.subList(0, bot);
         } else {
             return r;
         }
