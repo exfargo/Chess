@@ -19,16 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c28c060-e0c5-4615-a547-c576c2f84f54" name="Default Changelist" comment="funguju ??" />
+    <list default="true" id="4c28c060-e0c5-4615-a547-c576c2f84f54" name="Default Changelist" comment="funguju ??">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1meKXr5Uab2VtsUq7hvs0Ho29Xm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ChessFrontend" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -103,6 +106,7 @@
       <workItem from="1610106626474" duration="164000" />
       <workItem from="1610106887735" duration="27000" />
       <workItem from="1610350101166" duration="294000" />
+      <workItem from="1613925084835" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="funguju ??">
       <created>1610350299294</created>
@@ -146,10 +150,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609853092624" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1610106903330">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1613925095711">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610106903330" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1613925095711" />
     <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1610104963370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

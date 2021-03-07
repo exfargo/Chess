@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ApiServiceService} from "../apiService.service";
 
 @Component({
   selector: 'app-user',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  username = "placeholder";
+  elo = 0;
+
+  constructor(private apiService:ApiServiceService) { }
 
   ngOnInit(): void {
+    this.apiService.getPlayer().subscribe((data) => {
+      console.log(data);
+    })
   }
 
 }
