@@ -12,6 +12,8 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { LeaderboardComponent } from './lidlboard/leaderboard.component';
 import { UserComponent } from './user/user.component';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,14 +25,16 @@ import { UserComponent } from './user/user.component';
     LeaderboardComponent,
     UserComponent,
   ],
-  imports: [
-    BrowserModule,
-    BsDropdownModule.forRoot(),
-    TooltipModule.forRoot(),
-    ModalModule.forRoot(),
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        BsDropdownModule.forRoot(),
+        TooltipModule.forRoot(),
+        ModalModule.forRoot(),
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

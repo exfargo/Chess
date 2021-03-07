@@ -2,10 +2,12 @@
   <form class="p-5 bg-dark d-flex justify-content-center flex-column">
     <h1 class="h3 mb-4 fw-normal  text-center"><i class="fas fa-chess-king"></i>Login</h1>
     <label for="inputNick" class="visually-hidden">Nickname</label>
-    <input type="text" id="inputNick" class="form-control" placeholder="Nickname">
+    <input name="nickname" [(ngModel)]="nickname" type="text" id="inputNick" class="form-control"
+           placeholder="Nickname">
     <label for="inputPassword" class="visually-hidden">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+    <input name="password" [(ngModel)]="password" type="password" id="inputPassword" class="form-control"
+           placeholder="Password">
     <br>
-    <button class="w-100 btn btn-lg btn-secondary" type="submit">Login</button>
+    <button (click)="logUser()" class="w-100 btn btn-lg btn-secondary" type="submit">Login</button>
   </form>
 </div>

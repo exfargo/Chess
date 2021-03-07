@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import axios from "axios";
+import {ApiServiceService} from '../apiService.service';
 
 @Component({
   selector: 'app-register',
@@ -7,17 +7,20 @@ import axios from "axios";
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  nickname = '';
+  password = '';
 
-  userRegister: string[] = [];
-
-  constructor() {
+  constructor(private apiService: ApiServiceService) {
   }
 
   ngOnInit(): void {
-    axios.get(``)
-      .then(file => {
-        this.userRegister.push(file.data);
-      })
+
+  }
+
+  addUser(): void {
+    this.apiService.createPlayer(this.nickname, this.password).subscribe((data) => {
+      console.log(data);
+    });
 
   }
 
