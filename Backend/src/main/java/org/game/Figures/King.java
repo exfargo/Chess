@@ -22,12 +22,10 @@ public class King implements IFigure, IHradable, Cloneable {
 
     @Override
     public boolean checkMoveValidity(Pair<Integer, Integer> cords1, Pair<Integer, Integer> cords2) {
-        if (Math.abs(cords1.first() - cords2.first()) == 1 || Math.abs(cords1.second() - cords2.second()) == 1){
-
+        if (Math.abs(cords1.first() - cords2.first()) < 2 && Math.abs(cords1.second() - cords2.second()) < 2){
             return true;
-        }else if(hradovaniAble && Math.abs(cords1.first() - cords2.first()) == 2 && cords1.second() == cords2.second()){
-
-            return true;
+        }else if(hradovaniAble && Math.abs(cords1.first() - cords2.first()) == 2 && Math.abs(cords1.second() - cords2.second()) == 0){
+            return false;
         }
         return false;
     }
