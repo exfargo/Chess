@@ -6,8 +6,11 @@ import org.data.entities.Challenge;
 import org.data.entities.Game;
 import org.data.entities.Move;
 import org.data.entities.User;
+import org.game.Board;
+import org.game.Figures.IFigure;
 import org.game.Figures.Teams;
 import org.game.GameController;
+import org.game.IBoard;
 import org.utils.Pair;
 import org.utils.Utils;
 
@@ -35,9 +38,11 @@ public class GameManager {
         return gameDAO.get(id);
     }
 
-    public void makeMove(long id, Move move) {
-        gameControllerPool.retrieveController(id).makeMove(new Pair<>(move.getxSource(), move.getySource()), new Pair<>(move.getxTarget(), move.getyTarget()));
-        gameDAO.writeMove(id, move);
+    public boolean makeMove(long id, Move move) {
+        if (gameControllerPool.retrieveController(id).makeMove(new Pair<>(move.getxSource(), move.getySource()), new Pair<>(move.getxTarget(), move.getyTarget()))) {
+            gameDAO.writeMove(id, move);
+            return true;
+        } else return false;
     }
 
     public List<Long> getForUser(User user) {
@@ -54,4 +59,11 @@ public class GameManager {
         return gameControllerPool.retrieveController(id).getPlayersTurn();
     }
 
+    public IFigure[][] getCurrentBoardById(long id) {
+        return gameControllerPool.retrieveController(id).getBoard().getBoard();
+    }
+
+    public boolean playerInGameById(User loggedUser, long id) {
+        return gameDAO.get(id).getUser1().getId() == loggedUser.getId() || gameDAO.get(id).getUser2().getId() == loggedUser.getId();
+    }
 }
