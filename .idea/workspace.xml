@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="Docs">
+    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="Básničky">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_02_2021_10_49_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_02_2021_10_49__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_02_2021_17_30_[Default_Changelist]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_02_2021_17_30__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_02_2021_17_30__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_02_2021_17_30__Default_Changelist_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DOCS/Chess.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOCS/Chess.md" afterDir="false" />
     </list>
@@ -67,7 +72,9 @@
       <workItem from="1614151305413" duration="3136000" />
       <workItem from="1614605500771" duration="395000" />
       <workItem from="1614927278221" duration="536000" />
-      <workItem from="1615126500015" duration="1175000" />
+      <workItem from="1615126500015" duration="1244000" />
+      <workItem from="1615182887896" duration="17000" />
+      <workItem from="1615189124652" duration="1477000" />
     </task>
     <task id="LOCAL-00001" summary="Game package package transfer">
       <created>1613388637852</created>
@@ -139,7 +146,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614927559515</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Básničky">
+      <created>1615127691264</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1615127691264</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Básničky">
+      <created>1615127724939</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1615127724939</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +189,8 @@
     <MESSAGE value="user docs" />
     <MESSAGE value="user clarifications" />
     <MESSAGE value="Docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Docs" />
+    <MESSAGE value="Básničky" />
+    <option name="LAST_COMMIT_MESSAGE" value="Básničky" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

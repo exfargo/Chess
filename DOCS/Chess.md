@@ -55,7 +55,7 @@ Pekelný pekelník peklem pádí
 
 zjistit co ta bába provádí.
 
-Naprvch dorazil pozdě však,
+Naporvch dorazil pozdě však,
 
 co to vidí jeho zrak ?
 
@@ -111,3 +111,40 @@ hlasitě u toho láteří.
 Ostnatý drát ostny má,
 
 dráteníka už nikdo nepozná.
+
+
+## 7
+
+Jelen jede na blata,
+
+cestou potkal devčata.
+
+Do kufru je hnedka dal,
+
+cestou s nima zatřepal.
+
+na blatech je pustá mez,
+
+dostane za ně hodně peněz.
+
+## 8
+
+Teplota stoupá zrychleně,
+
+žralok kouká upřeně.
+
+Upřený je pohled jeho,
+
+kouká na dědu našehu.
+
+Děda mu však závidí,
+
+že ten žralok vidí.
+
+Děda šikmým krokem šel,
+
+a pak spadl pod postel.
+
+Žralok má rád skopový,
+
+ale taky maso dědový.
