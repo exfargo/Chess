@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
 
   logUser(): void {
     this.apiService.logPlayer(this.nickname, this.password).subscribe((data) => {
-      console.log(data);
 
       this.apiService.getPlayer().subscribe((data) => {
         console.log(data)
