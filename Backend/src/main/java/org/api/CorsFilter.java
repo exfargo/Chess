@@ -7,7 +7,6 @@ import javax.ws.rs.ext.Provider;
 
 @Provider
 public class CorsFilter implements ContainerResponseFilter {
-
     @Override
     public void filter(ContainerRequestContext requestContext,
                        ContainerResponseContext responseContext) {
@@ -17,7 +16,7 @@ public class CorsFilter implements ContainerResponseFilter {
                 "Access-Control-Allow-Credentials", "true");
         responseContext.getHeaders().add(
                 "Access-Control-Allow-Headers",
-                "origin, content-type, accept, authorization");
+                "origin, content-type, accept, authorization, *");
         responseContext.getHeaders().add(
                 "Access-Control-Allow-Methods",
                 "GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD");

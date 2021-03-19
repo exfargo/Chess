@@ -36,7 +36,6 @@ public class GameResources {
         }
     }
 
-
     @GET
     @Path("{id}/sync")
     public Response getGameBoard(@PathParam("id") long id) {
@@ -54,7 +53,6 @@ public class GameResources {
 
     @PUT
     @Path("{id}/play")
-    //TODO notify other player
     public Response makeMove(@PathParam("id") long id, Move move) {
         try {
             if (gameManager.getGame(id) == null) {
