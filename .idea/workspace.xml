@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="Básničky">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/JAXRSConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/api/JAXRSConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/LoggedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/LoggedUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/api/user/UserAuthentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/data/dao/producers/EntityManagerFactoryProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/data/dao/producers/EntityManagerFactoryProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/managers/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/managers/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOCS/Chess.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOCS/Chess.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/ChessFrontend/ChessFrontendEnd/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/ChessFrontend/ChessFrontendEnd/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/ChessFrontend/ChessFrontendEnd/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/ChessFrontend/ChessFrontendEnd/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/ChessFrontend/ChessFrontendEnd/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/ChessFrontend/ChessFrontendEnd/src/app/home/home.component.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +41,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.grazie" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -75,9 +72,9 @@
       <workItem from="1614927278221" duration="536000" />
       <workItem from="1615126500015" duration="1244000" />
       <workItem from="1615182887896" duration="17000" />
-      <workItem from="1615189124652" duration="3453000" />
-      <workItem from="1615223260359" duration="3086000" />
-      <workItem from="1616146568086" duration="1323000" />
+      <workItem from="1615189124652" duration="1477000" />
+      <workItem from="1616069587302" duration="10000" />
+      <workItem from="1616146548883" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="Game package package transfer">
       <created>1613388637852</created>
@@ -163,14 +160,7 @@
       <option name="project" value="LOCAL" />
       <updated>1615127724939</updated>
     </task>
-    <task id="LOCAL-00013" summary="Básničky">
-      <created>1615190620744</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1615190620744</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
