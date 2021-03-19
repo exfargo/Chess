@@ -25,11 +25,11 @@ Moji milí klucí,
 
 schovte se pod kapucí,
 
-Sam zase hatit bude,
+Sam zase hejtit bude,
 
 sebevědomí vám ubude.
 
-Nestruchujte se snad sami,
+Nestrachujte se snad sami,
 
 v prdeli jsme všichni dohromady.
 
@@ -80,7 +80,7 @@ do garáže ho svážu.
 
 V garáži on vyschne na kost
 
-to je soudruhova povinost.
+každého soudruhova to povinost.
 
 
 ## 5
@@ -95,7 +95,7 @@ vždyť ještě neobědval.
 
 Komín kouká klidně dál,
 
-brouk si svačí obodál.
+brouk si svačí opodál.
 
 Brouk vzlétl zrychleně,
 
@@ -125,7 +125,7 @@ cestou s nima zatřepal.
 
 na blatech je pustá mez,
 
-dostane za ně hodně peněz.
+nebude to hezký proces.
 
 ## 8
 
@@ -135,7 +135,7 @@ Teplota stoupá zrychleně,
 
 Upřený je pohled jeho,
 
-kouká na dědu našehu.
+kouká na dědu našeho.
 
 Děda mu však závidí,
 
@@ -148,3 +148,109 @@ a pak spadl pod postel.
 Žralok má rád skopový,
 
 ale taky maso dědový.
+
+## 9
+
+Sto skleniček kutá chrom,
+
+jedna přišla o záhon.
+
+Záhon to byl mrkvový,
+
+skleničky to však neví.
+
+Mrkev ji sebral Ahmarád,
+
+byl to sklenky kamarád.
+
+Často spolu dováděli,
+
+tajně se však scházeli.
+
+Pan sklenka o něm netuší,
+
+majznul by ho pod duši.
+
+## 10
+
+Traktor couvá do řeky,
+
+nechal si tam ořechy,
+
+Bez nich ať se nevrací,
+
+říkal mu pes hlídací.
+
+Traktor couval, couval dál,
+
+až se v řece vykoupal.
+
+## 11
+
+Krotič hadů splet si plot,
+
+použil užovčin vchod.
+
+Bo žovka není had,
+
+dostla hned nápad.
+
+Krotiče teď přechytračí,
+
+přec na užovku nestačí.
+
+## 12
+
+Tlačí břitvu na svůj krk,
+
+v rukou drží ptačí brk.
+
+Lidu píše dopis poslední,
+
+hrozní mu smrt bezprostřední.
+
+Břitvu nedal si tam sám,
+
+byl to Martin píše nám.
+
+## 13
+
+Růžovoprstá s ránem rodíc se potají,
+
+zjišťuje co si to ti kokoti šeptají.
+
+Často prý jednají zpontáně,
+
+onanují v křižíkově fontáně.
+
+
+## 14
+
+Když mailuješ si s Kristem,
+
+zaviruješ si systém.
+
+Onan nabídl ti pravou ruku,
+
+dostaneš, že si ji umyl, záruku ?
+
+## 15
+
+Ženy jsou rozkošné stvoření,
+
+když dárek dáš jim vlídný.
+
+doborvolně se s tebou ožení,
+
+pokud to nebyl dar bídný.
+
+## 16
+
+Na statku učili jsme francouze,
+
+házeti granátem za nouze.
+
+granát byl jeden z těch kluzkých
+
+škody byli v řadách francouzkých.
+

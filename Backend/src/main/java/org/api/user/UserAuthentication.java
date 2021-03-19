@@ -47,12 +47,13 @@ public class UserAuthentication {
      */
     @GET
     @Path("authentication")
-    public Response getLoggedUser() {
+    public Response getLoggedInUser() {
         try {
+            System.out.println("getting logged, ID : " + loggedUser.getLoggedUserId());
             if (loggedUser.isLogged()) {
                 return Response.status(200).entity(loggedUser.getLoggedUser()).build();
             } else
-                return Response.status(404).entity(new ResponseMessage("User is not logged in")).build();
+                return Response.status(403).entity(new ResponseMessage("User is not logged in")).build();
         } catch (NullPointerException e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
@@ -84,10 +85,10 @@ public class UserAuthentication {
     @POST
     @Path("authentication")
     public Response logUser(User user) {
-        user.print();
         try {
             if (userManager.isValidUser(user)) {
                 loggedUser.setLoggedUser(userManager.getNormalizedUser(user).getId());
+                System.out.println("logging, ID : " + loggedUser.getLoggedUserId());
                 return Response.status(200).entity(new ResponseMessage("Logged in")).build();
             }
             return Response.status(420).entity("huh").build();

@@ -74,7 +74,6 @@ public class UserManager {
     public boolean isValidUser(User user) {
         try {
             User usr = userDAO.getUserByName(user.getUsername());
-            usr.print();
             return usr.matchPassword(user.getPassword());
         } catch (Exception e) {
             return false;

@@ -14,9 +14,16 @@ public class LoggedUser implements Serializable {
     @Inject
     UserDAO userDAO;
 
+
     private Integer loggedUserId;
 
+    public Integer getLoggedUserId() {
+        return loggedUserId;
+    }
+
     public User getLoggedUser() {
+        System.out.println("Idawdawd acfsxdxafdawexdzawD : ");
+        System.out.println(loggedUserId);
         return userDAO.get(loggedUserId);
     }
 

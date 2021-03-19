@@ -12,6 +12,7 @@ public class EntityManagerFactoryProducer {
     private EntityManagerFactory instance = null;
 
     @Produces
+    @ApplicationScoped
     public EntityManagerFactory getEntityManagerFactory() {
         if (instance == null) {
             instance =  Persistence.createEntityManagerFactory("TestPersistence");

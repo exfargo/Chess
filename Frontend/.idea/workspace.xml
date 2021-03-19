@@ -21,6 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4c28c060-e0c5-4615-a547-c576c2f84f54" name="Default Changelist" comment="funguju ??">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/org/api/user/LoggedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/org/api/user/LoggedUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/org/api/user/UserAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/org/api/user/UserAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/org/data/dao/producers/EntityManagerFactoryProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/org/data/dao/producers/EntityManagerFactoryProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/org/data/dao/producers/EntityManagerProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/org/data/dao/producers/EntityManagerProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DOCS/Chess.md" beforeDir="false" afterPath="$PROJECT_DIR$/../DOCS/Chess.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +35,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="KotlinMultiplatform">
+    <allAvailableExecutables />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="l08qnfxi" />
+  </component>
   <component name="ProjectId" id="1meKXr5Uab2VtsUq7hvs0Ho29Xm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -38,14 +49,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ChessFrontend" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
-    <property name="ts.external.directory.path" value="C:\Users\krchk\OneDrive\Dokumenty\GitHub\Chess\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Apps\Dev\Chess\Frontend\ChessFrontend\ChessFrontendEnd\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -107,6 +120,7 @@
       <workItem from="1610106887735" duration="27000" />
       <workItem from="1610350101166" duration="294000" />
       <workItem from="1613925084835" duration="12000" />
+      <workItem from="1615544522556" duration="2058000" />
     </task>
     <task id="LOCAL-00001" summary="funguju ??">
       <created>1610350299294</created>
@@ -136,51 +150,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="funguju ??" />
     <option name="LAST_COMMIT_MESSAGE" value="funguju ??" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="586" y="198" key="#Inspections" timestamp="1610105747989">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1610105747989" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1610098977090">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1610098977090" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609853092624">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609853092624" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1613925095711">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1613925095711" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1610104963370">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610104963370" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1610104963370">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610104963370" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1610104963370">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610104963370" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1610104963370">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610104963370" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1610104577530">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1610104577530" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610350344572">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610350344572" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610350269140">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610350269140" />
   </component>
 </project>
