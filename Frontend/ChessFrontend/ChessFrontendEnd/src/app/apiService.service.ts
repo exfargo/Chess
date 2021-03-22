@@ -14,13 +14,13 @@ export class ApiServiceService {
 
 
   getPlayer(): Observable<any> {
-    return this.httpClient.get('/Chess/chess/user/authentication', {
+    return this.httpClient.get('/chess/user/authentication', {
       withCredentials: true
     });
   }
 
   createPlayer(username: string, password: string): Observable<any> {
-    return this.httpClient.post('/Chess/chess/user/authentication/new', {
+    return this.httpClient.post('/chess/user/authentication/new', {
       username,
       password
     }, {
@@ -29,7 +29,7 @@ export class ApiServiceService {
   }
 
   logPlayer(username: string, password: string): Observable<any> {
-    return this.httpClient.post('/Chess/chess/user/authentication', {
+    return this.httpClient.post('/chess/user/authentication', {
       username,
       password
     }, {
