@@ -11,11 +11,11 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { LeaderboardComponent } from './lidlboard/leaderboard.component';
-import { UserComponent } from './user/user.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { UsersComponent } from './users/users.component';
-import { HeaderComponent } from './header/header.component';
+import {HeaderComponent} from './header/header.component';
+import {UsersComponent} from './users/users.component';
+
 
 @NgModule({
   declarations: [
@@ -25,9 +25,8 @@ import { HeaderComponent } from './header/header.component';
     GameComponent,
     RegisterComponent,
     LeaderboardComponent,
-    UserComponent,
-    UsersComponent,
     HeaderComponent,
+    UsersComponent
   ],
     imports: [
         BrowserModule,
