@@ -1,0 +1,21 @@
+<div>
+  <h1 class="text-light text-center">Users</h1>
+  <table class="table table-dark table-striped text-light table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Position</th>
+      <th scope="col">Name</th>
+      <th scope="col">ELO</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <th scope="row">
+        <button (click)="goToUser(user.id)">{{user.id}}</button>
+      </th>
+      <td>{{user.username}}</td>
+      <td>{{user.points}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
