@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {User} from '../User';
 
 
 @Injectable({
@@ -12,11 +13,15 @@ export class ApiServiceService {
   }
 
 
-
-  getPlayer(): Observable<any> {
+  getPlayer(id?: number): Observable<User> {
+    if (typeof id !== typeof null) {
+      return this.httpClient.get('/chess/user/' + id, {
+        withCredentials: true
+      }) as Observable<User>;
+    }
     return this.httpClient.get('/chess/user/authentication', {
       withCredentials: true
-    });
+    }) as Observable<User>;
   }
 
   createPlayer(username: string, password: string): Observable<any> {
@@ -35,5 +40,13 @@ export class ApiServiceService {
     }, {
       withCredentials: true
     });
+  }
+
+  getAllUsers(): Observable<User[]> {
+    return this.httpClient.get('/chess/users/all') as Observable<User[]>;
+  }
+
+  getLeaderboard(type: string): Observable<User[]> {
+    return this.httpClient.get('/chess/lidlboard/' + type) as Observable<User[]>;
   }
 }

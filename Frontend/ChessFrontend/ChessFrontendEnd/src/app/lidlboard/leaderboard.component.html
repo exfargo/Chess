@@ -1,5 +1,5 @@
 <div>
-  <h1 class="text-light text-center">TOP TEN PLAYERS</h1>
+  <h1 class="text-light text-center">TOP 50 PLAYERS</h1>
   <table class="table table-dark table-striped text-light table-hover">
     <thead>
     <tr>
@@ -9,20 +9,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>300</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Jacob</td>
-      <td>100</td>
+    <tr *ngFor="let user of users">
+      <th scope="row"><button (click)="goToUser(user.id)">{{user.id}}</button></th>
+      <td>{{user.username}}</td>
+      <td>{{user.points}}</td>
     </tr>
     </tbody>
   </table>

@@ -14,6 +14,8 @@ import { LeaderboardComponent } from './lidlboard/leaderboard.component';
 import { UserComponent } from './user/user.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { UsersComponent } from './users/users.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import {HttpClientModule} from '@angular/common/http';
     RegisterComponent,
     LeaderboardComponent,
     UserComponent,
+    UsersComponent,
+    HeaderComponent,
   ],
     imports: [
         BrowserModule,

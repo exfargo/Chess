@@ -64,6 +64,8 @@ public class UserDAO {
     public List<User> getAll() {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<User> cq = cb.createQuery(User.class);
+        Root<User> rootEntry = cq.from(User.class);
+        cq.select(rootEntry).where(cb.equal(rootEntry.get(User_.points), rootEntry.get(User_.points)));
         TypedQuery<User> typedQuery = entityManager.createQuery(cq);
         return typedQuery.getResultList();
     }
