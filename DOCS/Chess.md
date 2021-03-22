@@ -221,8 +221,7 @@ zjišťuje co si to ti kokoti šeptají.
 
 Často prý jednají zpontáně,
 
-onanují v křižíkově fontáně.
-
+onanují v Křižíkově fontáně.
 
 ## 14
 
@@ -230,9 +229,9 @@ Když mailuješ si s Kristem,
 
 zaviruješ si systém.
 
-Onan nabídl ti pravou ruku,
+Dostal jsi pravou ruku Onanovu,
 
-dostaneš, že si ji umyl, záruku ?
+dostojí však svému slovu ?
 
 ## 15
 
@@ -250,7 +249,42 @@ Na statku učili jsme francouze,
 
 házeti granátem za nouze.
 
-granát byl jeden z těch kluzkých
+hodil si ho do domu,
 
-škody byli v řadách francouzkých.
+o ženě neřekne nikomu.
 
+## 17
+
+Peter Pan párek praží,
+
+dýchat se u toho snaží.
+
+Pod vodou prý je oheň chabý,
+
+stačí možná na stehýnka žabí.
+
+## 18
+
+null null null null,
+
+null null null null.
+
+null null null null,
+
+null null null null.
+
+## 19
+
+Struny umí škrtiti,
+
+nedají se přežíti.
+
+Zkoušel jsme to na vrata,
+
+odumíraj mi varlata.
+
+## 20
+
+Po dvou rumech s jedním pivem,
+
+projde Karel každým zdivem.

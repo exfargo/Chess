@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="Básničky">
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/api/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/api/CorsFilter.java" afterDir="false" />
-    </list>
+    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="Básničky" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,6 +71,7 @@
       <workItem from="1616069587302" duration="10000" />
       <workItem from="1616146548883" duration="15000" />
       <workItem from="1616149731043" duration="134000" />
+      <workItem from="1616412703991" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="Game package package transfer">
       <created>1613388637852</created>
