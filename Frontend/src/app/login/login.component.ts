@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiServiceService} from '../apiService.service';
+import {UserService} from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
   nickname = '';
   password = '';
 
-  constructor(private apiService: ApiServiceService) {
+  constructor(private userService: UserService) {
 
   }
 
@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   logUser(): void {
-    this.apiService.logPlayer(this.nickname, this.password).subscribe((data) => {
+    this.userService.logPlayer(this.nickname, this.password).subscribe((data) => {
       console.log('jes');
     });
 

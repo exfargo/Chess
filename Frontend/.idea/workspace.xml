@@ -1,78 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c28c060-e0c5-4615-a547-c576c2f84f54" name="Default Changelist" comment="funguju ??">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChessFrontend/ChessFrontendEnd/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ChessFrontend/ChessFrontendEnd/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChessFrontend/ChessFrontendEnd/src/app/game/game.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ChessFrontend/ChessFrontendEnd/src/app/game/game.component.ts" afterDir="false" />
+    <list default="true" id="b3f757d5-b642-41af-a05c-3fd489d1e6f8" name="Default Changelist" comment="tak si naser">
+      <change beforePath="$PROJECT_DIR$/src/app/apiService.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/apiService.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lidlboard/leaderboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lidlboard/leaderboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/user/user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/user/user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/users/users.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/users/users.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="KotlinMultiplatform">
     <allAvailableExecutables />
   </component>
   <component name="MacroExpansionManager">
-    <option name="directoryName" value="l08qnfxi" />
+    <option name="directoryName" value="x87aywas" />
   </component>
-  <component name="ProjectId" id="1meKXr5Uab2VtsUq7hvs0Ho29Xm" />
+  <component name="ProjectId" id="1pyDaixXDlJv54RKonTeROekS2a" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Backend" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="D:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\krchk\OneDrive\Dokumenty\GitHub\ChessFrontend\src\app\game" />
-    </key>
+    <property name="ts.external.directory.path" value="C:\Apps\Dev\Chess\Frontend\ChessFrontend\ChessFrontendEnd\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration name="Tests (ChessFrontend)" type="JavaScriptTestRunnerKarma">
-      <config-file value="$PROJECT_DIR$/karma.conf.js" />
-      <working-directory value="$PROJECT_DIR$" />
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="E2E Tests (ChessFrontend)" type="JavaScriptTestRunnerProtractor">
+    <configuration name="E2E Tests (ChessFrontendEnd)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
       <protractor-options value="" />
@@ -95,40 +88,40 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\krchk\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4c28c060-e0c5-4615-a547-c576c2f84f54" name="Default Changelist" comment="" />
-      <created>1609848658596</created>
+      <changelist id="b3f757d5-b642-41af-a05c-3fd489d1e6f8" name="Default Changelist" comment="" />
+      <created>1616146501318</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1609848658596</updated>
-      <workItem from="1609848659677" duration="3396000" />
-      <workItem from="1609853493386" duration="2234000" />
-      <workItem from="1609950400598" duration="91000" />
-      <workItem from="1609950869451" duration="807000" />
-      <workItem from="1609954250225" duration="1278000" />
-      <workItem from="1610098715707" duration="5863000" />
-      <workItem from="1610104902801" duration="183000" />
-      <workItem from="1610105131860" duration="1476000" />
-      <workItem from="1610106619244" duration="6000" />
-      <workItem from="1610106626474" duration="164000" />
-      <workItem from="1610106887735" duration="27000" />
-      <workItem from="1610350101166" duration="294000" />
-      <workItem from="1613925084835" duration="12000" />
-      <workItem from="1615544522556" duration="2058000" />
-      <workItem from="1616418073329" duration="748000" />
+      <updated>1616146501318</updated>
+      <workItem from="1616146502896" duration="5181000" />
+      <workItem from="1616404035622" duration="8144000" />
+      <workItem from="1616418206214" duration="1918000" />
+      <workItem from="1616435446429" duration="349000" />
     </task>
-    <task id="LOCAL-00001" summary="funguju ??">
-      <created>1610350299294</created>
+    <task id="LOCAL-00001" summary="users, userInterface, navbar, tabulka, novy fetche">
+      <created>1616411166489</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1610350299294</updated>
+      <updated>1616411166489</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="UserManager.java">
+      <created>1616412685995</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616412685995</updated>
+    </task>
+    <task id="LOCAL-00003" summary="tak si naser">
+      <created>1616418250711</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616418250711</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,10 +140,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$" />
-    </ignored-roots>
-    <MESSAGE value="funguju ??" />
-    <option name="LAST_COMMIT_MESSAGE" value="funguju ??" />
+    <MESSAGE value="users, userInterface, navbar, tabulka, novy fetche" />
+    <MESSAGE value="UserManager.java" />
+    <MESSAGE value="tak si naser" />
+    <option name="LAST_COMMIT_MESSAGE" value="tak si naser" />
   </component>
 </project>

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from '../../User';
 import {Router} from '@angular/router';
-import {ApiServiceService} from '../apiService.service';
+import {UserService} from '../user.service';
 
 
 @Component({
@@ -12,14 +12,14 @@ import {ApiServiceService} from '../apiService.service';
 export class LeaderboardComponent implements OnInit {
 
 
-  constructor(private readonly router: Router, private readonly apiService: ApiServiceService) {}
+  constructor(private readonly router: Router, private readonly userService: UserService) {}
 
 
   players: any = [];
   users: User[];
 
   ngOnInit(): void {
-    this.apiService.getLeaderboard('top-50').subscribe(
+    this.userService.getLeaderboard('top-50').subscribe(
       u => this.users = u,
       e => console.log(e)
     );

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from '../../User';
-import {ApiServiceService} from '../apiService.service';
 import {Router} from '@angular/router';
+import {UserService} from '../user.service';
 
 
 @Component({
@@ -12,11 +12,11 @@ import {Router} from '@angular/router';
 export class UsersComponent implements OnInit {
   users: User[];
 
-  constructor(private readonly apiService: ApiServiceService, private readonly router: Router) {
+  constructor(private readonly userService: UserService, private readonly router: Router) {
   }
 
   ngOnInit(): void {
-    this.apiService.getAllUsers().subscribe(
+    this.userService.getAllUsers().subscribe(
       u => this.users = u,
       e => console.log(e)
     );

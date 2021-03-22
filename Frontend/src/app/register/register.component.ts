@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiServiceService} from '../apiService.service';
+import {UserService} from '../user.service';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +10,7 @@ export class RegisterComponent implements OnInit {
   nickname = '';
   password = '';
 
-  constructor(private apiService: ApiServiceService) {
+  constructor(private userService: UserService) {
   }
 
   ngOnInit(): void {
@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   }
 
   addUser(): void {
-    this.apiService.createPlayer(this.nickname, this.password).subscribe((data) => {
+    this.userService.createPlayer(this.nickname, this.password).subscribe((data) => {
       console.log(data);
     });
 

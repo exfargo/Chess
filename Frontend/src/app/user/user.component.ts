@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiServiceService} from '../apiService.service';
 import {ActivatedRoute} from '@angular/router';
-import {User} from '../../User';
+import {UserService} from '../user.service';
 
 @Component({
   selector: 'app-user',
@@ -14,12 +13,12 @@ export class UserComponent implements OnInit {
   points = 0;
   id = -1;
 
-  constructor(private apiService: ApiServiceService, private route: ActivatedRoute) {
+  constructor(private userService: UserService, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.route.params.subscribe(
-      u => this.apiService.getPlayer(u.id).subscribe(
+      u => this.userService.getPlayer(u.id).subscribe(
         us => {
           this.username = us.username;
           this.points = us.points;

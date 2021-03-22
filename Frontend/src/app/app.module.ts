@@ -15,6 +15,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {HeaderComponent} from './header/header.component';
 import {UsersComponent} from './users/users.component';
+import {UserComponent} from './user/user.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {UsersComponent} from './users/users.component';
     RegisterComponent,
     LeaderboardComponent,
     HeaderComponent,
-    UsersComponent
+    UsersComponent,
+    UserComponent
   ],
     imports: [
         BrowserModule,
