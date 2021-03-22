@@ -11,6 +11,8 @@ export class ApiServiceService {
   constructor(private httpClient: HttpClient) {
   }
 
+
+
   getPlayer(): Observable<any> {
     return this.httpClient.get('/Chess/chess/user/authentication', {
       withCredentials: true

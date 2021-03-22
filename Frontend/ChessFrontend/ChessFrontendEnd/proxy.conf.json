@@ -1,7 +1,10 @@
 {
-  "/chess": {
-    "target": "http://25.67.249.190:8080/Chess/",
+  "/chess/*": {
+    "target": "http://25.67.249.190:8080/",
     "secure": false,
-    "logLevel": "info"
+    "logLevel": "info",
+    "withCredentials": true,
+    "changeOrigin": true
   }
 }
+
