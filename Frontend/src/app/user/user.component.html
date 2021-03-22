@@ -11,9 +11,7 @@
     <div class="colonka">
       <h2>GAMES</h2>
       <ul>
-        <li>hra</li>
-        <li>hra</li>
-        <li>hra</li>
+        <li *ngFor="let g of games">{{g.id}} => {{g.winner}}</li>
       </ul>
     </div>
   </div>

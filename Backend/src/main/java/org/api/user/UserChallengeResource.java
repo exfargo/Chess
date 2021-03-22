@@ -21,18 +21,16 @@ public class UserChallengeResource {
 
     /**
      * returns list of challenges for logged user
+     *
      * @return List of challenges
      */
     @GET
     @Path("challenge")
-    public Response getChallenges(@QueryParam("authored") boolean flip) {
+    public Response getChallenges() {
         if (!this.loggedUser.isLogged())
             return Response.status(404).entity(new ResponseMessage("You must be logged in order to view challenges")).build();
         try {
-            if (!flip) {
-                return Response.status(200).entity(userManager.getChallengesFor(this.loggedUser.getLoggedUser())).build();
-            }
-            return Response.status(200).entity(userManager.getChallengesBy(this.loggedUser.getLoggedUser())).build();
+            return Response.status(200).entity(userManager.getChallengesFor(this.loggedUser.getLoggedUser())).build();
         } catch (Exception e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
@@ -40,6 +38,7 @@ public class UserChallengeResource {
 
     /**
      * creates challenge for logged player and specified player
+     *
      * @param idChallenged id of challenged player
      * @return outcome message
      */
@@ -63,6 +62,7 @@ public class UserChallengeResource {
 
     /**
      * accept challenge, creates a game
+     *
      * @param id of challenge
      * @return outcome message
      */
@@ -86,6 +86,7 @@ public class UserChallengeResource {
 
     /**
      * decline / cancel a challenge by id
+     *
      * @param id of challenge
      * @return outcome message
      */

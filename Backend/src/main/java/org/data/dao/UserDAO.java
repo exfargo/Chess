@@ -11,6 +11,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @ApplicationScoped
 public class UserDAO {
@@ -59,6 +60,10 @@ public class UserDAO {
         cq.select(rootEntry).where(cb.equal(rootEntry.get(User_.points), value));
         TypedQuery<User> typedQuery = entityManager.createQuery(cq);
         return typedQuery.getResultList();
+    }
+
+    public List<User> getUsersBySearch(String name) {
+        return getAll().stream().filter(user -> user.getUsername().contains(name)).collect(Collectors.toList());
     }
 
     public List<User> getAll() {

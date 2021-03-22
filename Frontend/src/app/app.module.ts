@@ -16,6 +16,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {HeaderComponent} from './header/header.component';
 import {UsersComponent} from './users/users.component';
 import {UserComponent} from './user/user.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {UserComponent} from './user/user.component';
     LeaderboardComponent,
     HeaderComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
+    DashboardComponent
   ],
     imports: [
         BrowserModule,

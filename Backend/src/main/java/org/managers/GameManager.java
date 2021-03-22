@@ -2,6 +2,7 @@ package org.managers;
 
 import org.data.dao.ChallengeDAO;
 import org.data.dao.GameDAO;
+import org.data.dao.UserDAO;
 import org.data.entities.Challenge;
 import org.data.entities.Game;
 import org.data.entities.Move;
@@ -21,6 +22,8 @@ import java.util.List;
 @ApplicationScoped
 public class GameManager {
 
+    @Inject
+    UserDAO userDAO;
     @Inject
     GameDAO gameDAO;
     @Inject
@@ -45,8 +48,12 @@ public class GameManager {
         } else return false;
     }
 
-    public List<Long> getForUser(User user) {
-        return Utils.extractIds(gameDAO.getGameWherePlayer(user));
+    public List<Game> getForUser(int userId) {
+        return gameDAO.getGameWherePlayer(userDAO.get(userId));
+    }
+
+    public List<Game> getForUser(User user) {
+        return gameDAO.getGameWherePlayer(user);
     }
 
     public void matchChallenge(long id) {

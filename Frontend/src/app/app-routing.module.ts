@@ -7,6 +7,7 @@ import {UserComponent} from './user/user.component';
 import {LeaderboardComponent} from './lidlboard/leaderboard.component';
 import {HomeComponent} from './home/home.component';
 import {UsersComponent} from './users/users.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'user/:id', component: UserComponent},
   {path: 'lidlboard', component: LeaderboardComponent},
-  {path: 'users', component: UsersComponent}
+  {path: 'users', component: UsersComponent},
+  {path: 'dashboard', component: DashboardComponent},
+  {path: '**', component: HomeComponent}
 ];
 
 @NgModule({

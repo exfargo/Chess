@@ -9,8 +9,8 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of users">
-      <th scope="row"><button (click)="goToUser(user.id)">{{user.id}}</button></th>
+    <tr *ngFor="let user of users" (click)="goToUser(user.id)" class="pointer">
+      <th scope="row">{{user.id}}</th>
       <td>{{user.username}}</td>
       <td>{{user.points}}</td>
     </tr>

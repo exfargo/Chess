@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {UserService} from '../user.service';
+import {UserService} from '../services/user.service';
+import {Game} from '../../data/game';
+import {GameService} from '../services/game.service';
 
 @Component({
   selector: 'app-user',
@@ -13,7 +15,12 @@ export class UserComponent implements OnInit {
   points = 0;
   id = -1;
 
-  constructor(private userService: UserService, private route: ActivatedRoute) {
+
+  games: Game[];
+
+  constructor(private readonly userService: UserService,
+              private readonly route: ActivatedRoute,
+              private readonly gameService: GameService) {
   }
 
   ngOnInit(): void {
@@ -27,9 +34,17 @@ export class UserComponent implements OnInit {
         er => console.log(er)),
       e => console.log(e)
     );
+
+    this.gameService.getByUser(this.id).subscribe(
+      g => this.games = g,
+      e => console.log(e)
+    );
   }
 
   challenge(): void {
-    // TODO karle challengni ho
+    this.userService.challenge(this.id).subscribe(
+      u => console.log(u.message),
+      e => console.log(e)
+    );
   }
 }

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from '../../User';
+import {User} from '../../data/user';
 import {Router} from '@angular/router';
-import {UserService} from '../user.service';
+import {UserService} from '../services/user.service';
 
 
 @Component({
@@ -11,12 +11,20 @@ import {UserService} from '../user.service';
 })
 export class UsersComponent implements OnInit {
   users: User[];
+  search: string;
 
   constructor(private readonly userService: UserService, private readonly router: Router) {
   }
 
   ngOnInit(): void {
     this.userService.getAllUsers().subscribe(
+      u => this.users = u,
+      e => console.log(e)
+    );
+  }
+
+  updateBySearch(): void {
+    this.userService.getByName(this.search).subscribe(
       u => this.users = u,
       e => console.log(e)
     );
