@@ -71,6 +71,9 @@ public class UserAuthentication {
             if (userManager.isUserByName(newUser.getUsername())) {
                 return Response.status(409).entity(new ResponseMessage("Name already in use")).build();
             }
+            if (userManager.isForbidden(newUser.getUsername())) {
+                return Response.status(409).entity(new ResponseMessage("You CANNOT use this name")).build();
+            }
             return Response.status(200).entity(userManager.createUser(newUser)).build();
         } catch (Exception e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();

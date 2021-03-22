@@ -9,7 +9,9 @@ import org.utils.ResponseMessage;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 @ApplicationScoped
 public class UserManager {
@@ -24,6 +26,8 @@ public class UserManager {
     //gameManager holds reference to all gameControllers and Game entities
     @Inject
     GameManager gameManager;
+
+    private final String[] forbiddenNames = new String[] {"null", "admin", "root", "fabian", "petr"};
 
     //<editor-fold desc="User management">
     public ResponseMessage createUser(User u) {
@@ -131,6 +135,13 @@ public class UserManager {
 
     public void matchChallenge(long id) {
         gameManager.matchChallenge(id);
+    }
+
+    public boolean isForbidden(String username) {
+        for (String name : forbiddenNames) {
+            if (name.equals(username.toLowerCase())) return true;
+        }
+        return false;
     }
     //</editor-fold>
 }
