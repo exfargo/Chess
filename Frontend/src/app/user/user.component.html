@@ -1,14 +1,14 @@
 <div id="content">
-  <h1 class="text-white nadpis">{{username}}</h1>
-  <h2 class="text-white nadpis">ELO: {{points}}</h2>
-  <h3 class="text-white nadpis">ID: {{id}}</h3>
+  <h1 class="text-white">{{username}}</h1>
+  <h2 class="text-white">ELO: {{points}}</h2>
+  <h3 class="text-white">ID: {{id}}</h3>
   <button (click)="challenge()" class="bg-primary border-dark rounded">Challenge gamer</button>
   <div class="d-flex flex-row justify-content-center container">
-    <div class="colonka">
+    <div class="column">
       <h2>WINRATIO</h2>
       <p>wins - / loses - </p>
     </div>
-    <div class="colonka">
+    <div class="column">
       <h2>GAMES</h2>
       <ul>
         <li *ngFor="let g of games">{{g.id}} => {{g.winner}}</li>

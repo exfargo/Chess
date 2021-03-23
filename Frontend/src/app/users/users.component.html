@@ -1,8 +1,10 @@
-<div>
+<div class="center-wrapper">
   <h1 class="text-light text-center">Users</h1>
-  <input type="search" name="search" [(ngModel)]="search" placeholder="Search by name">
-  <button (click)="updateBySearch()">Search</button>
-  <table class="table table-dark table-striped text-light table-hover">
+  <div class="flex-column d-flex">
+    <input type="search" class="bg-dark border-dark text-white rounded" name="search" [(ngModel)]="search" placeholder="Search by name">
+    <button (click)="updateBySearch()" class="mt-1 bg-dark border-dark text-white rounded mb-1">Search</button>
+  </div>
+  <table class="table table-dark table-striped text-light table-hover rounded">
     <thead>
     <tr>
       <th scope="col">Position</th>

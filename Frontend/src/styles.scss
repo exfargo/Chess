@@ -5,3 +5,18 @@ body{
   font-family: Bahnschrift;
 }
 
+.pointer {
+  cursor: crosshair;
+}
+
+.center-wrapper {
+  margin: 50px 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+tr th {
+  width: 40%;
+}
