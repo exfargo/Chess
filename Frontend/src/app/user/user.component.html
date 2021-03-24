@@ -5,14 +5,17 @@
   <button (click)="challenge()" class="bg-primary border-dark rounded">Challenge gamer</button>
   <div class="d-flex flex-row justify-content-center container">
     <div class="column">
-      <h2>WINRATIO</h2>
-      <p>wins - / loses - </p>
+      <h2  class="text-white">WINRATIO</h2>
+      <p class="text-white">wins - / loses - </p>
     </div>
     <div class="column">
-      <h2>GAMES</h2>
+      <h2 class="text-white">GAMES</h2>
       <ul>
         <li *ngFor="let g of games">{{g.id}} => {{g.winner}}</li>
       </ul>
     </div>
+  <div *ngIf="">
+
+  </div>
   </div>
 </div>
