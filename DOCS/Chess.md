@@ -288,3 +288,55 @@ odumíraj mi varlata.
 Po dvou rumech s jedním pivem,
 
 projde Karel každým zdivem.
+
+## 21 
+
+Zemětřas silných paží,
+
+hezkou pannou se baží.
+
+Přemýtá co provést s ní - 
+
+asi ji njspíše sní.
+
+## 22
+
+Pod bílou lilií
+
+otcové země blijí.
+
+## 23 
+
+Pesos je kurence senzační, 
+
+cenu má jen orientační.
+
+Platil s nimi jednou i papež,
+
+snad ho v kurvinci nenačapeš.
+
+## 24
+
+Pramice po Odři pluje
+
+jeden pár se na ní miluje.
+
+Však z břehu si na ně ukazuje,
+
+pár, kterému sex nefunguje.
+
+## 25
+
+Žid Cohn si dělá obřízku,
+
+páč zarazil si tam třísku.
+
+## 26
+
+Zeus, blesků pán, se chvástá,
+
+že tři měsíce už nechlastá.
+
+Héra na to má názor rozdílný,
+
+že "ochlasta" je tvar mírný.

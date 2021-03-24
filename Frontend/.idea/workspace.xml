@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3f757d5-b642-41af-a05c-3fd489d1e6f8" name="Default Changelist" comment="uz me to fakt sralo">
+    <list default="true" id="b3f757d5-b642-41af-a05c-3fd489d1e6f8" name="Default Changelist" comment="presouvani veci do globalniho csska, visual leaderboardu, dashboardu, useru">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lidlboard/leaderboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lidlboard/leaderboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lidlboard/leaderboard.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lidlboard/leaderboard.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/user/user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/user/user.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/user/user.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/user/user.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/users/users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/users/users.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/users/users.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/users/users.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,19 +56,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="E2E Tests (ChessFrontendEnd)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -115,7 +92,8 @@
       <workItem from="1616435446429" duration="349000" />
       <workItem from="1616435883126" duration="1741000" />
       <workItem from="1616437652422" duration="6059000" />
-      <workItem from="1616478655908" duration="1316000" />
+      <workItem from="1616478655908" duration="1512000" />
+      <workItem from="1616495765879" duration="190000" />
     </task>
     <task id="LOCAL-00001" summary="users, userInterface, navbar, tabulka, novy fetche">
       <created>1616411166489</created>
@@ -145,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616436060221</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="presouvani veci do globalniho csska, visual leaderboardu, dashboardu, useru">
+      <created>1616480173732</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616480173732</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +157,7 @@
     <MESSAGE value="UserManager.java" />
     <MESSAGE value="tak si naser" />
     <MESSAGE value="uz me to fakt sralo" />
-    <option name="LAST_COMMIT_MESSAGE" value="uz me to fakt sralo" />
+    <MESSAGE value="presouvani veci do globalniho csska, visual leaderboardu, dashboardu, useru" />
+    <option name="LAST_COMMIT_MESSAGE" value="presouvani veci do globalniho csska, visual leaderboardu, dashboardu, useru" />
   </component>
 </project>
