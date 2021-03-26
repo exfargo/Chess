@@ -1,37 +1,49 @@
-<div class="center-wrapper">
-  <h1 class="text-light text-center pt-2">Challenge</h1>
-  <table class="table table-dark table-striped text-light table-hover">
+<div>
+
+  <h1 class="text-primary text-center pt-2 my-3">Challenges</h1>
+
+  <table class="table table-dark table-striped w-50 m-auto table-hover">
+
     <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Challenger</th>
-      <th scope="col">Status</th>
+    <tr class="text-secondary">
+      <th scope="col" class="w-25">Id</th>
+      <th scope="col" class="w-25">Challenger</th>
+      <th scope="col" class="w-25">Status</th>
+      <th scope="col" class="w-25">Accept</th>
     </tr>
     </thead>
+
     <tbody>
-    <tr *ngFor="let challenge of challenges" class="pointer">
+    <tr *ngFor="let challenge of challenges" class="pointer-select tableHover">
       <th scope="row">{{challenge.id}}</th>
       <td>{{challenge.challenger.username}}</td>
-      <td (click)="accept(challenge.id)">{{challenge.accepted}}</td>
+      <td>{{challenge.accepted}}</td>
+      <td (click)="accept(challenge.id)"><button class="bg-secondary border-0 p-1 px-2 rounded linkHover">Accept</button></td>
     </tr>
     </tbody>
   </table>
 
-  <h1 class="text-light text-center pt-5">Games</h1>
-  <table class="table table-dark table-striped text-light table-hover">
+  <h1 class="text-primary text-center pt-5 my-3">Games</h1>
+
+  <table class="table table-dark table-striped text-secondary w-50 m-auto table-hover">
     <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Player 1</th>
-      <th scope="col">Player 2</th>
+    <tr class="text-secondary">
+      <th scope="col" class="w-25">Id</th>
+      <th scope="col" class="w-25">Player 1</th>
+      <th scope="col" class="w-25">Player 2</th>
+      <th scope="col" class="w-25">Game</th>
     </tr>
     </thead>
+
     <tbody>
-    <tr *ngFor="let game of games" class="pointer">
+    <tr *ngFor="let game of games" class="pointer-select tableHover">
       <th scope="row">{{game.id}}</th>
       <td>{{game.user1.username}}</td>
       <td>{{game.user2.username}}</td>
+      <td (click)="enterGame(game.id)"><button class="bg-secondary border-0 p-1 px-2 rounded linkHover">Play</button></td>
     </tr>
     </tbody>
+
   </table>
+
 </div>

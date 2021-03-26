@@ -1,22 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
-body{
-  background-color: #1a1a1a;
-  font-family: Bahnschrift;
+
+@import 'scss/color-variables';
+@import 'scss/override-bootstrap';
+
+@font-face {
+  font-family: banschrift;
+  src: url("assets/bahnschrift.ttf");
 }
 
-.pointer {
-  cursor: crosshair;
+* {
+  font-family: banschrift, serif;
 }
 
-.center-wrapper {
-  margin: 50px 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+body {
+  background-color: $darkest;
 }
 
-tr th {
-  width: 40%;
+
+.pointer-select {
+  cursor: pointer;
+}
+
+.pointer-write {
+  cursor: text;
+}
+
+.linkHover {
+  color: $white !important;
+}
+
+.linkHover:hover {
+  color: $primary !important;
+}
+
+.tableHover {
+  color: $secondary;
+}
+
+.tableHover:hover {
+  color: $primary !important;
+}
+
+.scaleHover:hover {
+  transform: scale(1.1);
+}
+
+.checkbox {
+  display: none;
+}
+
+#registerCheckVis {
+  width: 20px;
+  height: 20px;
+  background-color: $light;
+  border: 1px solid $primary;
+}
+
+#funbox:checked + #registerCheckVis {
+  background-color: $success;
 }

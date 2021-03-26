@@ -1,21 +1,31 @@
-<div id="content">
-  <h1 class="text-white">{{username}}</h1>
-  <h2 class="text-white">ELO: {{points}}</h2>
-  <h3 class="text-white">ID: {{id}}</h3>
-  <button (click)="challenge()" class="bg-primary border-dark rounded">Challenge gamer</button>
+<div class="m-auto">
+
+  <div class="d-flex flex-column justify-content-center text-center my-5">
+    <h1><i class="far fa-user text-primary"></i></h1>
+    <h1 class="text-primary">{{username}}/{{id}}</h1>
+    <h2 class="text-secondary">Score: {{points}}</h2>
+  </div>
+
+
   <div class="d-flex flex-row justify-content-center container">
-    <div class="column">
-      <h2  class="text-white">WINRATIO</h2>
-      <p class="text-white">wins - / loses - </p>
+
+    <div class="w-25 mx-1 text-center border-secondary border p-4 rounded scaleHover bg-dark">
+      <h2 class="text-primary">Win ration</h2>
+      <p class="text-secondary">wins / loses</p> <!--TODO KAREL: fetch this-->
     </div>
-    <div class="column">
-      <h2 class="text-white">GAMES</h2>
-      <ul>
+
+    <div class="w-25 mx-1 text-center border-secondary border p-4 rounded scaleHover bg-dark">
+      <h2 class="text-primary">GAMES</h2>
+      <ul class="text-secondary">
         <li *ngFor="let g of games">{{g.id}} => {{g.winner}}</li>
       </ul>
     </div>
-  <div *ngIf="">
 
-  </div>
+    <div class="w-25 mx-1 text-center border-secondary border p-4 rounded scaleHover bg-dark">
+      <h2 class="text-primary">Actions</h2>
+      <div class="m-auto">
+        <button (click)="challenge()" class="bg-secondary border-0 p-1 px-2 rounded linkHover">Challenge gamer</button>
+      </div>
+    </div>
   </div>
 </div>

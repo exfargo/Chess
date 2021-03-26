@@ -1,13 +1,22 @@
-<div id="window" class="d-flex justify-content-center mb-5 align-items-center text-white">
-  <form class="p-5 bg-dark d-flex justify-content-center flex-column">
-    <h1 class="h3 mb-4 fw-normal  text-center"><i class="fas fa-chess-king"></i>Login</h1>
-    <label for="inputNick" class="visually-hidden">Nickname</label>
-    <input name="nickname" [(ngModel)]="nickname" type="text" id="inputNick" class="form-control"
-           placeholder="Nickname">
-    <label for="inputPassword" class="visually-hidden">Password</label>
-    <input name="password" [(ngModel)]="password" type="password" id="inputPassword" class="form-control"
+<div class="w-25 mx-auto mt-5">
+
+  <form class="bg-dark p-5 rounded d-flex flex-column">
+
+    <h1 class="mb-4 text-primary text-center">Login</h1>
+
+    <label for="inputNick" class="text-secondary pointer-write">Username</label>
+    <input name="nickname" [(ngModel)]="nickname" type="text" id="inputNick"
+           class="form-control bg-transparent border-primary border-left-0 border-right-0 border-top-0 text-white rounded-0"
+           placeholder="Username">
+
+    <label for="inputPassword" class="text-secondary">Password</label>
+    <input name="password" [(ngModel)]="password" type="password" id="inputPassword"
+           class="form-control bg-transparent border-primary border-left-0 border-right-0 border-top-0 text-white rounded-0"
            placeholder="Password">
-    <br>
-    <button (click)="logUser()" class="w-100 btn btn-lg btn-secondary" type="submit">Login</button>
+
+    <button (click)="logUser()" class="bg-secondary border-0 px-1 py-2 w-50 rounded linkHover mx-auto mt-4" type="submit">
+      Login
+    </button>
   </form>
+
 </div>

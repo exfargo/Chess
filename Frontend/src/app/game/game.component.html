@@ -1,9 +1,12 @@
 <div class="d-flex justify-content-center">
-  <table class="checkboard">
-    <tr *ngFor="let j of checkboard; let i = index">
-      <td *ngFor="let k of checkboard[i]; let j = index"><i class='chess-piece {{checkboard[i][j].getHtml()}}'></i></td>
-    </tr>
-  </table>
+  <div class="board mt-5">
+    <table>
+      <tr *ngFor="let j of checkboard; let i = index">
+        <td *ngFor="let k of checkboard[i]; let j = index"><i class='chess-piece {{checkboard[i][j].getHtml()}}'></i>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
 
 

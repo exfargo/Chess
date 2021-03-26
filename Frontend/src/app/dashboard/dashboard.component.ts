@@ -35,4 +35,9 @@ export class DashboardComponent implements OnInit {
       e => console.log(e)
     );
   }
+
+
+  enterGame(id: number): void {
+
+  }
 }
