@@ -17,6 +17,7 @@ import {HeaderComponent} from './header/header.component';
 import {UsersComponent} from './users/users.component';
 import {UserComponent} from './user/user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BlameComponent } from './blame/blame.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeaderComponent,
     UsersComponent,
     UserComponent,
-    DashboardComponent
+    DashboardComponent,
+    BlameComponent
   ],
     imports: [
         BrowserModule,

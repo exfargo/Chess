@@ -19,33 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3f757d5-b642-41af-a05c-3fd489d1e6f8" name="Default Changelist" comment="haha není v projektu lol">
-      <change afterPath="$PROJECT_DIR$/src/assets/bahnschrift.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/color-variables.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/override-bootstrap.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="b3f757d5-b642-41af-a05c-3fd489d1e6f8" name="Default Changelist" comment="uff, jak to shrnout... No  tedka to vypada jako ze ta stranka pouziva legitimni cssko">
+      <change afterPath="$PROJECT_DIR$/src/app/blame/blame.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/blame/blame.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/blame/blame.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/blame/blame.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Dragon-Scales.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Endless-Constellation.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/honza.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/karel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/pavel.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/game/game.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/game/game.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/game/game.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/game/game.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/header/header.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lidlboard/leaderboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lidlboard/leaderboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lidlboard/leaderboard.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lidlboard/leaderboard.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/register/register.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/user/user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/user/user.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/user/user.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/user/user.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/users/users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/users/users.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/users/users.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/users/users.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/piece.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/piece.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +81,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -106,21 +93,27 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Apps\Dev\Chess\Frontend\src\scss" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Apps\Dev\Chess\Frontend\src\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Apps\Dev\Chess\Frontend\src\assets" />
+      <recent name="C:\Apps\Dev\Chess\Frontend\src" />
+      <recent name="C:\Apps\Dev\Chess\Frontend\src\app" />
+      <recent name="C:\Apps\Dev\Chess\Frontend\src\scss" />
       <recent name="C:\Apps\Dev\Chess\Frontend\src\data" />
-      <recent name="C:\Apps\Dev\Chess\Frontend\src\app\services" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -167,7 +160,8 @@
       <workItem from="1616485119585" duration="3645000" />
       <workItem from="1616494007044" duration="1293000" />
       <workItem from="1616751378555" duration="6041000" />
-      <workItem from="1616760052353" duration="13348000" />
+      <workItem from="1616760052353" duration="13423000" />
+      <workItem from="1616843986258" duration="4476000" />
     </task>
     <task id="LOCAL-00001" summary="users, userInterface, navbar, tabulka, novy fetche">
       <created>1616411166489</created>
@@ -211,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616494454842</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="uff, jak to shrnout... No  tedka to vypada jako ze ta stranka pouziva legitimni cssko">
+      <created>1616783318937</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616783318937</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +240,7 @@
     <MESSAGE value="tak si naser" />
     <MESSAGE value="uz me to fakt sralo" />
     <MESSAGE value="haha není v projektu lol" />
-    <option name="LAST_COMMIT_MESSAGE" value="haha není v projektu lol" />
+    <MESSAGE value="uff, jak to shrnout... No  tedka to vypada jako ze ta stranka pouziva legitimni cssko" />
+    <option name="LAST_COMMIT_MESSAGE" value="uff, jak to shrnout... No  tedka to vypada jako ze ta stranka pouziva legitimni cssko" />
   </component>
 </project>
