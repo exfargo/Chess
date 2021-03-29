@@ -1,8 +1,8 @@
 <div class="d-flex justify-content-center">
   <div class="board mt-5">
-    <table>
+    <table [ngModel]="board" name="board">
       <tr *ngFor="let j of checkboard; let i = index">
-        <td *ngFor="let k of checkboard[i]; let j = index"><i class='chess-piece {{checkboard[i][j].getHtml()}}'></i>
+        <td *ngFor="let k of checkboard[i]; let j = index" (click)="clickedTile(i,j)"><i class='chess-piece {{checkboard[i][j].getHtml()}}'></i>
         </td>
       </tr>
     </table>
