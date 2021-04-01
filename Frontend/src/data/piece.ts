@@ -9,7 +9,7 @@ export class Piece {
     return this.name;
   }
 
-  getHtml(): string {
+  getHtmlClass(): string {
     let output: string = this.htmlText;
     if (this.team !== Teams.Empty) {
       // fuj enumy to neumi

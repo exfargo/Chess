@@ -11,7 +11,7 @@ export class GameComponent implements OnInit {
   // wtf co je za pojmenovani checkboard
   // i blame karel
   checkboard: Piece[][];
-  selectedPiece: Piece;
+  selectedTile: Element;
   board: ElementRef;
   constructor() {
   }
@@ -28,31 +28,15 @@ export class GameComponent implements OnInit {
     this.checkboard[2][0] = new Piece('king', 'fas fa-chess-king', Teams.White);
 
   }
-
-  clickedTile(x: number, y: number): void {
-    if (this.selectedPiece === null){
-      if (this.checkboard[x][y].getName() !== 'empty'){
-        this.selectedPiece = this.selectPiece(x, y);
-      }
-    }else {
-        this.selectedPiece = this.selectPiece(null, null);
+  // někdy se selectne jenom ta figurka vim že to šlo nějak zpravit ale nevim jak
+  clickedTile(clickEvent: MouseEvent, clickedPiece: Piece): void {
+    // unselect old tile
+    if (this.selectedTile !== undefined) {
+      this.selectedTile.classList.remove('selected-tile');
     }
-  }
-
-  selectPiece(x: number, y: number): Piece{
-    const temp = this.board.nativeElement.children;
-    // unselect piece
-    // tslint:disable-next-line:prefer-for-of
-    for (let x2 = 0; x2 < temp.length; x2++){
-      for (let y2 = 0; y2 < temp.length; y2++){
-        temp[x2].nativeElement.children[y2].classList = '';
-      }
-    }
-
-    if (x === null || y === null){
-      return null;
-    }
-    return this.checkboard[x][y];
+    // select new tile
+    this.selectedTile = (clickEvent.target as Element);
+    this.selectedTile.classList.add('selected-tile');
   }
 }
 
