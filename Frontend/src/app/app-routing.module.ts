@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {EventEmitter, Input, NgModule, Output} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {GameComponent} from './game/game.component';
 import {LoginComponent} from './login/login.component';

@@ -19,17 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3f757d5-b642-41af-a05c-3fd489d1e6f8" name="Default Changelist" comment="uff, jak to shrnout... No  tedka to vypada jako ze ta stranka pouziva legitimni cssko">
-      <change afterPath="$PROJECT_DIR$/../Backend/.idea/Backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/.idea/dataSources/e035e0da-7a02-42c7-8b29-cbf8757469af.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/.idea/dataSources/e035e0da-7a02-42c7-8b29-cbf8757469af/storage_v2/_src_/schema/chess.AOejBQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/.idea/dataSources/e035e0da-7a02-42c7-8b29-cbf8757469af/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/org/api/user/UserAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/org/api/user/UserAuthentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    <list default="true" id="b3f757d5-b642-41af-a05c-3fd489d1e6f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/services/notification.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/services/notification.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +36,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="SCSS File" />
         <option value="Sass File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -86,7 +83,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="terminal" />
-    <property name="ts.external.directory.path" value="C:\Apps\Dev\Chess\Frontend\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -94,14 +91,25 @@
       <recent name="C:\Apps\Dev\Chess\Frontend\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/services" />
       <recent name="C:\Apps\Dev\Chess\Frontend\src\assets" />
       <recent name="C:\Apps\Dev\Chess\Frontend\src" />
       <recent name="C:\Apps\Dev\Chess\Frontend\src\app" />
       <recent name="C:\Apps\Dev\Chess\Frontend\src\scss" />
-      <recent name="C:\Apps\Dev\Chess\Frontend\src\data" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="E2E Tests (ChessFrontendEnd)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -150,6 +158,7 @@
       <workItem from="1617023806446" duration="9000" />
       <workItem from="1617190221592" duration="1197000" />
       <workItem from="1617196125388" duration="223000" />
+      <workItem from="1617435100905" duration="3572000" />
     </task>
     <task id="LOCAL-00001" summary="users, userInterface, navbar, tabulka, novy fetche">
       <created>1616411166489</created>
@@ -200,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616783318937</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="shitload nahodnejch veci a proxy config na spravnou ip">
+      <created>1617435298255</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1617435298256</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +245,7 @@
     <MESSAGE value="uz me to fakt sralo" />
     <MESSAGE value="haha není v projektu lol" />
     <MESSAGE value="uff, jak to shrnout... No  tedka to vypada jako ze ta stranka pouziva legitimni cssko" />
-    <option name="LAST_COMMIT_MESSAGE" value="uff, jak to shrnout... No  tedka to vypada jako ze ta stranka pouziva legitimni cssko" />
+    <MESSAGE value="shitload nahodnejch veci a proxy config na spravnou ip" />
+    <option name="LAST_COMMIT_MESSAGE" value="shitload nahodnejch veci a proxy config na spravnou ip" />
   </component>
 </project>

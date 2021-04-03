@@ -1,4 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { ResponseMessage } from 'src/data/responseMessage';
+import {AppRoutingModule} from '../app-routing.module';
 import {UserService} from '../services/user.service';
 
 @Component({
@@ -20,8 +22,6 @@ export class LoginComponent implements OnInit {
 
   logUser(): void {
     this.userService.logPlayer(this.nickname, this.password).subscribe((data) => {
-      console.log('jes');
-    });
-
+    })
   }
 }
