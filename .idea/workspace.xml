@@ -19,13 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="temporary absolutně nefunkční">
+    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="bruh">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_02_2021_17_30__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_02_2021_17_30__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/game/game.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/game/game.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/game/game.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/game/game.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/game/game.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/game/game.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/data/piece.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/data/piece.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,8 +114,6 @@
       <workItem from="1616484775840" duration="159000" />
       <workItem from="1616511084009" duration="76000" />
       <workItem from="1616751328356" duration="3992000" />
-      <workItem from="1617300823219" duration="613000" />
-      <workItem from="1617301723516" duration="1991000" />
     </task>
     <task id="LOCAL-00001" summary="Game package package transfer">
       <created>1613388637852</created>
@@ -202,14 +199,7 @@
       <option name="project" value="LOCAL" />
       <updated>1615127724939</updated>
     </task>
-    <task id="LOCAL-00013" summary="temporary absolutně nefunkční">
-      <created>1617002656909</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1617002656909</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,8 +229,7 @@
     <MESSAGE value="user clarifications" />
     <MESSAGE value="Docs" />
     <MESSAGE value="Básničky" />
-    <MESSAGE value="temporary absolutně nefunkční" />
-    <option name="LAST_COMMIT_MESSAGE" value="temporary absolutně nefunkční" />
+    <option name="LAST_COMMIT_MESSAGE" value="Básničky" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

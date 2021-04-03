@@ -20,19 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f757d5-b642-41af-a05c-3fd489d1e6f8" name="Default Changelist" comment="uff, jak to shrnout... No  tedka to vypada jako ze ta stranka pouziva legitimni cssko">
-      <change afterPath="$PROJECT_DIR$/src/app/blame/blame.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/blame/blame.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/blame/blame.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/blame/blame.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Dragon-Scales.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Endless-Constellation.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/honza.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/karel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pavel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Backend/.idea/Backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/.idea/dataSources/e035e0da-7a02-42c7-8b29-cbf8757469af.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/.idea/dataSources/e035e0da-7a02-42c7-8b29-cbf8757469af/storage_v2/_src_/schema/chess.AOejBQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/.idea/dataSources/e035e0da-7a02-42c7-8b29-cbf8757469af/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/org/api/user/UserAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/org/api/user/UserAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/game/game.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/game/game.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,14 +78,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Backend" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="ts.external.directory.path" value="C:\Apps\Dev\Chess\Frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -105,19 +102,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="E2E Tests (ChessFrontendEnd)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -162,6 +146,10 @@
       <workItem from="1616751378555" duration="6041000" />
       <workItem from="1616760052353" duration="13423000" />
       <workItem from="1616843986258" duration="4476000" />
+      <workItem from="1617012692795" duration="119000" />
+      <workItem from="1617023806446" duration="9000" />
+      <workItem from="1617190221592" duration="1197000" />
+      <workItem from="1617196125388" duration="223000" />
     </task>
     <task id="LOCAL-00001" summary="users, userInterface, navbar, tabulka, novy fetche">
       <created>1616411166489</created>

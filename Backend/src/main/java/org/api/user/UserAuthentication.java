@@ -94,7 +94,7 @@ public class UserAuthentication {
                 System.out.println("logging, ID : " + loggedUser.getLoggedUserId());
                 return Response.status(200).entity(new ResponseMessage("Logged in")).build();
             }
-            return Response.status(420).entity("huh").build();
+            return Response.status(420).entity("User doesn't exist").build();
         } catch (Exception e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
         }
