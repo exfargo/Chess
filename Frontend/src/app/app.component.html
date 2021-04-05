@@ -1,3 +1,13 @@
 <app-header class="sticky-top"></app-header>
+<p *ngIf="notification && getStatus()" class="text-white bg-success mt-4 mx-5 p-3 rounded shadowedText">
+  {{notification.message}}
+  <i (click)="cancel()"
+     class="fas fa-times pointer-select float-right my-auto text-light align-content-center align-baseline"></i>
+</p>
+<p *ngIf="notification && !getStatus()" class="text-white bg-danger mt-4 mx-5 p-3 rounded shadowedText">
+  {{notification.message}}
+  <i (click)="cancel()"
+     class="fas fa-times pointer-select float-right my-auto text-light align-content-center align-baseline"></i>
+</p>
 <router-outlet></router-outlet>
-<div></div>
+

@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
 
   accept(id: number): void {
     this.userService.acceptChallenge(id).subscribe(
-      s => this.userService.acceptChallenge(id),
+      s => this.enterGame(id),
       e => console.log(e)
     );
   }

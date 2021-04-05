@@ -1,6 +1,5 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import { ResponseMessage } from 'src/data/responseMessage';
-import {AppRoutingModule} from '../app-routing.module';
+import {Component, OnInit} from '@angular/core';
+import {NotificationService} from '../services/notification.service';
 import {UserService} from '../services/user.service';
 
 @Component({
@@ -12,7 +11,7 @@ export class LoginComponent implements OnInit {
   nickname = '';
   password = '';
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private notificationService: NotificationService) {
 
   }
 
@@ -21,7 +20,9 @@ export class LoginComponent implements OnInit {
   }
 
   logUser(): void {
-    this.userService.logPlayer(this.nickname, this.password).subscribe((data) => {
-    })
+    this.userService.logPlayer(this.nickname, this.password).subscribe(
+      s => this.notificationService.pushNotification(s, true),
+      e => this.notificationService.pushNotification(e, false)
+    );
   }
 }

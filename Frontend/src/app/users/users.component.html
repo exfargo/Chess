@@ -3,9 +3,11 @@
   <h1 class="text-center text-primary font-weight-bold my-4">Users</h1>
 
   <div class="flex-column d-flex w-25 m-auto">
-    <input type="search"
-           class="bg-transparent border-secondary border-left-0 border-right-0 border-top-0 text-white text-center"
-           name="search" [(ngModel)]="search" placeholder="Search by name">
+    <label>
+      <input [(ngModel)]="search"
+             class="bg-transparent border-secondary border-left-0 border-right-0 border-top-0 text-white text-center"
+             name="search" placeholder="Search by name" type="search">
+    </label>
     <button (click)="updateBySearch()"
             class="pt-1 mt-1 bg-dark border-0 text-white rounded mb-1 linkHover my-3 w-50 mx-auto"><i
       class="fas fa-search pr-2"></i>Search

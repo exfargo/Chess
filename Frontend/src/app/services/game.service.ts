@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Game} from '../../data/game';
 import {IFigure} from '../../data/iFigure';
 import {Move} from '../../data/move';
-import {ResponseMessage} from "../../data/responseMessage";
+import {ResponseMessage} from '../../data/responseMessage';
 
 @Injectable({
   providedIn: 'root'

@@ -49,7 +49,6 @@ public class UserAuthentication {
     @Path("authentication")
     public Response getLoggedInUser() {
         try {
-            System.out.println("getting logged, ID : " + loggedUser.getLoggedUserId());
             if (loggedUser.isLogged()) {
                 return Response.status(200).entity(loggedUser.getLoggedUser()).build();
             } else
@@ -110,7 +109,7 @@ public class UserAuthentication {
         try {
             if (this.loggedUser.isLogged()) {
                 loggedUser.setLoggedUser(null);
-                return Response.status(200).entity(new ResponseMessage("user signed out")).build();
+                return Response.status(200).entity(new ResponseMessage("User signed out")).build();
             }
             return Response.status(404).entity(new ResponseMessage("No user is logged in")).build();
         } catch (Exception e) {

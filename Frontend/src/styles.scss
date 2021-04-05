@@ -59,3 +59,7 @@ body {
 #funbox:checked + #registerCheckVis {
   background-color: $success;
 }
+
+.shadowedText {
+  text-shadow: 1px 1px 1px $primary;
+}
