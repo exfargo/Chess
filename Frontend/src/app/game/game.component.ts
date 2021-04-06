@@ -36,8 +36,12 @@ export class GameComponent implements OnInit {
     }
     // select new tile
     this.selectedTile = (clickEvent.target as Element);
+    // fix aby se vybralo celi policko a ne jenom ta figurka
+    if (this.selectedTile.tagName !== 'TD') { this.selectedTile = this.selectedTile.parentElement; }
     this.selectedTile.classList.add('selected-tile');
   }
+
+
 }
 
 /*
