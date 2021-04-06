@@ -32,7 +32,6 @@ export class GameComponent implements OnInit {
     this.checkboard[2][0] = new Piece('king', 'fas fa-chess-king', Teams.White);
 
   }
-  // někdy se selectne jenom ta figurka vim že to šlo nějak zpravit ale nevim jak
   clickedTile(clickEvent: MouseEvent, clickedPiece: Piece, y: number, x: number): void {
     if (clickedPiece.getTeam() === this.playingTeam) {
       this.selectNewTile(clickEvent, x, y);

@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="fixed už se vybiraj spravny tily">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/game/game.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/game/game.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/game/game.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/game/game.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="už je připraveny hejbani ted to jenom zapojit do apicka&#10;Pavel asi bude muset pomoct" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -213,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617695734508</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="už je připraveny hejbani ted to jenom zapojit do apicka&#10;Pavel asi bude muset pomoct">
+      <created>1617697686050</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1617697686050</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +248,8 @@
     <MESSAGE value="Básničky" />
     <MESSAGE value="temporary absolutně nefunkční" />
     <MESSAGE value="fixed už se vybiraj spravny tily" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed už se vybiraj spravny tily" />
+    <MESSAGE value="už je připraveny hejbani ted to jenom zapojit do apicka&#10;Pavel asi bude muset pomoct" />
+    <option name="LAST_COMMIT_MESSAGE" value="už je připraveny hejbani ted to jenom zapojit do apicka&#10;Pavel asi bude muset pomoct" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
