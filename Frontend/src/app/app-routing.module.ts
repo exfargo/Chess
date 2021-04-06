@@ -8,6 +8,7 @@ import {LeaderboardComponent} from './lidlboard/leaderboard.component';
 import {HomeComponent} from './home/home.component';
 import {UsersComponent} from './users/users.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import {BlameComponent} from './blame/blame.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'lidlboard', component: LeaderboardComponent},
   {path: 'users', component: UsersComponent},
   {path: 'dashboard', component: DashboardComponent},
+  {path: 'blame', component: BlameComponent},
   {path: '**', component: HomeComponent}
 ];
 

@@ -3,9 +3,9 @@
   <h1 class="text-center text-primary font-weight-bold my-4">Users</h1>
 
   <div class="flex-column d-flex w-25 m-auto">
-    <label>
+    <label class="text-center">
       <input [(ngModel)]="search"
-             class="bg-transparent border-secondary border-left-0 border-right-0 border-top-0 text-white text-center"
+             class="textInput"
              name="search" placeholder="Search by name" type="search">
     </label>
     <button (click)="updateBySearch()"

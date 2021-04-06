@@ -63,3 +63,15 @@ body {
 .shadowedText {
   text-shadow: 1px 1px 1px $primary;
 }
+
+.textInput {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid $secondary;
+  color: $white;
+  text-align: center;
+}
+
+.textInput:focus {
+  outline: none;
+}

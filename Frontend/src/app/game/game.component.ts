@@ -10,6 +10,7 @@ import {Teams} from '../../data/teams';
 export class GameComponent implements OnInit {
   constructor() {
   }
+
   // wtf co je za pojmenovani checkboard
   // i blame karel
   checkboard: Piece[][];
@@ -19,6 +20,7 @@ export class GameComponent implements OnInit {
   selectedY: number;
   // asi se potom bude nejak brat z apicka??
   playingTeam: Teams = Teams.White;
+
   ngOnInit(): void {
     this.checkboard = [];
     for (let i = 0; i < 8; i++) {
@@ -30,8 +32,8 @@ export class GameComponent implements OnInit {
     this.checkboard[0][0] = new Piece('rook', 'fas fa-chess-rook', Teams.White);
     this.checkboard[1][0] = new Piece('knight', 'fas fa-chess-knight', Teams.Black);
     this.checkboard[2][0] = new Piece('king', 'fas fa-chess-king', Teams.White);
-
   }
+
   clickedTile(clickEvent: MouseEvent, clickedPiece: Piece, y: number, x: number): void {
     if (clickedPiece.getTeam() === this.playingTeam) {
       this.selectNewTile(clickEvent, x, y);
@@ -40,17 +42,20 @@ export class GameComponent implements OnInit {
     }
   }
 
-  selectNewTile(clickEvent: MouseEvent, x: number, y: number): void{
+  selectNewTile(clickEvent: MouseEvent, x: number, y: number): void {
     this.unselectTile();
     // select new tile
     this.selectedTile = (clickEvent.target as Element);
     // fix aby se vybralo celi policko a ne jenom ta figurka
-    if (this.selectedTile.tagName !== 'TD') { this.selectedTile = this.selectedTile.parentElement; }
+    if (this.selectedTile.tagName !== 'TD') {
+      this.selectedTile = this.selectedTile.parentElement;
+    }
     this.selectedX = x;
     this.selectedY = y;
     this.selectedTile.classList.add('selected-tile');
   }
-  unselectTile(): void{
+
+  unselectTile(): void {
     if (this.selectedTile !== undefined) {
       this.selectedTile.classList.remove('selected-tile');
       this.selectedTile = undefined;
@@ -58,7 +63,8 @@ export class GameComponent implements OnInit {
       this.selectedY = undefined;
     }
   }
-  makeMove(sx: number, sy: number, tx: number, ty: number): void{
+
+  makeMove(sx: number, sy: number, tx: number, ty: number): void {
     console.log('attempted move');
     console.log('source :' + sx + ',' + sy);
     console.log('target :' + tx + ',' + ty);
