@@ -8,6 +8,8 @@ import {Notification} from '../../data/notification';
 })
 export class NotificationService {
 
+
+
   private notificationSource = new BehaviorSubject<Notification>(null);
   activeNotification = this.notificationSource.asObservable();
 

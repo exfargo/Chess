@@ -26,13 +26,10 @@
       </li>
     </ul>
 
-    <form *ngIf="user == null" class="form-inline my-2 my-lg-0">
+    <form *ngIf="!status" class="form-inline my-2 my-lg-0">
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li>
           <a class="nav-link linkHover" routerLink="login"><h5>Login</h5></a>
-        </li>
-        <li>
-          <h5 class="nav-link linkHover" (click)="log()">break in</h5>
         </li>
         <li>
           <a class="nav-link linkHover" routerLink="register"><h5>Register</h5></a>
@@ -40,9 +37,8 @@
       </ul>
     </form>
 
-    <div *ngIf="user != null" class="form-inline my-2 my-lg-0">
+    <div *ngIf="status ? log:false;" class="form-inline my-2 my-lg-0">
       <h5 class="nav-link linkHover" (click)="goToUser()"><i class="far fa-user"></i> {{user.username}}</h5>
     </div>
-
   </div>
 </nav>
