@@ -2,6 +2,7 @@ package org.api.game;
 
 import org.api.user.LoggedUser;
 import org.data.entities.Move;
+import org.game.Figures.IFigure;
 import org.game.Figures.Teams;
 import org.managers.GameManager;
 import org.utils.ResponseMessage;

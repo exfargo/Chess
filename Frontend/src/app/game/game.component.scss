@@ -17,6 +17,7 @@ tr:nth-child(odd) {
     background: $white;
   }
 }
+
 tr:nth-child(even) {
   td:nth-child(even) {
     background: $light;
@@ -36,6 +37,7 @@ tr:nth-child(1) {
     border-radius: 0 25px 0 0;
   }
 }
+
 tr:last-child {
   td:nth-child(1) {
     border-radius: 0 0 0 25px;
@@ -55,14 +57,22 @@ tr:last-child {
 
 }
 
-.black-piece{
-  color: $secondary;
+.black-piece {
+  color: $teamBlack;
 }
 
-.white-piece{
-  color: $danger;
+.white-piece {
+  color: $teamWhite;
 }
 
-.selected-tile{
-  background-color: #f3df57 !important;
+//TODO option1 => filter: invert(50%);
+//TODO option2 => filter: brightness(200$);
+//TODO option3 => background: $secondary !important;
+
+.selected-tile {
+  box-shadow: inset 1px 1px 20px 5px $primary;
+}
+
+.accessible-tile {
+  box-shadow: inset 1px 1px 20px 5px $success;
 }

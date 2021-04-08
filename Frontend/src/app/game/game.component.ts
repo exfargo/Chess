@@ -80,12 +80,17 @@ export class GameComponent implements OnInit {
     this.unselectTile();
   }
 
-  updateBoard(board: Observable<IFigure[][]>): void{
-    board.subscribe(s => {this.replaceBoard(s); }, error => {console.log('lmfao'); });
+  updateBoard(board: Observable<IFigure[][]>): void {
+    board.subscribe(s => {
+      this.replaceBoard(s);
+    }, error => {
+      console.log('lmfao');
+    });
   }
-  replaceBoard(board: IFigure[][]): void{
-    for (let x = 0; x < 8; x++){
-      for (let y = 0; y < 8; y++){
+
+  replaceBoard(board: IFigure[][]): void {
+    for (let x = 0; x < 8; x++) {
+      for (let y = 0; y < 8; y++) {
         const newTile: IFigure = board[x][y];
         const tile: Piece = this.checkboard[x][y];
         tile.setName(newTile.type);
@@ -94,8 +99,13 @@ export class GameComponent implements OnInit {
       }
     }
   }
-  reloadGame(): void{
+
+  reloadGame(): void {
     this.updateBoard(this.gameService.getBoard(this.id));
+  }
+
+  select($event: MouseEvent): void {
+    ($event.target as Element).classList.add('selected-tile');
   }
 }
 
