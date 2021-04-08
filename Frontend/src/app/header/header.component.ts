@@ -13,33 +13,21 @@ import {Observable, Observer} from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  user: User = null;
-  status: boolean;
-  processedStatus = true;
+  user: User;
 
   constructor(private readonly router: Router, private readonly userService: UserService, private readonly userSource: UserEmitterService) {
   }
 
   ngOnInit(): void {
-    this.userSource.userActive.subscribe(status => this.status = status);
-  }
-
-
-  log(): boolean {
-    if (this.processedStatus) {
-      this.userService.getPlayer().subscribe(
-        u => {
-          this.user = u;
-          this.processedStatus = false;
-          console.log('how the fuck did uy di');
-        },
-        e => console.log(e)
-      );
-    }
-    return this.processedStatus;
+    this.userSource.userActive.subscribe(user => this.user = user);
   }
 
   goToUser(): void {
     this.router.navigateByUrl('/user/' + this.user.id);
+  }
+
+  showThis(): boolean {
+    // TODO KARLE OPRAV TO
+    return true;
   }
 }

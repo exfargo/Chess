@@ -19,155 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="už je připraveny hejbani ted to jenom zapojit do apicka&#10;Pavel asi bude muset pomoct">
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/main.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/polyfills.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/polyfills.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/runtime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/runtime.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/styles.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/vendor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/ChessFrontendEnd/vendor.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/api/CorsFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/api/JAXRSConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/api/game/GameResources.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/api/game/GameplayResources.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/api/leaderboard/LeaderBoardResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/api/user/LoggedUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/api/user/UserAuthentication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/api/user/UserChallengeResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/api/user/UserSettingsResources.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/api/user/UsersExtraResources.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/dao/ChallengeDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/dao/GameDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/dao/UserDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/dao/producers/EntityManagerFactoryProducer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/dao/producers/EntityManagerProducer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/entities/Challenge.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/entities/Challenge_.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/entities/Game.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/entities/Game_.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/entities/Move.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/entities/Move_.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/entities/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/data/entities/User_.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/Board.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/Figures/Bishop.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/Figures/EmptySpace.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/Figures/IFigure.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/Figures/IHradable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/Figures/King.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/Figures/Knight.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/Figures/Pawn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/Figures/Queen.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/Figures/Rook.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/Figures/Teams.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/GameController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/IBoard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/IGameController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/game/TestovaciSunka.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/managers/GameControllerPool.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/managers/GameManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/managers/GameResourceManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/managers/LeaderBoardManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/managers/UserManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/utils/Coordinates.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/utils/Pair.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/utils/PasswordService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/utils/ResponseMessage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/classes/org/utils/Utils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/jboss-web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/FastInfoset-1.2.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/antlr-2.7.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/byte-buddy-1.10.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/classmate-1.5.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/commons-logging-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/dom4j-2.1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/hibernate-commons-annotations-5.1.2.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/hibernate-core-5.4.27.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/hibernate-entitymanager-5.4.27.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/istack-commons-runtime-3.0.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/jandex-2.1.3.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/javassist-3.27.0-GA.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/javax.activation-api-1.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/javax.persistence-api-2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/jaxb-api-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/jaxb-runtime-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/jboss-logging-3.4.1.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/mariadb-java-client-2.1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/spring-security-crypto-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/stax-ex-1.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/lib/txw2-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/Chess/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/api/CorsFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/api/JAXRSConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/api/game/GameResources.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/api/game/GameplayResources.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/api/leaderboard/LeaderBoardResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/api/user/LoggedUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/api/user/UserAuthentication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/api/user/UserChallengeResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/api/user/UserSettingsResources.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/api/user/UsersExtraResources.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/dao/ChallengeDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/dao/GameDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/dao/UserDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/dao/producers/EntityManagerFactoryProducer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/dao/producers/EntityManagerProducer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/entities/Challenge.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/entities/Challenge_.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/entities/Game.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/entities/Game_.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/entities/Move.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/entities/Move_.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/entities/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/data/entities/User_.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/Board.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/Figures/Bishop.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/Figures/EmptySpace.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/Figures/IFigure.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/Figures/IHradable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/Figures/King.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/Figures/Knight.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/Figures/Pawn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/Figures/Queen.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/Figures/Rook.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/Figures/Teams.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/GameController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/IBoard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/IGameController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/game/TestovaciSunka.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/managers/GameControllerPool.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/managers/GameManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/managers/GameResourceManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/managers/LeaderBoardManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/managers/UserManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/utils/Coordinates.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/utils/Pair.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/utils/PasswordService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/utils/ResponseMessage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/classes/org/utils/Utils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/generated-sources/annotations/org/data/entities/Challenge_.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/generated-sources/annotations/org/data/entities/Game_.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/generated-sources/annotations/org/data/entities/Move_.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/generated-sources/annotations/org/data/entities/User_.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/notification.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/notification.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="už je připraveny hejbani ted to jenom zapojit do apicka&#10;Pavel asi bude muset pomoct" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend/src/main/java/org/game/Figures/IFigure.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Frontend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -259,6 +111,7 @@
       <workItem from="1617300823219" duration="613000" />
       <workItem from="1617301723516" duration="1991000" />
       <workItem from="1617781285869" duration="7000" />
+      <workItem from="1617786170627" duration="50000" />
     </task>
     <task id="LOCAL-00001" summary="Game package package transfer">
       <created>1613388637852</created>

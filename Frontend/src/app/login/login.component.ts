@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NotificationService} from '../services/notification.service';
 import {UserService} from '../services/user.service';
-import { UserEmitterService } from '../services/user-emitter.service';
+import {UserEmitterService} from '../services/user-emitter.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +13,8 @@ export class LoginComponent implements OnInit {
   password = '';
 
   // tslint:disable-next-line:max-line-length
-  constructor(private userService: UserService, private notificationService: NotificationService, private readonly userEmmiter: UserEmitterService) {
+  constructor(private userService: UserService, private notificationService: NotificationService,
+              private readonly userEmmiter: UserEmitterService) {
 
   }
 
@@ -25,7 +26,8 @@ export class LoginComponent implements OnInit {
     this.userService.logPlayer(this.nickname, this.password).subscribe(
       s => {
         this.notificationService.pushNotification(s, true);
-        this.userEmmiter.pushUser(true);
+        this.userService.getPlayer().subscribe(u => this.userEmmiter.pushUser(u),
+          e => this.notificationService.pushNotification(e, false));
       },
       e => this.notificationService.pushNotification(e, false)
     );
