@@ -1,6 +1,10 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
 import {Piece} from '../../data/piece';
 import {Teams} from '../../data/teams';
+import {Observable} from 'rxjs';
+import {IFigure} from '../../data/iFigure';
+import {ActivatedRoute} from '@angular/router';
+import {GameService} from '../services/game.service';
 
 @Component({
   selector: 'app-game',
@@ -8,7 +12,7 @@ import {Teams} from '../../data/teams';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-  constructor() {
+  constructor(private readonly route: ActivatedRoute, private gameService: GameService) {
   }
 
   // wtf co je za pojmenovani checkboard
@@ -18,10 +22,15 @@ export class GameComponent implements OnInit {
   board: ElementRef;
   selectedX: number;
   selectedY: number;
+  id: number;
   // asi se potom bude nejak brat z apicka??
   playingTeam: Teams = Teams.White;
 
   ngOnInit(): void {
+    this.route.params.subscribe(
+      u => this.id = u.id,
+      e => console.log(e)
+    );
     this.checkboard = [];
     for (let i = 0; i < 8; i++) {
       this.checkboard.push([]);
@@ -69,6 +78,24 @@ export class GameComponent implements OnInit {
     console.log('source :' + sx + ',' + sy);
     console.log('target :' + tx + ',' + ty);
     this.unselectTile();
+  }
+
+  updateBoard(board: Observable<IFigure[][]>): void{
+    board.subscribe(s => {this.replaceBoard(s); }, error => {console.log('lmfao'); });
+  }
+  replaceBoard(board: IFigure[][]): void{
+    for (let x = 0; x < 8; x++){
+      for (let y = 0; y < 8; y++){
+        const newTile: IFigure = board[x][y];
+        const tile: Piece = this.checkboard[x][y];
+        tile.setName(newTile.type);
+        tile.setTeam(newTile.owner);
+        tile.setHtmlClass('fas fa-chess-' + newTile.type.toLowerCase());
+      }
+    }
+  }
+  reloadGame(): void{
+    this.updateBoard(this.gameService.getBoard(this.id));
   }
 }
 
