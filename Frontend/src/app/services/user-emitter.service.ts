@@ -6,7 +6,7 @@ import {BehaviorSubject} from 'rxjs/internal/BehaviorSubject';
 })
 export class UserEmitterService {
 
-  // @ts-ignore
+
   private userSource = new BehaviorSubject<boolean>(false);
   userActive = this.userSource.asObservable();
 

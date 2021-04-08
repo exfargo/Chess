@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   nickname = '';
   password = '';
 
+  // tslint:disable-next-line:max-line-length
   constructor(private userService: UserService, private notificationService: NotificationService, private readonly userEmmiter: UserEmitterService) {
 
   }
