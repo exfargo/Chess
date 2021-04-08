@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Challenge} from '../../data/challenge';
 import {UserService} from '../services/user.service';
 import {Game} from '../../data/game';
+import {NotificationService} from '../services/notification.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +14,9 @@ export class DashboardComponent implements OnInit {
   challenges: Challenge[];
   games: Game[];
 
-  constructor(private readonly userService: UserService) {
+  constructor(private readonly userService: UserService,
+              private readonly notificationService: NotificationService,
+              private readonly router: Router) {
   }
 
   ngOnInit(): void {
@@ -22,22 +26,21 @@ export class DashboardComponent implements OnInit {
     );
     this.userService.getGames().subscribe(
       g => {
-        console.log(g);
         this.games = g;
       },
-      e => console.log(e)
+      e => this.notificationService.pushNotification(e, false)
     );
   }
 
   accept(id: number): void {
     this.userService.acceptChallenge(id).subscribe(
-      s => this.enterGame(id),
-      e => console.log(e)
+      s => this.notificationService.pushNotification(s, true),
+      e => this.notificationService.pushNotification(e, false)
     );
   }
 
 
   enterGame(id: number): void {
-
+    this.router.navigateByUrl('/game/' + id);
   }
 }

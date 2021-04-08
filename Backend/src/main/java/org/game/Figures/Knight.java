@@ -4,6 +4,7 @@ import org.utils.Pair;
 
 public class Knight implements IFigure,Cloneable{
     private final Teams owner;
+    private final String name = "Knight";
 
     public Knight(Teams owner){
         this.owner = owner;
@@ -16,7 +17,7 @@ public class Knight implements IFigure,Cloneable{
 
     @Override
     public String getType() {
-        return "Knight";
+        return name;
     }
 
     @Override

@@ -7,10 +7,11 @@ public class EmptySpace implements IFigure, Cloneable{
     public Teams getOwner() {
         return Teams.Empty;
     }
+    private final String name = "Empty Space";
 
     @Override
     public String getType() {
-        return "EmptySpace";
+        return name;
     }
 
     @Override

@@ -5,6 +5,7 @@ import org.utils.Pair;
 public class King implements IFigure, IHradable, Cloneable {
     private final Teams owner;
     private boolean hradovaniAble = true;
+    private final String name = "King";
 
     public King(Teams owner){
         this.owner = owner;
@@ -17,7 +18,7 @@ public class King implements IFigure, IHradable, Cloneable {
 
     @Override
     public String getType() {
-        return "King";
+        return name;
     }
 
     @Override

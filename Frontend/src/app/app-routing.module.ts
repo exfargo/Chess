@@ -11,11 +11,14 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {BlameComponent} from './blame/blame.component';
 
 const routes: Routes = [
+
   {path: 'home', component: HomeComponent},
-  {path: 'game', component: GameComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+
   {path: 'user/:id', component: UserComponent},
+  {path: 'game/:id', component: GameComponent},
+
   {path: 'lidlboard', component: LeaderboardComponent},
   {path: 'users', component: UsersComponent},
   {path: 'dashboard', component: DashboardComponent},
