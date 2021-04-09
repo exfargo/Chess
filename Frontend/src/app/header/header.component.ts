@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   user: User;
   logged = false;
 
+  // tslint:disable-next-line:max-line-length
   constructor(private readonly router: Router, private readonly userService: UserService, private readonly userSource: UserEmitterService, private httpClient: HttpClient) {
   }
 
