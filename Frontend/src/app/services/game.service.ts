@@ -20,6 +20,6 @@ export class GameService {
     return this.httpClient.get('chess/game/' + id + '/sync') as Observable<IFigure[][]>;
   }
   makeMove(move: Move, id): Observable<ResponseMessage>{
-    return this.httpClient.post('chess/game/' + id + '/play', move) as Observable<ResponseMessage>;
+    return this.httpClient.put('chess/game/' + id + '/play', move) as Observable<ResponseMessage>;
   }
 }
