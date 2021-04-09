@@ -1,0 +1,16 @@
+@import 'src/scss/color-variables';
+
+div {
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 1px 15px 5px $secondary;
+  border-radius: 25px;
+}
+
+.alert {
+  box-shadow: 1px 1px 15px 5px $danger;
+}
+
+.success {
+  box-shadow: 1px 1px 15px 5px $success;
+}

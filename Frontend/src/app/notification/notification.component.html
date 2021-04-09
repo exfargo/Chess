@@ -1,0 +1,8 @@
+<div *ngIf="notification" id="notificator">
+  <div *ngIf="getStatus()" class="d-flex justify-content-center align-items-center text-primary success">
+    {{notification.message}}
+  </div>
+  <div *ngIf="!getStatus()" class="d-flex justify-content-center align-items-center text-primary alert">
+    {{notification.message}}
+  </div>
+</div>
