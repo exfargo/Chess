@@ -40,6 +40,10 @@ public class GameplayResources {
     @PUT
     @Path("{id}/play")
     public Response makeMove(@PathParam("id") long id, Move move) {
+        System.out.println(move.getxSource());
+        System.out.println(move.getySource());
+        System.out.println(move.getxTarget());
+        System.out.println(move.getyTarget());
         try {
             if (gameManager.getGame(id) == null) {
                 return Response.status(404).entity(new ResponseMessage("No game with id : " + id)).build();
@@ -54,9 +58,12 @@ public class GameplayResources {
                     || gameManager.getGame(id).getUser2().getId() == loggedUser.getLoggedUser().getId() && gameManager.getTurn(id) != Teams.Black) {
                 return Response.status(200).entity(new ResponseMessage("Not your turn")).build();
             }
-            if (gameManager.makeMove(id, move)) {
-                return Response.status(200).entity(new ResponseMessage("Moved successfully")).build();
-            }
+            System.out.println("got here");
+            System.out.println(gameManager.makeMove(id, move));
+//            if (gameManager.makeMove(id, move)) {
+//                return Response.status(200).entity(new ResponseMessage("Moved successfully")).build();
+//            }
+            System.out.println("got here two");
             return Response.status(200).entity(new ResponseMessage("Invalid move!")).build();
         } catch (Exception e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
