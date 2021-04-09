@@ -15,6 +15,11 @@ export class UserService {
   constructor(private httpClient: HttpClient) {
   }
 
+  logoutPlayer(): Observable<ResponseMessage>{
+    return this.httpClient.delete('/chess/user/authentication', {
+      withCredentials: true
+    })as Observable<ResponseMessage>;
+  }
 
   getPlayer(id?: number): Observable<User> {
     if (id != null || id !== undefined) {

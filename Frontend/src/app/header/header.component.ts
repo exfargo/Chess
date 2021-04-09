@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import {UserService} from '../services/user.service';
 import {User} from '../../data/user';
 import {UserEmitterService} from '../services/user-emitter.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
   user: User;
   logged = false;
 
-  constructor(private readonly router: Router, private readonly userService: UserService, private readonly userSource: UserEmitterService) {
+  constructor(private readonly router: Router, private readonly userService: UserService, private readonly userSource: UserEmitterService, private httpClient: HttpClient) {
   }
 
   ngOnInit(): void {
@@ -33,4 +34,9 @@ export class HeaderComponent implements OnInit {
     console.log(this.logged);
     return !this.logged;
   }
+  logOut(): void {
+    this.userSource.pushUser(null);
+    this.userService.logoutPlayer().subscribe(e => console.log(e) );
+  }
+
 }
