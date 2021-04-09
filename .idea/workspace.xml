@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="Synchonizace boardy s backendem">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/game/game.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/game/game.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/game/game.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/game/game.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/game.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/game.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/data/move.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/data/move.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/data/teams.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/data/teams.ts" afterDir="false" />
-    </list>
+    <list default="true" id="cc6f7080-5a9f-44d2-bda5-81533ddd0a0a" name="Default Changelist" comment="makeMove hra se rozbila" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend/src/main/java/org/game/Figures/IFigure.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -119,7 +111,7 @@
       <workItem from="1617300823219" duration="613000" />
       <workItem from="1617301723516" duration="1991000" />
       <workItem from="1617781285869" duration="7000" />
-      <workItem from="1617958119459" duration="3917000" />
+      <workItem from="1617958119459" duration="4044000" />
     </task>
     <task id="LOCAL-00001" summary="Game package package transfer">
       <created>1613388637852</created>
@@ -233,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617883469403</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="makeMove hra se rozbila">
+      <created>1617962360796</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1617962360796</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +266,8 @@
     <MESSAGE value="fixed už se vybiraj spravny tily" />
     <MESSAGE value="už je připraveny hejbani ted to jenom zapojit do apicka&#10;Pavel asi bude muset pomoct" />
     <MESSAGE value="Synchonizace boardy s backendem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Synchonizace boardy s backendem" />
+    <MESSAGE value="makeMove hra se rozbila" />
+    <option name="LAST_COMMIT_MESSAGE" value="makeMove hra se rozbila" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

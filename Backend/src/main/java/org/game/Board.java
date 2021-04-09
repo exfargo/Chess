@@ -124,18 +124,17 @@ public class Board implements IBoard {
          */
         IFigure selectedPiece = board[source.second()][source.first()];
 
-
         //hledí na : move validity, los, friendly fire a tahy
         if (canMove(source, target, playingTeam, selectedPiece)) {
-
             //pawn shenanigans
+            System.out.println("xd");
             if (board[source.second()][source.first()].getType().equals("Pawn")) {
                 if (source.first().equals(target.first())) {
                     //aby se nemohl vyhazovat veci pred sebou
-                    if (board[target.second()][target.first()].getType().equals("EmptySpace")) {
+                    System.out.println("xd1");
+                    if (board[target.second()][target.first()].getOwner().equals(Teams.Empty)) {
                         teleportPiece(source, target);
                         //en passant
-
 
                         if (Math.abs(source.second() - target.second()) == 2) {
                             passX = target.first();
@@ -220,7 +219,8 @@ public class Board implements IBoard {
             tempX -= Math.signum(tempX - target.first());
             tempY -= Math.signum(tempY - target.second());
             //check for collision
-            if (!board[tempY][tempX].getType().equals("EmptySpace")) {
+            if (!board[tempY][tempX].getOwner().equals(Teams.Empty)) {
+                System.out.println("haha");
                 return false;
             }
         }
@@ -335,17 +335,13 @@ public class Board implements IBoard {
                 && board[source.second()][source.first()].getOwner() != board[target.second()][target.first()].getOwner()
                 && (selectedPiece.getOwner() == playingTeam || cheatMode);
 
-
         if (output && !cheatMode) {
-
             //pair cannot be cast to coordinates :I
             output = !ghostTurn(playingTeam, new Coordinates(source.first(), source.second()), new Coordinates(target.first(), target.second()));
         }
-
         return output;
     }
 
-    //TODO: this
     //tohle bude humáč
     public boolean checkCheckMate(Teams team) {
 
