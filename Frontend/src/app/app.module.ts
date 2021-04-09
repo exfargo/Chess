@@ -18,6 +18,7 @@ import {UsersComponent} from './users/users.component';
 import {UserComponent} from './user/user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BlameComponent } from './blame/blame.component';
+import { NotificationComponent } from './notification/notification.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { BlameComponent } from './blame/blame.component';
     UsersComponent,
     UserComponent,
     DashboardComponent,
-    BlameComponent
+    BlameComponent,
+    NotificationComponent
   ],
     imports: [
         BrowserModule,

@@ -3,8 +3,6 @@ import {Router} from '@angular/router';
 import {UserService} from '../services/user.service';
 import {User} from '../../data/user';
 import {UserEmitterService} from '../services/user-emitter.service';
-import {printLine} from 'tslint/lib/verify/lines';
-import {Observable, Observer} from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -14,12 +12,17 @@ import {Observable, Observer} from 'rxjs';
 export class HeaderComponent implements OnInit {
 
   user: User;
+  logged = false;
 
   constructor(private readonly router: Router, private readonly userService: UserService, private readonly userSource: UserEmitterService) {
   }
 
   ngOnInit(): void {
-    this.userSource.userActive.subscribe(user => this.user = user);
+    this.userSource.userActive.subscribe(user => {
+        this.user = user;
+        this.logged = user !== null;
+      },
+      e => this.logged = false);
   }
 
   goToUser(): void {
@@ -27,7 +30,7 @@ export class HeaderComponent implements OnInit {
   }
 
   showThis(): boolean {
-    // TODO KARLE OPRAV TO
-    return true;
+    console.log(this.logged);
+    return !this.logged;
   }
 }

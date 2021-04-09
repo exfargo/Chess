@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {NotificationService} from './services/notification.service';
-import {Notification} from '../data/notification';
 
 @Component({
   selector: 'app-root',
@@ -11,22 +9,12 @@ export class AppComponent implements OnInit {
 
   title = 'Chess';
 
-  notification: Notification;
-
-  constructor(private notificationService: NotificationService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.notificationService.activeNotification.subscribe(data => {
-      this.notification = data;
-    });
+
   }
 
-  getStatus(): boolean {
-    return this.notification.status;
-  }
 
-  cancel(): void {
-    this.notification = null;
-  }
 }
