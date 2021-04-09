@@ -1,5 +1,5 @@
 export enum Teams{
-  Empty,
-  White,
-  Black,
+  Empty = 'Empty',
+  White = 'White',
+  Black = 'Black',
 }

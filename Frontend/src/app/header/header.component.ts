@@ -31,7 +31,6 @@ export class HeaderComponent implements OnInit {
   }
 
   showThis(): boolean {
-    console.log(this.logged);
     return !this.logged;
   }
   logOut(): void {

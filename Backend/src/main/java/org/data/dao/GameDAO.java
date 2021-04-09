@@ -29,8 +29,9 @@ public class GameDAO {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<Game> cq = cb.createQuery(Game.class);
         Root<Game> rootEntry = cq.from(Game.class);
-        cq.select(rootEntry).where(cb.equal(rootEntry.get(Game_.user1), user));
-        cq.select(rootEntry).where(cb.equal(rootEntry.get(Game_.user2), user));
+
+
+
         TypedQuery<Game> typedQuery = entityManager.createQuery(cq);
         return typedQuery.getResultList();
     }
@@ -55,4 +56,5 @@ public class GameDAO {
         entityManager.merge(g);
         entityManager.getTransaction().commit();
     }
+
 }

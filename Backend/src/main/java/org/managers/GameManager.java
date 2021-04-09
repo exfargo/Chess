@@ -17,6 +17,7 @@ import org.utils.Utils;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import java.util.Collection;
 import java.util.List;
 
 @ApplicationScoped
@@ -43,6 +44,7 @@ public class GameManager {
 
     public boolean makeMove(long id, Move move) {
         if (gameControllerPool.retrieveController(id).makeMove(new Pair<>(move.getxSource(), move.getySource()), new Pair<>(move.getxTarget(), move.getyTarget()))) {
+            System.out.println("hej got inti the in");
             gameDAO.writeMove(id, move);
             return true;
         } else return false;
@@ -50,10 +52,6 @@ public class GameManager {
 
     public List<Game> getForUser(int userId) {
         return gameDAO.getGameWherePlayer(userDAO.get(userId));
-    }
-
-    public List<Game> getForUser(User user) {
-        return gameDAO.getGameWherePlayer(user);
     }
 
     public void matchChallenge(long id) {
@@ -73,4 +71,6 @@ public class GameManager {
     public boolean playerInGameById(User loggedUser, long id) {
         return gameDAO.get(id).getUser1().getId() == loggedUser.getId() || gameDAO.get(id).getUser2().getId() == loggedUser.getId();
     }
+
+
 }

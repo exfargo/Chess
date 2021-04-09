@@ -2,13 +2,14 @@ package org.api.game;
 
 import org.api.user.LoggedUser;
 import org.data.entities.Game;
-import org.data.entities.Move;
-import org.game.Figures.Teams;
 import org.managers.GameManager;
 import org.utils.ResponseMessage;
 
 import javax.inject.Inject;
-import javax.ws.rs.*;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -27,7 +28,7 @@ public class GameResources {
     public Response getGames() {
         try {
             if (loggedUser.isLogged()) {
-                return Response.status(200).entity(gameManager.getForUser(loggedUser.getLoggedUser())).build();
+                return Response.status(200).entity(gameManager.getForUser(loggedUser.getLoggedUserId())).build();
             } else {
                 return Response.status(404).entity(new ResponseMessage("User not logged")).build();
             }

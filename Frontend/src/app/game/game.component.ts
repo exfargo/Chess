@@ -5,6 +5,7 @@ import {Observable} from 'rxjs';
 import {IFigure} from '../../data/iFigure';
 import {ActivatedRoute} from '@angular/router';
 import {GameService} from '../services/game.service';
+import {Move} from '../../data/move';
 
 @Component({
   selector: 'app-game',
@@ -38,9 +39,7 @@ export class GameComponent implements OnInit {
         this.checkboard[i][j] = new Piece('empty', '', Teams.Empty);
       }
     }
-    this.checkboard[0][0] = new Piece('rook', 'fas fa-chess-rook', Teams.White);
-    this.checkboard[1][0] = new Piece('knight', 'fas fa-chess-knight', Teams.Black);
-    this.checkboard[2][0] = new Piece('king', 'fas fa-chess-king', Teams.White);
+    this.reloadGame();
   }
 
   clickedTile(clickEvent: MouseEvent, clickedPiece: Piece, y: number, x: number): void {
@@ -75,9 +74,16 @@ export class GameComponent implements OnInit {
 
   makeMove(sx: number, sy: number, tx: number, ty: number): void {
     console.log('attempted move');
-    console.log('source :' + sx + ',' + sy);
-    console.log('target :' + tx + ',' + ty);
     this.unselectTile();
+    const move: Move = {
+      xSource: sx,
+      ySource: sy,
+      xTarget: tx,
+      yTarget: ty,
+    };
+    console.log(move);
+    this.gameService.makeMove(move, this.id).subscribe(s => console.log(s), e => console.log(e));
+    this.reloadGame();
   }
 
   updateBoard(board: Observable<IFigure[][]>): void {
