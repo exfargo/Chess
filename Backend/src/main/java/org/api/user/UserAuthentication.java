@@ -23,6 +23,7 @@ public class UserAuthentication {
 
     /**
      * retrieves and returns a user with specified id from database
+     *
      * @param id user's identification
      * @return User by id
      */
@@ -31,9 +32,8 @@ public class UserAuthentication {
     public Response getUser(@PathParam("id") int id) {
         try {
             User u = userManager.getUserById(id);
-            if (u == null) {
+            if (u == null)
                 return Response.status(404).entity(new ResponseMessage("User doesn't exist")).build();
-            }
             return Response.status(200).entity(u).build();
         } catch (Exception e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
@@ -41,17 +41,19 @@ public class UserAuthentication {
     }
 
     //region user/authentication
+
     /**
      * retrieves currently logged user, returns null if not logged
+     *
      * @return User? instance
      */
     @GET
     @Path("authentication")
     public Response getLoggedInUser() {
         try {
-            if (loggedUser.isLogged()) {
+            if (loggedUser.isLogged())
                 return Response.status(200).entity(loggedUser.getLoggedUser()).build();
-            } else
+            else
                 return Response.status(403).entity(new ResponseMessage("User is not logged in")).build();
         } catch (NullPointerException e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
@@ -60,6 +62,7 @@ public class UserAuthentication {
 
     /**
      * creates new user
+     *
      * @param newUser information (username, password)
      * @return outcome message
      */
@@ -67,12 +70,14 @@ public class UserAuthentication {
     @Path("authentication/new")
     public Response createUser(User newUser) {
         try {
-            if (userManager.isUserByName(newUser.getUsername())) {
+            if (newUser.getUsername().isEmpty())
+                return Response.status(409).entity(new ResponseMessage("Name cannot be empty")).build();
+            if (newUser.getPassword().isEmpty())
+                return Response.status(409).entity(new ResponseMessage("Password cannot be empty")).build();
+            if (userManager.isUserByName(newUser.getUsername()))
                 return Response.status(409).entity(new ResponseMessage("Name already in use")).build();
-            }
-            if (userManager.isForbidden(newUser.getUsername())) {
+            if (userManager.isForbidden(newUser.getUsername()))
                 return Response.status(409).entity(new ResponseMessage("You CANNOT use this name")).build();
-            }
             return Response.status(200).entity(userManager.createUser(newUser)).build();
         } catch (Exception e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
@@ -81,6 +86,7 @@ public class UserAuthentication {
 
     /**
      * sets passed user as currently logged
+     *
      * @param user information (username, password)
      * @return outcome message
      */
@@ -101,6 +107,7 @@ public class UserAuthentication {
 
     /**
      * signs out session logged user,
+     *
      * @return outcome message
      */
     @DELETE

@@ -24,6 +24,6 @@ export class NotificationComponent implements OnInit {
   }
 
   cancel(): void {
-    this.notification = null;
+    this.notificationService.close();
   }
 }

@@ -2,17 +2,21 @@ import {Component, OnInit} from '@angular/core';
 import {User} from '../../data/user';
 import {Router} from '@angular/router';
 import {UserService} from '../services/user.service';
+import {NotificationService} from '../services/notification.service';
 
 
 @Component({
-  selector: 'app-leaderboard',
-  templateUrl: './leaderboard.component.html',
-  styleUrls: ['./leaderboard.component.scss']
-})
+             selector: 'app-leaderboard',
+             templateUrl: './leaderboard.component.html',
+             styleUrls: ['./leaderboard.component.scss']
+           })
 export class LeaderboardComponent implements OnInit {
 
 
-  constructor(private readonly router: Router, private readonly userService: UserService) {}
+  constructor(private readonly router: Router,
+              private readonly userService: UserService,
+              private readonly notificationService: NotificationService) {
+  }
 
 
   players: any = [];
@@ -21,7 +25,7 @@ export class LeaderboardComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getLeaderboard('top-50').subscribe(
       u => this.users = u,
-      e => console.log(e)
+      e => this.notificationService.pushNotification(e.error, false)
     );
   }
 

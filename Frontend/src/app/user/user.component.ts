@@ -3,12 +3,13 @@ import {ActivatedRoute} from '@angular/router';
 import {UserService} from '../services/user.service';
 import {Game} from '../../data/game';
 import {GameService} from '../services/game.service';
+import {NotificationService} from '../services/notification.service';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
-})
+             selector: 'app-user',
+             templateUrl: './user.component.html',
+             styleUrls: ['./user.component.scss']
+           })
 export class UserComponent implements OnInit {
 
   username = '';
@@ -20,7 +21,9 @@ export class UserComponent implements OnInit {
 
   constructor(private readonly userService: UserService,
               private readonly route: ActivatedRoute,
-              private readonly gameService: GameService) {
+              private readonly gameService: GameService,
+              private readonly notificationService: NotificationService
+  ) {
   }
 
   ngOnInit(): void {
@@ -31,20 +34,20 @@ export class UserComponent implements OnInit {
           this.points = us.points;
           this.id = us.id;
         },
-        er => console.log(er)),
-      e => console.log(e)
+        er => this.notificationService.pushNotification(er.error, false)),
+      e => this.notificationService.pushNotification(e.error, false)
     );
 
     this.gameService.getByUser(this.id).subscribe(
       g => this.games = g,
-      e => console.log(e)
+      e => this.notificationService.pushNotification(e.error, false)
     );
   }
 
   challenge(): void {
     this.userService.challenge(this.id).subscribe(
-      u => console.log(u.message),
-      e => console.log(e)
+      u => this.notificationService.pushNotification(u.message, true),
+      e => this.notificationService.pushNotification(e.error, false)
     );
   }
 }

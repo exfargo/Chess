@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {NotificationService} from './services/notification.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,15 @@ export class AppComponent implements OnInit {
 
   title = 'Chess';
 
-  constructor() {
+  constructor(private readonly notificationService: NotificationService) {
   }
 
   ngOnInit(): void {
 
+  }
+
+  closeNotification(): void {
+    this.notificationService.close();
   }
 
 

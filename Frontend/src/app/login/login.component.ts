@@ -2,12 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {NotificationService} from '../services/notification.service';
 import {UserService} from '../services/user.service';
 import {UserEmitterService} from '../services/user-emitter.service';
+import {ResponseMessage} from '../../data/responseMessage';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
-})
+             selector: 'app-login',
+             templateUrl: './login.component.html',
+             styleUrls: ['./login.component.scss']
+           })
 export class LoginComponent implements OnInit {
   nickname = '';
   password = '';
@@ -25,11 +26,16 @@ export class LoginComponent implements OnInit {
   logUser(): void {
     this.userService.logPlayer(this.nickname, this.password).subscribe(
       s => {
-        this.notificationService.pushNotification(s, true);
-        this.userService.getPlayer().subscribe(u => this.userEmmiter.pushUser(u),
-          e => this.notificationService.pushNotification(e, false));
+        this.notificationService.pushNotification(s.message, true);
+        this.userService.getPlayer().subscribe(
+          u => this.userEmmiter.pushUser(u),
+          e => {
+            this.notificationService.pushNotification(e.error, false);
+          });
       },
-      e => this.notificationService.pushNotification(e, false)
+      e => {
+        this.notificationService.pushNotification(e.error, false);
+      }
     );
   }
 }

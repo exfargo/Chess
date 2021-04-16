@@ -1,13 +1,11 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
-import {ResponseMessage} from 'src/data/responseMessage';
 import {Notification} from '../../data/notification';
 
 @Injectable({
-  providedIn: 'root'
-})
+              providedIn: 'root'
+            })
 export class NotificationService {
-
 
 
   private notificationSource = new BehaviorSubject<Notification>(null);
@@ -16,8 +14,12 @@ export class NotificationService {
   constructor() {
   }
 
-  pushNotification(message: ResponseMessage, status: boolean): void {
-    this.notificationSource.next({message: message.message, status});
+  pushNotification(message: string, status: boolean): void {
+    this.notificationSource.next({message, status});
+  }
+
+  close(): void {
+    this.notificationSource.next(null);
   }
 }
 
