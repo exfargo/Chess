@@ -5,7 +5,7 @@ import {Game} from '../../data/game';
 import {IFigure} from '../../data/iFigure';
 import {Move} from '../../data/move';
 import {ResponseMessage} from '../../data/responseMessage';
-import {Teams} from "../../data/teams";
+import {Teams} from '../../data/teams';
 
 @Injectable({
   providedIn: 'root'

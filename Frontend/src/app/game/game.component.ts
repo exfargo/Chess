@@ -116,12 +116,5 @@ export class GameComponent implements OnInit {
   }
 }
 
-/*
-  rook <i class="fas fa-chess-rook"></i>
-  queen <i class="fas fa-chess-queen"></i>
-  pawn <i class="fas fa-chess-pawn"></i>
-  knight <i class="fas fa-chess-knight"></i>
-  king <i class="fas fa-chess-king"></i>
- */
 
 
