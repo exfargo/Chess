@@ -115,6 +115,6 @@ export class GameComponent implements OnInit {
     ($event.target as Element).classList.add('selected-tile');
   }
 }
-
+// hm
 
 

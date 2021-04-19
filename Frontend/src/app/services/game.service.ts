@@ -26,4 +26,5 @@ export class GameService {
   getTurn(id): Observable<Teams>{
     return this.httpClient.get('chess/game/' + id + '/turn') as Observable<Teams>;
   }
+  // github
 }
