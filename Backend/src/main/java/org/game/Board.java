@@ -127,11 +127,11 @@ public class Board implements IBoard {
         //hledí na : move validity, los, friendly fire a tahy
         if (canMove(source, target, playingTeam, selectedPiece)) {
             //pawn shenanigans
-            System.out.println("xd");
+
             if (board[source.second()][source.first()].getType().equals("Pawn")) {
                 if (source.first().equals(target.first())) {
                     //aby se nemohl vyhazovat veci pred sebou
-                    System.out.println("xd1");
+
                     if (board[target.second()][target.first()].getOwner().equals(Teams.Empty)) {
                         teleportPiece(source, target);
                         //en passant

@@ -5,6 +5,7 @@ import {Game} from '../../data/game';
 import {IFigure} from '../../data/iFigure';
 import {Move} from '../../data/move';
 import {ResponseMessage} from '../../data/responseMessage';
+import {Teams} from "../../data/teams";
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +22,8 @@ export class GameService {
   }
   makeMove(move: Move, id): Observable<ResponseMessage>{
     return this.httpClient.put('chess/game/' + id + '/play', move) as Observable<ResponseMessage>;
+  }
+  getTurn(id): Observable<Teams>{
+    return this.httpClient.get('chess/game/' + id + '/turn') as Observable<Teams>;
   }
 }

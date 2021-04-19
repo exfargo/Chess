@@ -40,10 +40,11 @@ export class GameComponent implements OnInit {
       }
     }
     this.reloadGame();
+    setInterval(() => { this.reloadGame(); }, 0.5 * 1000);
   }
 
   clickedTile(clickEvent: MouseEvent, clickedPiece: Piece, y: number, x: number): void {
-    if (clickedPiece.getTeam() === this.playingTeam) {
+    if (clickedPiece.getTeam() !== Teams.Empty) {
       this.selectNewTile(clickEvent, x, y);
     } else if (this.selectedTile !== undefined) {
       this.makeMove(this.selectedX, this.selectedY, x, y);
@@ -82,8 +83,7 @@ export class GameComponent implements OnInit {
       yTarget: ty,
     };
     console.log(move);
-    this.gameService.makeMove(move, this.id).subscribe(s => console.log(s), e => console.log(e));
-    this.reloadGame();
+    this.gameService.makeMove(move, this.id).subscribe(s => {console.log(s); this.reloadGame(); }, e => console.log(e));
   }
 
   updateBoard(board: Observable<IFigure[][]>): void {
@@ -108,6 +108,7 @@ export class GameComponent implements OnInit {
 
   reloadGame(): void {
     this.updateBoard(this.gameService.getBoard(this.id));
+    this.gameService.getTurn(this.id).subscribe(s => {this.playingTeam = s; }, error => console.log('lmao'));
   }
 
   select($event: MouseEvent): void {
