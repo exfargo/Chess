@@ -1,10 +1,19 @@
 <div *ngIf="notification" id="notificator" class="idle">
-  <div *ngIf="getStatus()" class="d-flex justify-content-center align-items-center text-primary success">
-    {{notification.message}}
-    <i class="fas fa-times ml-5 linkHover" (click)="cancel()"></i>
+
+  <div *ngIf="getStatus()" class="d-flex align-items-center text-success s justify-content-between">
+
+    <strong>{{notification.message}}</strong>
+
+    <i class="fas fa-times ml-5" (click)="cancel()"></i>
+
   </div>
-  <div *ngIf="!getStatus()" class="d-flex justify-content-center align-items-center text-primary alert">
-    {{notification.message}}
-    <i class="fas fa-times ml-5 linkHover" (click)="cancel()"></i>
+
+  <div *ngIf="!getStatus()" class="d-flex align-items-center text-danger a justify-content-between">
+
+    <strong>{{notification.message}}</strong>
+
+    <i class="fas fa-times ml-5" (click)="cancel()"></i>
+
   </div>
+
 </div>

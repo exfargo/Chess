@@ -76,3 +76,7 @@ tr:last-child {
 .accessible-tile {
   box-shadow: inset 1px 1px 29px 10px $success;
 }
+
+.rotate {
+  transform: rotateZ(180deg);
+}

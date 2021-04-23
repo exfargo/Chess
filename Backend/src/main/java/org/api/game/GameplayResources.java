@@ -2,7 +2,6 @@ package org.api.game;
 
 import org.api.user.LoggedUser;
 import org.data.entities.Move;
-import org.game.Figures.IFigure;
 import org.game.Figures.Teams;
 import org.managers.GameManager;
 import org.utils.ResponseMessage;
@@ -40,10 +39,6 @@ public class GameplayResources {
     @PUT
     @Path("{id}/play")
     public Response makeMove(@PathParam("id") long id, Move move) {
-        System.out.println(move.getxSource());
-        System.out.println(move.getySource());
-        System.out.println(move.getxTarget());
-        System.out.println(move.getyTarget());
         try {
             if (gameManager.getGame(id) == null) {
                 return Response.status(404).entity(new ResponseMessage("No game with id : " + id)).build();
@@ -58,15 +53,42 @@ public class GameplayResources {
                     || gameManager.getGame(id).getUser2().getId() == loggedUser.getLoggedUser().getId() && gameManager.getTurn(id) != Teams.Black) {
                 return Response.status(200).entity(new ResponseMessage("Not your turn")).build();
             }
-            System.out.println("got here");
-            System.out.println(gameManager.makeMove(id, move));
-//            if (gameManager.makeMove(id, move)) {
-//                return Response.status(200).entity(new ResponseMessage("Moved successfully")).build();
-//            }
-            System.out.println("got here two");
+            if (gameManager.makeMove(id, move)) {
+                return Response.status(200).entity(new ResponseMessage("Moved successfully")).build();
+            }
             return Response.status(200).entity(new ResponseMessage("Invalid move!")).build();
         } catch (Exception e) {
             return Response.status(400).entity(new ResponseMessage(e.toString())).build();
+        }
+    }
+
+    @GET
+    @Path("{id}/turn")
+    public Response getTurn(@PathParam("id") long id) {
+        try {
+            if (gameManager.getGame(id) == null) {
+                return Response.status(404).entity(new ResponseMessage("No game with id : " + id)).build();
+            }
+            if (!loggedUser.isLogged()) {
+                return Response.status(400).entity(new ResponseMessage("How the fuck did you get here ?!")).build();
+            }
+            return Response.status(200).entity(gameManager.getTurn(id)).build();
+        } catch (Exception e) {
+            return Response.status(400).entity(new ResponseMessage(e.toString())).build();
+        }
+    }
+
+    @GET
+    @Path("{id}/myTeam")
+    public Response getPlayerTeam(@PathParam("id") long id) {
+        try {
+            if (gameManager.getGame(id).getUser1().getId() == loggedUser.getLoggedUser().getId()) {
+                return Response.status(200).entity(Teams.White).build();
+            } else {
+                return Response.status(200).entity(Teams.Black).build();
+            }
+        } catch (Exception e) {
+            return Response.status(400).entity(new ResponseMessage("JOU WTF!")).build();
         }
     }
 }

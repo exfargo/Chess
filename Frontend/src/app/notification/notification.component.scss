@@ -6,12 +6,15 @@ div {
   border-radius: 25px;
 }
 
-.alert {
+.a {
   box-shadow: 1px 1px 15px 5px $danger;
+  padding: 0 30px;
+
 }
 
-.success {
+.s {
   box-shadow: 1px 1px 15px 5px $success;
+  padding: 0 30px;
 }
 
 .idle {

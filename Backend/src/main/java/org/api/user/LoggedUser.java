@@ -22,8 +22,6 @@ public class LoggedUser implements Serializable {
     }
 
     public User getLoggedUser() {
-        System.out.println("Idawdawd acfsxdxafdawexdzawD : ");
-        System.out.println(loggedUserId);
         return userDAO.get(loggedUserId);
     }
 

@@ -6,10 +6,10 @@ import {NotificationService} from '../services/notification.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
-})
+             selector: 'app-dashboard',
+             templateUrl: './dashboard.component.html',
+             styleUrls: ['./dashboard.component.scss']
+           })
 export class DashboardComponent implements OnInit {
   challenges: Challenge[];
   games: Game[];
@@ -37,8 +37,8 @@ export class DashboardComponent implements OnInit {
       s => this.notificationService.pushNotification(s.message, true),
       e => this.notificationService.pushNotification(e.error, false)
     );
+    this.ngOnInit();
   }
-
 
   enterGame(id: number): void {
     this.router.navigateByUrl('/game/' + id);
