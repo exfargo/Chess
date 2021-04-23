@@ -39,12 +39,15 @@ export class GameComponent implements OnInit {
         this.checkboard[i][j] = new Piece('empty', '', Teams.Empty);
       }
     }
+    this.gameService.getTeam(this.id).subscribe(s => {this.playingTeam = s; } , error => {console.log('bruh'); } );
+    console.log(this.playingTeam);
     this.reloadGame();
     setInterval(() => { this.reloadGame(); }, 0.5 * 1000);
   }
 
   clickedTile(clickEvent: MouseEvent, clickedPiece: Piece, y: number, x: number): void {
-    if (clickedPiece.getTeam() !== Teams.Empty) {
+    console.log(this.playingTeam);
+    if (clickedPiece.getTeam() === this.playingTeam) {
       this.selectNewTile(clickEvent, x, y);
     } else if (this.selectedTile !== undefined) {
       this.makeMove(this.selectedX, this.selectedY, x, y);
