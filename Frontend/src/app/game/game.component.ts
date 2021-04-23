@@ -111,7 +111,7 @@ export class GameComponent implements OnInit {
 
   reloadGame(): void {
     this.updateBoard(this.gameService.getBoard(this.id));
-    this.gameService.getTurn(this.id).subscribe(s => {this.playingTeam = s; }, error => console.log('lmao'));
+    // this.gameService.getTurn(this.id).subscribe(s => {this.playingTeam = s; }, error => console.log('lmao'));
   }
 
   select($event: MouseEvent): void {
