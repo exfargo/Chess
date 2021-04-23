@@ -40,7 +40,15 @@ export class GameComponent implements OnInit {
       }
     }
     this.gameService.getTeam(this.id).subscribe(s => {this.playingTeam = s; } , error => {console.log('bruh'); } );
-    console.log(this.playingTeam);
+
+    if (this.playingTeam === Teams.Black){
+      document.getElementById('table').classList.add('rotate');
+      const pieces = document.getElementsByClassName('chess-piece');
+      for ( const piece of pieces[Symbol.iterator]){
+        piece.classList.add('rotate');
+      }
+    }
+
     this.reloadGame();
     setInterval(() => { this.reloadGame(); }, 0.5 * 1000);
   }
