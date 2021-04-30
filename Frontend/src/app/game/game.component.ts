@@ -25,7 +25,7 @@ export class GameComponent implements OnInit {
   selectedY: number;
   id: number;
   // asi se potom bude nejak brat z apicka??
-  playingTeam: Teams = Teams.White;
+  playingTeam: Teams;
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -39,18 +39,24 @@ export class GameComponent implements OnInit {
         this.checkboard[i][j] = new Piece('empty', '', Teams.Empty);
       }
     }
-    this.gameService.getTeam(this.id).subscribe(s => {this.playingTeam = s; } , error => {console.log('bruh'); } );
-
-    if (this.playingTeam === Teams.Black){
-      document.getElementById('table').classList.add('rotate');
-      const pieces = document.getElementsByClassName('chess-piece');
-      for ( const piece of pieces[Symbol.iterator]){
-        piece.classList.add('rotate');
+    this.gameService.getTeam(this.id).subscribe(s => {
+      this.playingTeam = s;
+      if (this.playingTeam === Teams.Black) {
+        document.getElementById('table').classList.add('rotate');
+        const pieces = document.getElementsByClassName('chess-piece');
+        for (const piece of Array.from(pieces)) {
+          piece.classList.add('rotate');
+        }
       }
-    }
+    }, error => {
+      console.log('bruh');
+    });
+
 
     this.reloadGame();
-    setInterval(() => { this.reloadGame(); }, 0.5 * 1000);
+    setInterval(() => {
+      this.reloadGame();
+    }, 0.5 * 1000);
   }
 
   clickedTile(clickEvent: MouseEvent, clickedPiece: Piece, y: number, x: number): void {
@@ -94,7 +100,10 @@ export class GameComponent implements OnInit {
       yTarget: ty,
     };
     console.log(move);
-    this.gameService.makeMove(move, this.id).subscribe(s => {console.log(s); this.reloadGame(); }, e => console.log(e));
+    this.gameService.makeMove(move, this.id).subscribe(s => {
+      console.log(s);
+      this.reloadGame();
+    }, e => console.log(e));
   }
 
   updateBoard(board: Observable<IFigure[][]>): void {
@@ -126,6 +135,7 @@ export class GameComponent implements OnInit {
     ($event.target as Element).classList.add('selected-tile');
   }
 }
+
 // hm
 
 
