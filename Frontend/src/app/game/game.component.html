@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center align-items-center flex-column">
   <button (click)="reloadGame()" class="linkHover btn btn-primary py-2 px-4 mt-3">Reload</button>
   <div class="board mt-2 d-flex justify-content-center align-items-center flex-column">
-    <table id = "table">
+    <table id="table">
       <tr *ngFor="let l of checkboard; let i = index">
         <td *ngFor="let k of checkboard[i]; let j = index" (click)="clickedTile($event, k, i, j)"><i class='chess-piece {{checkboard[i][j].getHtmlClass()}}'></i>
         </td>

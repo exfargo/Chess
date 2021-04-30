@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class TestovaciSunka {
     public static void main(String[] args) {
         GameController g = new GameController();
-        boolean isOn = true;
         Scanner sc = new Scanner(System.in);
         g.printBoard();
 

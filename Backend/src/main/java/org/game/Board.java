@@ -132,10 +132,10 @@ public class Board implements IBoard {
                 if (source.first().equals(target.first())) {
                     //aby se nemohl vyhazovat veci pred sebou
 
-                    if (board[target.second()][target.first()].getOwner().equals(Teams.Empty)) {
+                    if (board[target.second()][target.first()].getOwner() == Teams.Empty) {
                         teleportPiece(source, target);
-                        //en passant
 
+                        //en passant
                         if (Math.abs(source.second() - target.second()) == 2) {
                             passX = target.first();
                             passTeam = board[target.second()][target.first()].getOwner();
@@ -156,7 +156,7 @@ public class Board implements IBoard {
                     return false;
                     //vyhazovani
                 } else {
-                    if (!board[target.second()][target.first()].getType().equals("EmptySpace")) {
+                    if (board[target.second()][target.first()].getOwner() != Teams.Empty) {
                         teleportPiece(source, target);
                         return true;
                         //en passant
