@@ -65,10 +65,6 @@ tr:last-child {
   color: $teamWhite;
 }
 
-//TODO option1 => filter: invert(50%);
-//TODO option2 => filter: brightness(200$);
-//TODO option3 => background: $secondary !important;
-
 .selected-tile {
   box-shadow: inset 1px 1px 20px 5px $primary;
 }
